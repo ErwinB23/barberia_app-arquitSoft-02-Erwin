@@ -1,0 +1,13 @@
+# Archivos temporales y del editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
+*~
+
+# Variables de entorno y archivos locales
+.env
+.env.*
+!.env.example
+*.log
