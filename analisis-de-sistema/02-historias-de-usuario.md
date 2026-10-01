@@ -1,7 +1,5 @@
 # Historias de usuario
 
-Las historias expresan necesidades de los actores humanos. Se emplea el formato: **Como [actor], quiero [acción], para [beneficio].** Usuario y usuario invitado representan situaciones de los actores identificados, no roles administrativos adicionales.
-
 | ID | Historia de usuario |
 |---|---|
 | HU01 | Como cliente, quiero crear una cuenta y confirmar mi correo, para acceder a la plataforma con una identidad verificable. |

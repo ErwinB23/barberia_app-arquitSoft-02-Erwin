@@ -1,10 +1,6 @@
 # Actores del sistema
 
-## Contexto
-
-Los actores son personas o servicios externos que interactúan con App Barbería. Los módulos internos, PostgreSQL y los mecanismos de permisos no son actores de negocio.
-
-## Actores humanos
+## Actores
 
 | Actor | ¿Qué necesita realizar? |
 |---|---|
@@ -25,7 +21,3 @@ Los actores son personas o servicios externos que interactúan con App Barbería
 Un usuario podrá actuar como cliente y participar como barbero o administrador en uno o varios establecimientos. Las capacidades profesionales y administrativas dependerán de una membresía activa en la barbería correspondiente; no se asumirá que un rol concede acceso a toda la plataforma.
 
 La visibilidad pública de una barbería y su catálogo se distinguirá del acceso a datos privados, como pagos, agenda operativa y membresías. Los administradores descritos pertenecen a establecimientos; este alcance no define un administrador global de la plataforma.
-
-## Delimitación
-
-Supabase Auth se considera un componente de infraestructura de identidad. Yape se considera un medio de pago utilizado fuera de la aplicación: el sistema mostrará los datos de pago y registrará la confirmación del personal, sin invocar una API financiera. No se incluyen pasarela de pago, ERP, servicio de envío ni facturación electrónica como actores de este caso.
