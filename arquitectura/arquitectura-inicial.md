@@ -36,71 +36,11 @@ Los módulos son unidades lógicas del negocio, no servicios desplegados de form
 
 ## Diagrama de arquitectura
 
-Las flechas principales representan llamadas o uso de servicios; no describen un esquema de tablas. Las líneas punteadas identifican capacidades previstas o mecanismos de seguridad aplicados a otros componentes.
+El diagrama se lee de arriba hacia abajo: actores, presentación, aplicación y negocio, y datos. La conexión lateral muestra los servicios externos que apoyan la capa de negocio. Las capacidades previstas se distinguen en color ámbar.
 
-```mermaid
-flowchart TD
-    subgraph ACTORES["ACTORES"]
-        Cliente["Cliente"]
-        Barbero["Barbero"]
-        Admin["Administrador de barbería"]
-    end
+![Arquitectura inicial de App Barbería: tres capas lógicas e integraciones](imagenes/arquitectura-inicial.png)
 
-    subgraph PRESENTACION["1. PRESENTACIÓN"]
-        UI["Aplicación móvil y acceso Web<br/>Expo + React Native + Expo Router"]
-    end
-
-    subgraph NEGOCIO["2. APLICACIÓN Y LÓGICA DE NEGOCIO"]
-        Modulos["Módulos funcionales<br/>Barberías, catálogo, barberos y horarios<br/>Reservas, atención y pagos<br/>Perfiles, favoritos, invitaciones y notificaciones"]
-        Evolucion["Módulos previstos<br/>Reseñas y ubicación"]
-        Auth["Supabase Auth<br/>Identidad y sesiones"]
-        API["API de Supabase<br/>REST y RPC sobre HTTPS"]
-        Reglas["Funciones PostgreSQL<br/>Disponibilidad y operaciones transaccionales<br/>Validación de permisos y estados"]
-        Edge["Edge Function<br/>Adaptador de correo y autorización de envío"]
-        Tareas["Tareas programadas<br/>Recordatorios internos"]
-        MapasAdapter["Adaptador de mapas<br/>Previsto"]
-    end
-
-    subgraph DATOS["3. DATOS"]
-        DB[("PostgreSQL compartido<br/>Entidades, relaciones e historial<br/>Identificación por barbería")]
-        Control["RLS, restricciones e índices<br/>Aislamiento e integridad"]
-        Geo["Datos geoespaciales y reseñas<br/>Ampliación prevista; PostGIS a evaluar"]
-        Media["Almacenamiento de objetos<br/>Ampliación prevista para imágenes"]
-    end
-
-    subgraph EXTERNOS["SERVICIOS EXTERNOS"]
-        Google["Google OAuth"]
-        Correo["Servicio de correo<br/>Resend para invitaciones"]
-        Mapas["Mapas y geocodificación<br/>Proveedor por definir"]
-    end
-
-    Cliente --> UI
-    Barbero --> UI
-    Admin --> UI
-    UI --> Modulos
-    Modulos --> Auth
-    Modulos --> API
-    Modulos --> Edge
-    API --> Reglas
-    API --> DB
-    Reglas --> DB
-    Auth --> Google
-    Auth --> DB
-    Edge -->|"Consulta y autorización"| DB
-    Edge --> Correo
-    Auth -->|"Confirmación y recuperación de acceso"| Correo
-    Tareas -->|"Genera avisos internos"| DB
-    Control -.-> DB
-    Modulos -.-> Evolucion
-    Evolucion -.-> API
-    Evolucion -.-> MapasAdapter
-    MapasAdapter -.-> Mapas
-    Geo -.-> DB
-    API -.-> Media
-
-    classDef prevista fill:#fff4df,stroke:#b7791f,stroke-dasharray:5 5,color:#3c2b12
-    class Evolucion,MapasAdapter,Mapas,Geo,Media prevista
-```
+**Figura 1. Arquitectura inicial de App Barbería.** Los módulos representan responsabilidades lógicas; la seguridad y las reglas transaccionales también se aplican en el servidor. Las reseñas y los mapas son capacidades previstas. Yape se registra mediante confirmación manual.
 
 ## Dependencias y organización del código
 
@@ -164,7 +104,6 @@ El catálogo de una barbería publicada podrá ser consultable por los clientes,
 
 Los recordatorios internos se generarán mediante tareas programadas, con control para evitar duplicar avisos de una misma cita. La carga de archivos se prevé mediante almacenamiento de objetos con políticas de acceso; inicialmente las imágenes podrán referenciarse mediante URLs seguras.
 
-El procesamiento en segundo plano se utilizará cuando corresponda a tareas secundarias. No se presupone una cola o un conjunto de trabajadores independientes en esta arquitectura inicial. Si se requiere mayor garantía de entrega, se evaluará un registro de tareas pendientes y reintentos.
 
 
 
