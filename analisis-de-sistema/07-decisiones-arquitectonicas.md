@@ -2,27 +2,29 @@
 
 ## Alcance y estado
 
-Estas decisiones definen la propuesta de arquitectura de App Barbería para el laboratorio. Están **adoptadas para el diseño**; su presencia en el documento no implica que todos los mecanismos estén implementados o validados.
+Estas decisiones definen la propuesta de arquitectura de App Barbería para el laboratorio.
 
 Un ADR (Architecture Decision Record) registra el contexto, la decisión, las alternativas y sus consecuencias. Se conserva su identificador cuando evoluciona y se documenta por qué se revisa.
 
-La elección central es mantener Supabase, organizar por funcionalidades y aplicar Clean Architecture gradualmente. No se plantea construir una API Node.js para reproducir el ejemplo de clase.
+La elección central es mantener Supabase, organizar por funcionalidades y aplicar Clean Architecture gradualmente.
 
-## Resumen
+## Cuadro de decisiones arquitectónicas
 
-| ID | Decisión | Drivers principales |
-|---|---|---|
-| [ADR-001](#adr-001) | Organización modular con Supabase como backend. | DA08, DA09, DA11 |
-| [ADR-002](#adr-002) | Clean Architecture con adopción gradual. | DA09, DA11 |
-| [ADR-003](#adr-003) | Presentación Expo y comunicación HTTPS mediante REST/RPC. | DA06, DA10 |
-| [ADR-004](#adr-004) | Base y esquema compartidos con aislamiento por barbería. | DA01 |
-| [ADR-005](#adr-005) | Identidad y autorización contextual en servidor. | DA01, DA06 |
-| [ADR-006](#adr-006) | Reservas y cambios críticos mediante operaciones transaccionales. | DA02, DA03, DA04 |
-| [ADR-007](#adr-007) | Preservación de condiciones históricas. | DA05 |
-| [ADR-008](#adr-008) | Pagos manuales con permisos y estados definidos. | DA04 |
-| [ADR-009](#adr-009) | Entrega externa separada y avisos internos consistentes. | DA07 |
-| [ADR-010](#adr-010) | Contratos y adaptadores para las integraciones. | DA09, DA11 |
-| [ADR-011](#adr-011) | Crecimiento y rendimiento guiados por mediciones. | DA03, DA08 |
+| ID | Decisión arquitectónica | Driver relacionado | Justificación | Resultado |
+|---|---|---|---|---|
+| [ADR-001](#adr-001) | Organización modular con Supabase | DA08 - Crecimiento y respuesta<br>DA09 - Evolución del alcance<br>DA11 - Mantenibilidad | Organizar las funcionalidades con límites claros y aprovechar los servicios administrados para facilitar mantenimiento y evolución. | Módulos de identidad, barberías, catálogo, horarios, reservas, atención, pagos y comunicación, apoyados en Supabase. |
+| [ADR-002](#adr-002) | Clean Architecture gradual | DA09 - Evolución del alcance<br>DA11 - Mantenibilidad | Separar reglas y casos de uso de las pantallas y los detalles del proveedor, controlando las dependencias internas. | Dominio, Aplicación, Presentación e Infraestructura por módulo; contratos internos y adaptación progresiva. |
+| [ADR-003](#adr-003) | Presentación Expo y comunicación HTTPS mediante REST/RPC | DA06 - Seguridad de identidad y secretos<br>DA10 - Experiencia móvil | Ofrecer interfaces móviles y acceso seguro al backend, reutilizando las tecnologías elegidas para el proyecto. | Expo, React Native y Expo Router; solicitudes HTTPS mediante adaptadores del SDK, REST/RPC e invocación de funciones. |
+| [ADR-004](#adr-004) | Base y esquema compartidos con aislamiento por barbería | DA01 - Aislamiento entre barberías | Permitir que varios establecimientos compartan la plataforma sin acceder a información privada de otros. | PostgreSQL compartido; relaciones por barbershop_id y controles de propiedad, membresía y acceso. |
+| [ADR-005](#adr-005) | Identidad y autorización contextual en servidor | DA01 - Aislamiento entre barberías<br>DA06 - Seguridad de identidad y secretos | Verificar quién solicita la operación y qué permisos tiene sobre el recurso y la barbería correspondiente. | Supabase Auth, membresías activas, permisos y RLS; validaciones explícitas en funciones de servidor y secretos protegidos. |
+| [ADR-006](#adr-006) | Operaciones críticas transaccionales | DA02 - Concurrencia de reservas<br>DA03 - Disponibilidad combinada<br>DA04 - Consistencia de atención y pago | Evitar citas superpuestas y escrituras parciales al confirmar reservas o modificar estados relacionados. | Funciones PostgreSQL con revalidación, transacciones, bloqueos y restricciones de exclusión de intervalos activos. |
+| [ADR-007](#adr-007) | Preservación de condiciones históricas | DA05 - Conservación del historial | Impedir que cambios posteriores del catálogo o las políticas alteren las condiciones de reservas anteriores. | Datos descriptivos, precios, duración y políticas conservados en la reserva, con reglas definidas para su actualización. |
+| [ADR-008](#adr-008) | Pagos manuales con permisos y estados definidos | DA04 - Consistencia de atención y pago | Controlar el registro de efectivo, Yape y reembolsos según autorización y estado, dentro del alcance previsto. | Confirmación manual por personal autorizado y transiciones de pago validadas; sin cobros automáticos mediante pasarela. |
+| [ADR-009](#adr-009) | Entrega externa separada y avisos internos consistentes | DA07 - Comunicaciones secundarias | Conservar la operación principal cuando falla el correo externo y mantener coherencia de avisos y recordatorios. | Correo fuera de la transacción principal; avisos internos consistentes y recordatorios deduplicados. Reintentos persistentes por evaluar. |
+| [ADR-010](#adr-010) | Integraciones mediante contratos y adaptadores | DA09 - Evolución del alcance<br>DA11 - Mantenibilidad | Limitar el impacto de cambios de proveedor y evitar dependencias externas dispersas en pantallas y reglas. | Contratos y adaptadores de Supabase y correo; incorporación gradual de reseñas, mapas y archivos previstos. |
+| [ADR-011](#adr-011) | Crecimiento y rendimiento basados en mediciones | DA03 - Disponibilidad combinada<br>DA08 - Crecimiento y respuesta | Detectar cuellos de botella y asignar recursos según la carga real antes de añadir infraestructura. | Métricas, índices, filtros y paginación; evaluación de recursos, costos, caché o réplicas según evidencia. |
+
+El resultado describe lo que se espera obtener con cada decisión. Su explicación, alternativas y consecuencias se desarrollan a continuación.
 
 <a id="adr-001"></a>
 
