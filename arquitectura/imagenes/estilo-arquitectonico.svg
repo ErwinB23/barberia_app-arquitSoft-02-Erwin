@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1860" viewBox="0 0 1800 1860">
+<title>estilo arquitectonico · App Barbería</title>
+<desc>Diagrama académico de la propuesta de arquitectura. Las etiquetas y leyendas distinguen responsabilidades, colaboración y capacidades previstas.</desc>
+<rect width="1800" height="1860" fill="#f6f9fd"/>
+<rect x="45" y="36" width="1710" height="185" rx="24" fill="#162b47" stroke="none" stroke-width="2"/>
+<text x="82" y="64" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#9fc6ff" dominant-baseline="text-before-edge">APP BARBERÍA / VISTA 02</text>
+<text x="82" y="103" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#ffffff" dominant-baseline="text-before-edge">Estilo y límites de ejecución</text>
+<text x="82" y="164" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#d8e5f5" dominant-baseline="text-before-edge">Cliente-servidor · Organización modular · Backend administrado (BaaS)</text>
+<ellipse cx="1677.03125" cy="124.109375" rx="7.734375" ry="7.734375" fill="none" stroke="#83ddc2" stroke-width="3"/>
+<ellipse cx="1706.25" cy="124.109375" rx="7.734375" ry="7.734375" fill="none" stroke="#83ddc2" stroke-width="3"/>
+<polyline points="1679.609375,119.8125 1706.25,87.15625" fill="none" stroke="#83ddc2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1703.671875,119.8125 1677.03125,87.15625" fill="none" stroke="#83ddc2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="65" y="270" width="610" height="766" rx="22" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="105.59375" y="300.71875" width="30.8125" height="52.5625" rx="7" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<polyline points="115.5625,307.0625 126.4375,307.0625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="117.375,346.03125 124.625,346.03125" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="171" y="303" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">CLIENTE MODULAR</text>
+<text x="96" y="374" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">Dispositivo o navegador</text>
+<text x="96" y="419" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Expo + React Native + TypeScript</text>
+<rect x="96" y="478" width="546" height="144" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<polyline points="116.625,511.78125 135.0,501.9375 153.375,511.78125 135.0,521.625 116.625,511.78125" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="116.625,519.65625 135.0,529.5 153.375,519.65625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="116.625,527.53125 135.0,537.375 153.375,527.53125" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="174" y="500" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Interfaz y navegación</text>
+<text x="116" y="555" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Pantallas · rutas · estado visual</text>
+<rect x="96" y="644" width="546" height="144" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="118.59375" y="668.59375" width="13.125" height="13.125" rx="3" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<rect x="138.28125" y="668.59375" width="13.125" height="13.125" rx="3" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<rect x="118.59375" y="688.28125" width="13.125" height="13.125" rx="3" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<rect x="138.28125" y="688.28125" width="13.125" height="13.125" rx="3" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<text x="174" y="666" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Casos de uso por módulo</text>
+<text x="116" y="721" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Coordinar entradas y resultados</text>
+<rect x="96" y="810" width="546" height="144" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<polyline points="127.125,833.28125 127.125,844.4375" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="142.875,833.28125 142.875,844.4375" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="121.875" y="844.4375" width="26.25" height="14.4375" rx="7" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<polyline points="135.0,858.875 135.0,867.40625 144.84375,867.40625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="174" y="832" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Contratos y adaptadores</text>
+<text x="116" y="887" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Encapsular solicitudes a Supabase</text>
+<text x="96" y="984" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">La validación visual no autoriza operaciones.</text>
+<rect x="861" y="270" width="874" height="766" rx="22" fill="#eaf8f2" stroke="#d6e1ee" stroke-width="2"/>
+<polyline points="897.875,344.21875 891.53125,336.96875 891.53125,327.0 898.78125,319.75 907.84375,319.75 912.375,307.0625 925.0625,307.0625 933.21875,315.21875 933.21875,323.375 940.46875,328.8125 940.46875,337.875 933.21875,344.21875 897.875,344.21875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="971" y="303" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">BACKEND SUPABASE</text>
+<text x="893" y="374" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">Servicios administrados y lógica de servidor</text>
+<rect x="893" y="436" width="392" height="158" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<ellipse cx="923.46875" cy="469.78125" rx="9.1875" ry="9.1875" fill="none" stroke="#147d68" stroke-width="3"/>
+<polyline points="930.03125,476.34375 947.09375,493.40625 951.03125,489.46875 947.09375,485.53125" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="939.875,485.53125 943.8125,481.59375" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="971" y="458" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Auth</text>
+<text x="913" y="513" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Identidad y sesión</text>
+<text x="913" y="546.12" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Correo / Google</text>
+<rect x="1308" y="436" width="394" height="158" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<polyline points="1340.4375,464.53125 1329.28125,477.0 1340.4375,489.46875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1353.5625,464.53125 1364.71875,477.0 1353.5625,489.46875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1350.28125,461.25 1343.71875,492.75" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1386" y="458" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">API de datos</text>
+<text x="1328" y="513" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Consultas REST</text>
+<text x="1328" y="546.12" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Funciones por RPC</text>
+<rect x="893" y="628" width="809" height="174" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<ellipse cx="932.0" cy="656.203125" rx="17.0625" ry="4.921875" fill="#eaf8f2" stroke="#147d68" stroke-width="3"/>
+<polyline points="914.9375,656.53125 914.9375,680.8125" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="949.0625,656.53125 949.0625,680.8125" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="914.9375,667.6875 920.1875,672.28125 932.0,674.25 943.8125,672.28125 949.0625,667.6875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="914.9375,679.5 920.1875,684.09375 932.0,686.0625 943.8125,684.09375 949.0625,679.5" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="971" y="650" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">PostgreSQL</text>
+<text x="913" y="705" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Datos + reglas transaccionales + permisos + RLS</text>
+<text x="913" y="739.5" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Restricciones contra reservas superpuestas</text>
+<rect x="893" y="835" width="392" height="151" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="913.625" y="862.875" width="36.75" height="26.25" rx="4" fill="#f6f9fd" stroke="#147d68" stroke-width="3"/>
+<polyline points="914.28125,864.84375 932.0,877.3125 949.71875,864.84375" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="914.28125,887.8125 926.09375,876.65625" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="949.71875,887.8125 937.90625,876.65625" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="971" y="857" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Edge Functions</text>
+<text x="913" y="912" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Integraciones seguras</text>
+<text x="913" y="943.74" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Correo de invitación</text>
+<rect x="1308" y="835" width="394" height="151" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<ellipse cx="1347.0" cy="876.0" rx="17.0625" ry="17.0625" fill="none" stroke="#147d68" stroke-width="3"/>
+<polyline points="1347.0,865.5 1347.0,876.65625 1354.875,881.25" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1386" y="857" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Tareas internas</text>
+<text x="1328" y="912" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Recordatorios</text>
+<text x="1328" y="943.74" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Control de duplicación</text>
+<polyline points="675,650 858,650" fill="none" stroke="#2468c9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="858,650 843.0,643.0 843.0,657.0" fill="#2468c9"/>
+<text x="727.0" y="528" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">HTTPS</text>
+<text x="700.75390625" y="568" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">REST / RPC</text>
+<text x="691" y="698" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Identidad y</text>
+<text x="691" y="729.74" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">contexto del</text>
+<text x="691" y="761.48" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">usuario</text>
+<rect x="65" y="1100" width="1670" height="203" rx="22" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<text x="94" y="1126" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">SERVICIOS EXTERNOS Y AMPLIACIONES</text>
+<rect x="94" y="1180" width="475" height="97" rx="13" fill="#eaf8f2" stroke="none" stroke-width="2"/>
+<ellipse cx="120.28125" cy="1215.46875" rx="8.3125" ry="8.3125" fill="none" stroke="#147d68" stroke-width="3"/>
+<polyline points="126.21875,1221.40625 141.65625,1236.84375 145.21875,1233.28125 141.65625,1229.71875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="135.125,1229.71875 138.6875,1226.15625" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="164" y="1196" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Google</text>
+<text x="164" y="1237" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Identidad mediante Auth</text>
+<rect x="604" y="1180" width="496" height="97" rx="13" fill="#eaf8f2" stroke="none" stroke-width="2"/>
+<rect x="621.375" y="1210.125" width="33.25" height="23.75" rx="4" fill="#f6f9fd" stroke="#147d68" stroke-width="3"/>
+<polyline points="621.96875,1211.90625 638.0,1223.1875 654.03125,1211.90625" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="621.96875,1232.6875 632.65625,1222.59375" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="654.03125,1232.6875 643.34375,1222.59375" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="674" y="1196" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Correo</text>
+<text x="674" y="1237" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Resend / correo de acceso</text>
+<rect x="1134" y="1180" width="570" height="97" rx="13" fill="#fff5e5" stroke="none" stroke-width="2"/>
+<ellipse cx="1168.0" cy="1216.0625" rx="10.6875" ry="10.6875" fill="none" stroke="#926018" stroke-width="3"/>
+<polyline points="1158.5,1223.1875 1168.0,1238.625 1177.5,1223.1875" fill="none" stroke="#926018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="1168.0" cy="1215.46875" rx="3.5625" ry="3.5625" fill="none" stroke="#926018" stroke-width="3"/>
+<text x="1204" y="1196" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Mapas y archivos: previstos</text>
+<text x="1204" y="1237" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Adaptadores y políticas por definir</text>
+<polyline points="1285,1036 1285,1097" fill="none" stroke="#147d68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1285,1097 1292.0,1082.0 1278.0,1082.0" fill="#147d68"/>
+<rect x="1330" y="1049" width="387" height="33" rx="8" fill="#f6f9fd" stroke="none" stroke-width="2"/>
+<text x="1340" y="1055" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">Colaboración según el servicio</text>
+<rect x="65" y="1340" width="812" height="253" rx="18" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="94.921875" y="1371.921875" width="14.0625" height="14.0625" rx="3" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<rect x="116.015625" y="1371.921875" width="14.0625" height="14.0625" rx="3" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<rect x="94.921875" y="1393.015625" width="14.0625" height="14.0625" rx="3" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<rect x="116.015625" y="1393.015625" width="14.0625" height="14.0625" rx="3" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<text x="158" y="1367" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">MÓDULOS DEL NEGOCIO</text>
+<text x="96" y="1430" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Identidad · Barberías · Catálogo · Barberos</text>
+<text x="96" y="1464.5" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Horarios · Reservas · Atención · Pagos</text>
+<text x="96" y="1499.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Membresías · Favoritos · Notificaciones</text>
+<rect x="911" y="1340" width="824" height="253" rx="18" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<polyline points="959.5,1369.8125 975.671875,1376.140625 974.265625,1393.71875 967.234375,1404.265625 959.5,1409.1875 951.765625,1404.265625 944.734375,1393.71875 943.328125,1376.140625 959.5,1369.8125" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="951.0625,1388.796875 957.390625,1395.125 968.640625,1383.171875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1005" y="1367" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">PLATAFORMA MULTI-TENANT</text>
+<text x="943" y="1430" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Una base y esquema compartidos.</text>
+<text x="943" y="1464.5" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Datos privados aislados por barbería y usuario.</text>
+<text x="943" y="1499.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Permisos por membresía activa y recurso.</text>
+<polyline points="65,1640 1735,1640" fill="none" stroke="#d6e1ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="65" y="1662" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">CRITERIO DE DISEÑO</text>
+<text x="65" y="1698" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Los módulos no son microservicios. No se incorpora una API propia Node.js en esta propuesta.</text>
+<text x="65" y="1731.12" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Se optimiza y amplía capacidad con mediciones; Supabase no reemplaza el diseño de permisos y reglas.</text>
+</svg>
