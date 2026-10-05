@@ -10,9 +10,20 @@ Los drivers son requisitos, atributos de calidad o restricciones cuya influencia
 | DA04 | Mantener un ciclo consistente de atención y pago. | RF19, RF23, RF24, RF25, RF37, RF38; AC03; RC07 | Las operaciones cambian estados relacionados y requieren permisos diferentes. | Casos de uso y funciones transaccionales con validación de estado y rol; registro manual de pagos. |
 | DA05 | Conservar las condiciones históricas de cada reserva. | RF17; AC10 | Cambios del catálogo o las políticas no deben alterar la interpretación de una atención pasada. | Copias de los datos relevantes y políticas al confirmar, asociadas a la reserva. |
 | DA06 | Proteger identidad, sesiones y secretos en dispositivos cliente. | RF01, RF02, RF03, RF04, RF42; AC01; RC03, RC05, RC06 | El cliente no es una frontera suficiente de autorización y no puede almacenar claves privilegiadas. | Supabase Auth, HTTPS, validación de permisos en servidor y secretos en entornos seguros. |
-| DA07 | Separar operaciones principales de comunicaciones secundarias. | RF34, RF39, RF40; AC07; RC12 | Un fallo de correo no debe borrar una invitación o revertir una reserva confirmada. | Notificaciones internas, tareas programadas y envío de correo con tratamiento independiente del fallo y reintentos controlados. |
+| DA07 | Separar operaciones principales de comunicaciones secundarias. | RF34, RF39, RF40; AC07; RC12 | Un fallo de correo no debe borrar una invitación o revertir una reserva confirmada. | Conservar avisos internos consistentes y ejecutar el envío externo fuera de la transacción principal; definir reintentos y deduplicación cuando se necesiten. |
 | DA08 | Responder y crecer conforme aumenten usuarios y establecimientos. | AC04, AC05, AC06; RC02, RC04 | Influye en consultas, recursos, monitoreo y límites de infraestructura. | Servicios administrados, índices, consultas acotadas y mediciones antes de ampliar capacidad. |
 | DA09 | Incorporar reseñas y mapas manteniendo módulos cohesionados. | RF43, RF44; AC08; RC09, RC12, RC13 | Las nuevas capacidades y proveedores no deben dispersar dependencias en las pantallas. | Módulos de reseñas y ubicación, adaptador de mapas y persistencia geoespacial prevista. |
 | DA10 | Ofrecer una experiencia móvil clara con acceso desde otras plataformas. | RF07, RF09, RF13; AC09; RC01 | Determina componentes, navegación y estados de interfaz para distintos dispositivos. | Expo/React Native, rutas delgadas, componentes compartidos y validación por plataforma. |
+| DA11 | Modificar el núcleo funcional manteniendo responsabilidades y dependencias controladas. | AC08; RC09, RC10 | El SDK, los tipos de persistencia o las pantallas no deben propagarse a las reglas y casos de uso del módulo. | Clean Architecture gradual, contratos internos, adaptadores y pruebas por responsabilidad. |
 
+## Prioridades de diseño
 
+| Prioridad | Drivers | Motivo |
+|---|---|---|
+| Alta | DA01, DA02, DA04, DA05, DA06 | Protegen acceso, integridad, estados e historial; un fallo afecta directamente una operación de negocio. |
+| Media | DA03, DA07, DA08, DA10, DA11 | Determinan respuesta, comunicaciones, crecimiento, experiencia y evolución del núcleo. |
+| Evolución del alcance | DA09 | Prepara reseñas, mapas y otros cambios sin exigir su implementación en el laboratorio. |
+
+Las prioridades orientan el diseño, no eliminan requisitos. DA06 conserva su significado de seguridad; DA11 explicita la mantenibilidad general del núcleo y DA09 se concentra en capacidades previstas.
+
+La respuesta completa a cada driver se desarrolla en las [decisiones arquitectónicas](07-decisiones-arquitectonicas.md) y en la [matriz de trazabilidad](../arquitectura/trazabilidad-arquitectonica.md).
