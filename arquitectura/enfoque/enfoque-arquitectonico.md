@@ -90,19 +90,3 @@ Encapsular una función SQL no la convierte en dominio independiente. Se acepta 
 Reservas consulta disponibilidad mediante un contrato definido y no modifica arbitrariamente tablas o detalles internos de Horarios. Pagos opera sobre la reserva autorizada y no obtiene permisos por importar un módulo. Las colaboraciones transaccionales se coordinan en servidor cuando necesitan consistencia conjunta.
 
 Compartir tipos o utilidades requiere una responsabilidad estable. No se utilizará shared como depósito de todo el negocio ni se crearán dependencias circulares entre funcionalidades.
-
-## Adopción gradual y verificación
-
-| Paso | Resultado esperado | Comprobación |
-|---|---|---|
-| Delimitar responsabilidades | Identificar UI, regla, coordinación y acceso externo en cada flujo. | Una misma función no mezcla todas esas responsabilidades. |
-| Definir contrato de operación | Entrada, salida, errores y garantía transaccional. | Refleja el caso de uso completo y su autorización de servidor. |
-| Encapsular el proveedor | Adaptador y mapeo explícito de tipos. | Dominio y aplicación no importan SDK ni tipos generados. |
-| Conectar mediante composición | Casos de uso reciben implementaciones de sus contratos. | Se puede sustituir un adaptador en pruebas. |
-| Evaluar el flujo | Pruebas puras y de integración según responsabilidad. | Permisos, concurrencia, estados y regresión conservan el comportamiento. |
-
-Esta tarea documenta la organización y su justificación. No añade funcionalidades ni ejecuta una reestructuración del repositorio de la aplicación.
-
-## Relación con el análisis
-
-ADR-002 y ADR-010 responden a DA11 y a la evolución prevista de DA09. ADR-005 y ADR-006 preservan autorización y atomicidad durante cualquier cambio. Los criterios se relacionan con AC01, AC02, AC03 y AC08 y se resumen en la [trazabilidad arquitectónica](../trazabilidad-arquitectonica.md).
