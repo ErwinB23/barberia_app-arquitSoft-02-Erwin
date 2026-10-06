@@ -224,18 +224,5 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Verificación y criterio de revisión.** Prueba de carga documentada con mezcla de operaciones y volumen representativos; medir percentil 95 y errores. Revisar la decisión cuando se identifique un cuello de botella que no se resuelva razonablemente con esta estrategia.
 
-## Documentos relacionados
 
-- [Drivers arquitectónicos](06-drivers-arquitectonicos.md).
-- [Arquitectura inicial](../arquitectura/arquitectura-inicial.md).
-- [Estilo arquitectónico](../arquitectura/estilo-arquitectonico.md).
-- [Clean Architecture](../arquitectura/enfoque/enfoque-arquitectonico.md).
-- [Trazabilidad y criterios de evaluación](../arquitectura/trazabilidad-arquitectonica.md).
 
-## Sustento técnico
-
-Las interfaces de servidor elegidas se apoyan en la [API de Supabase](https://supabase.com/docs/guides/api). Las [funciones de base de datos](https://supabase.com/docs/guides/database/functions) permiten encapsular operaciones cercanas a los datos; su configuración de seguridad exige revisar identidad y permisos.
-
-Las tácticas de concurrencia se sustentan en las [restricciones de PostgreSQL](https://www.postgresql.org/docs/current/ddl-constraints.html). La dirección de dependencias se toma de la [referencia original de Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
-
-El crecimiento se evaluará con la [guía de producción de Supabase](https://supabase.com/docs/guides/deployment/going-into-prod) y las características de sus [réplicas de lectura](https://supabase.com/docs/guides/platform/read-replicas); esto no constituye una garantía de capacidad del proyecto.
