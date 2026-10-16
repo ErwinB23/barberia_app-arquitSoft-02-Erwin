@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1850" viewBox="0 0 1800 1850">
+<title>nivel3 componentes · App Barbería</title>
+<desc>Diagrama académico de la propuesta de arquitectura. Las etiquetas y leyendas distinguen responsabilidades, colaboración y capacidades previstas.</desc>
+<rect width="1800" height="1850" fill="#f6f9fd"/>
+<rect x="45" y="36" width="1710" height="185" rx="24" fill="#162b47" stroke="none" stroke-width="2"/>
+<text x="82" y="64" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#9fc6ff" dominant-baseline="text-before-edge">APP BARBERÍA / C4 · NIVEL 3</text>
+<text x="82" y="103" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#ffffff" dominant-baseline="text-before-edge">Componentes de la aplicación</text>
+<text x="82" y="164" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#d8e5f5" dominant-baseline="text-before-edge">Contenedor detallado: aplicación Expo / React Native · Flujo central: reserva</text>
+<ellipse cx="1677.03125" cy="124.109375" rx="7.734375" ry="7.734375" fill="none" stroke="#83ddc2" stroke-width="3"/>
+<ellipse cx="1706.25" cy="124.109375" rx="7.734375" ry="7.734375" fill="none" stroke="#83ddc2" stroke-width="3"/>
+<polyline points="1679.609375,119.8125 1706.25,87.15625" fill="none" stroke="#83ddc2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1703.671875,119.8125 1677.03125,87.15625" fill="none" stroke="#83ddc2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="65" y="270" width="1670" height="1090" rx="22" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<text x="93" y="298" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">APLICACIÓN MÓVIL / WEB — COMPONENTES INTERNOS</text>
+<rect x="420" y="370" width="960" height="190" rx="18" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="452.546875" y="396.109375" width="23.90625" height="40.78125" rx="7" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<polyline points="460.28125,401.03125 468.71875,401.03125" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="461.6875,431.265625 467.3125,431.265625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="505" y="395" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Presentación y navegación</text>
+<text x="444" y="454" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">RUTAS · PANTALLAS · RESULTADOS</text>
+<text x="444" y="495" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Recoge la selección del usuario y presenta los resultados según su rol.</text>
+<rect x="96" y="670" width="500" height="220" rx="18" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2"/>
+<ellipse cx="131.359375" cy="708.765625" rx="9.84375" ry="9.84375" fill="none" stroke="#2468c9" stroke-width="3"/>
+<polyline points="138.390625,715.796875 156.671875,734.078125 160.890625,729.859375 156.671875,725.640625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="148.9375,725.640625 153.15625,721.421875" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="181" y="695" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Identidad y contexto</text>
+<text x="120" y="754" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">COMPONENTE FUNCIONAL</text>
+<text x="120" y="795" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Sesión, perfil y membresía.</text>
+<rect x="650" y="670" width="500" height="220" rx="18" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="676.21875" y="702.4375" width="36.5625" height="32.34375" rx="6" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<polyline points="676.21875,712.28125 712.78125,712.28125" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="685.359375,696.8125 685.359375,707.359375" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="703.640625,696.8125 703.640625,707.359375" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="683.953125,720.015625 690.28125,720.015625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="698.71875,720.015625 705.046875,720.015625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="683.953125,727.046875 690.28125,727.046875" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="735" y="695" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Reservas y agenda</text>
+<text x="674" y="754" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">COMPONENTE FUNCIONAL</text>
+<text x="674" y="795" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Disponibilidad, cita y atención.</text>
+<rect x="1204" y="670" width="500" height="220" rx="18" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="1232.328125" y="711.578125" width="32.34375" height="23.90625" rx="2" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<polyline points="1228.8125,711.578125 1235.140625,698.921875 1261.859375,698.921875 1268.1875,711.578125 1228.8125,711.578125" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1239.359375" y="721.421875" width="8.4375" height="14.0625" rx="1" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<rect x="1252.71875" y="720.015625" width="7.03125" height="7.03125" rx="1" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<text x="1289" y="695" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Gestión de barbería</text>
+<text x="1228" y="754" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">COMPONENTE FUNCIONAL</text>
+<text x="1228" y="795" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Catálogo, personal y horarios.</text>
+<polyline points="900,560 900,610" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="346,610 1454,610" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="346,610 346,665" fill="none" stroke="#2468c9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="346,665 353.0,650.0 339.0,650.0" fill="#2468c9"/>
+<polyline points="900,610 900,665" fill="none" stroke="#2468c9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="900,665 907.0,650.0 893.0,650.0" fill="#2468c9"/>
+<polyline points="1454,610 1454,665" fill="none" stroke="#2468c9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="1454,665 1461.0,650.0 1447.0,650.0" fill="#2468c9"/>
+<text x="950" y="625" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Invoca casos de uso</text>
+<rect x="420" y="1020" width="960" height="235" rx="18" fill="#f3effb" stroke="#d6e1ee" stroke-width="2"/>
+<polyline points="456.0625,1047.515625 456.0625,1059.46875" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="472.9375,1047.515625 472.9375,1059.46875" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="450.4375" y="1059.46875" width="28.125" height="15.46875" rx="7" fill="#f6f9fd" stroke="#7052b8" stroke-width="3"/>
+<polyline points="464.5,1074.9375 464.5,1084.078125 475.046875,1084.078125" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="505" y="1045" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">Adaptadores de servicios</text>
+<text x="444" y="1104" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">CONTRATOS INTERNOS · MAPEO DE DATOS</text>
+<text x="444" y="1145" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Supabase para consultas y RPC; invocación de correo. Convierte respuestas y</text>
+<text x="444" y="1179.5" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">conflictos a resultados de la aplicación.</text>
+<polyline points="346,890 346,958" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="900,890 900,958" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1454,890 1454,958" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="346,958 1454,958" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="900,958 900,1015" fill="none" stroke="#7052b8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="900,1015 907.0,1000.0 893.0,1000.0" fill="#7052b8"/>
+<text x="1413" y="1024" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">Apoyan el flujo:</text>
+<text x="1413" y="1070" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Favoritos, invitaciones,</text>
+<text x="1413" y="1103.12" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">pagos manuales y</text>
+<text x="1413" y="1136.2399999999998" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">notificaciones.</text>
+<polyline points="900,1255 900,1420" fill="none" stroke="#147d68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="900,1420 907.0,1405.0 893.0,1405.0" fill="#147d68"/>
+<rect x="947" y="1350" width="582" height="38" rx="8" fill="#f6f9fd" stroke="none" stroke-width="2"/>
+<text x="962" y="1359" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">HTTPS · identidad del usuario · REST / RPC</text>
+<rect x="65" y="1425" width="1670" height="220" rx="18" fill="#eaf8f2" stroke="#d6e1ee" stroke-width="2"/>
+<polyline points="95.4375,1484.859375 90.515625,1479.234375 90.515625,1471.5 96.140625,1465.875 103.171875,1465.875 106.6875,1456.03125 116.53125,1456.03125 122.859375,1462.359375 122.859375,1468.6875 128.484375,1472.90625 128.484375,1479.9375 122.859375,1484.859375 95.4375,1484.859375" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="1450" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Servicios de backend Supabase</text>
+<text x="89" y="1509" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">OTROS CONTENEDORES / SERVICIOS DEL NIVEL 2</text>
+<text x="89" y="1550" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Auth, API, PostgreSQL y Edge Functions. El servidor vuelve a validar permisos, disponibilidad y estados; conserva la atomicidad.</text>
+<polyline points="65,1695 1735,1695" fill="none" stroke="#d6e1ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="65" y="1717" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">RESPONSABILIDADES Y REQUISITOS</text>
+<text x="65" y="1753" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Identidad: RF01–RF05, RF41–RF42. Reservas y agenda: RF09–RF25. Gestión: RF26–RF38.</text>
+<text x="65" y="1786.12" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Los componentes son responsabilidades internas de la aplicación; no microservicios separados.</text>
+</svg>
