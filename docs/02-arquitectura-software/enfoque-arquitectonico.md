@@ -8,7 +8,7 @@ Se propone una adopción gradual por módulos. El dominio TypeScript será indep
 
 ## Diagrama de dependencias
 
-![Clean Architecture en App Barbería: dependencias internas y ejemplo de reserva](../imagenes/enfoque-arquitectonico.svg)
+![Clean Architecture en App Barbería: dependencias internas y ejemplo de reserva](../../img/enfoque-arquitectonico.svg)
 
 **Figura 3. Dependencias propuestas y flujo de una reserva.** La parte superior muestra importaciones hacia el interior. La inferior muestra colaboración en ejecución; su dirección no sustituye la regla de dependencias. PostgreSQL conserva la decisión definitiva de la operación.
 

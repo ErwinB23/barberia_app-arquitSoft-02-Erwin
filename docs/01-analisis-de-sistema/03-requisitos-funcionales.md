@@ -89,4 +89,3 @@
 - La confirmación y el reembolso de pagos registran una operación realizada por el personal; no transfieren dinero ni constituyen facturación electrónica.
 - Los recordatorios se plantean inicialmente como notificaciones internas. Push no es un requisito de esta primera versión.
 - La elección de cualquier barbero disponible debe producir una reserva asignada a un profesional concreto al confirmar.
-

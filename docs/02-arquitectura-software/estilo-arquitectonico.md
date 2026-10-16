@@ -8,7 +8,7 @@ Esta descripción distingue comunicación, organización del código y servicios
 
 ## Diagrama de organización global
 
-![Estilo de App Barbería: cliente modular, backend Supabase y servicios externos](imagenes/estilo-arquitectonico.svg)
+![Estilo de App Barbería: cliente modular, backend Supabase y servicios externos](../../img/estilo-arquitectonico.svg)
 
 **Figura 2. Vista de servicios y límites de ejecución.** El cliente y el backend se comunican por HTTPS. Los módulos del cliente no representan microservicios; los componentes de Supabase son servicios de la plataforma. Las flechas describen colaboración en ejecución.
 
@@ -61,4 +61,4 @@ Supabase administra infraestructura, pero el proyecto conserva la responsabilida
 
 ## Relación con las decisiones
 
-ADR-001 establece la organización global; ADR-003 define presentación y comunicación; ADR-004 y ADR-005 determinan aislamiento y autorización; ADR-006 define las operaciones críticas; ADR-011 orienta el crecimiento. El enfoque interno se desarrolla en [Clean Architecture](enfoque/enfoque-arquitectonico.md).
+ADR-001 establece la organización global; ADR-003 define presentación y comunicación; ADR-004 y ADR-005 determinan aislamiento y autorización; ADR-006 define las operaciones críticas; ADR-011 orienta el crecimiento. El enfoque interno se desarrolla en [Clean Architecture](enfoque-arquitectonico.md).

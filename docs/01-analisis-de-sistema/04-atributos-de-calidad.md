@@ -13,20 +13,6 @@
 | AC09 | Usabilidad y accesibilidad | Un cliente reserva desde una pantalla móvil pequeña o necesita comprender un error de disponibilidad. | El flujo presenta pasos claros, estados de carga, vacío y error; mantiene controles táctiles adecuados y mensajes comprensibles, y no depende únicamente del color. |
 | AC10 | Preservación histórica | Cambian el nombre de un servicio, su precio o las políticas después de confirmar una cita. | La consulta histórica conserva las condiciones registradas para la reserva, sin reemplazarlas silenciosamente por la configuración actual. |
 
-## Condiciones de evaluación
+## Evaluación
 
-Los valores de AC04 y AC05 son objetivos de diseño pendientes de verificación, no resultados de pruebas ni un SLA contratado. No se deduce una capacidad máxima de usuarios a partir del número de cuentas registradas.
-
-| Atributos | Verificación propuesta |
-|---|---|
-| AC01, AC02 | Intentar operaciones con un usuario sin sesión, un cliente ajeno, un barbero no asignado y un administrador de otra barbería. La respuesta no debe exponer ni modificar datos privados. |
-| AC03 | Ejecutar solicitudes simultáneas sobre intervalos superpuestos e inducir un fallo antes de completar la escritura. Verificar exclusión de intervalos y ausencia de datos parciales. |
-| AC04 | Definir datos, recursos contratados, red, consultas y mezcla de operaciones; simular 100 usuarios concurrentes y medir el percentil 95 de extremo a extremo de las consultas principales. Registrar errores y consumo de recursos. |
-| AC05 | Medir el tiempo en que un flujo representativo de autenticación y consulta/gestión de reservas está disponible sobre el periodo mensual definido. Registrar ventanas de observación y fallos de dependencias. |
-| AC06 | Repetir una carga representativa con mayor volumen de datos y solicitudes; identificar el recurso limitante antes de aumentar capacidad. |
-| AC07 | Simular un fallo de correo después de confirmar una invitación. Verificar conservación del registro, resultado de envío y control de reintentos. |
-| AC08 | Cambiar un adaptador o añadir una capacidad sin importar el SDK del proveedor desde el dominio; revisar contratos y ejecutar regresión del módulo afectado. |
-| AC09 | Evaluar reserva y recuperación de errores en pantallas móviles; comprobar etiquetas, contraste, controles táctiles y navegación. |
-| AC10 | Cambiar catálogo y políticas y consultar una reserva previa. Los datos históricos deben conservar las condiciones correspondientes. |
-
-La evaluación propuesta no se ha ejecutado por el hecho de documentarla. La capacidad y disponibilidad dependerán del diseño, configuración y servicios utilizados.
+Cada atributo se desarrolla con fuente, estímulo, artefacto, entorno, respuesta y medida en [escenarios de atributos de calidad](08-escenarios-atributos-calidad.md). Las metas de rendimiento y disponibilidad están pendientes de validación.

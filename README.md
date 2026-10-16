@@ -4,7 +4,7 @@
 |---|---|
 | Estudiante | Erwin Brayam Inca Pauccara |
 | Curso | Arquitectura de Software - Semestre 2026-II |
-| Trabajo base | ENTREGABLE-03: ESTILO ARQUITECTONICO + ENFOQUE ARQUITECTÓNICO |
+| Trabajo base | PRIMER SPRINT: ANÁLISIS, ARQUITECTURA Y DISEÑO - SEMANAS 4, 5 Y 6 |
 
 ## Descripción y necesidad
 
@@ -24,31 +24,31 @@ Las reglas transaccionales conservadas en PostgreSQL seguirán vinculadas a esa 
 
 ## Vista inicial
 
-![Arquitectura inicial de App Barbería](arquitectura/imagenes/arquitectura-inicial.svg)
+![Arquitectura inicial de App Barbería](img/arquitectura-inicial.svg)
 
-La imagen presenta actores, capas, seguridad e integraciones. Las capacidades previstas aparecen en ámbar. Consultar la [explicación de la arquitectura inicial](arquitectura/arquitectura-inicial.md).
+La imagen presenta actores, capas, seguridad e integraciones. Las capacidades previstas aparecen en ámbar. Consultar la [explicación de la arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md).
 
 ## Documentos del proceso arquitectónico
 
 | Etapa | Documento | Contenido |
 |---|---|---|
-| 1. Necesidad del negocio | [Necesidad del negocio](analisis-de-sistema/00-necesidad-del-negocio.md) | Problema, objetivos, valor y límites. |
-| 2. Requisitos | [Actores](analisis-de-sistema/01-actores.md), [historias](analisis-de-sistema/02-historias-de-usuario.md), [requisitos funcionales](analisis-de-sistema/03-requisitos-funcionales.md) y [restricciones](analisis-de-sistema/05-restricciones.md) | Participantes, comportamiento esperado y condiciones de diseño. |
-| 3. Atributos de calidad | [Atributos de calidad](analisis-de-sistema/04-atributos-de-calidad.md) | Escenarios, criterios y evaluación propuesta. |
-| 4. Drivers arquitectónicos | [Drivers](analisis-de-sistema/06-drivers-arquitectonicos.md) | Necesidades que condicionan decisiones. |
-| 5. Decisiones arquitectónicas | [Registros ADR](analisis-de-sistema/07-decisiones-arquitectonicas.md) | Contexto, alternativas, decisiones y consecuencias. |
-| 6. Estilo arquitectónico | [Estilo](arquitectura/estilo-arquitectonico.md) | Organización global, servicios y límites de ejecución. |
-| Enfoque adicional | [Clean Architecture](arquitectura/enfoque/enfoque-arquitectonico.md) | Responsabilidades, contratos y dependencias internas. |
-| Vista general | [Arquitectura inicial](arquitectura/arquitectura-inicial.md) | Capas, módulos, datos y flujo de reserva. |
+| 1. Necesidad del negocio | [Necesidad del negocio](docs/01-analisis-de-sistema/00-necesidad-del-negocio.md) | Problema, objetivos, valor y límites. |
+| 2. Requisitos | [Actores](docs/01-analisis-de-sistema/01-actores.md), [historias](docs/01-analisis-de-sistema/02-historias-de-usuario.md), [requisitos funcionales](docs/01-analisis-de-sistema/03-requisitos-funcionales.md) y [restricciones](docs/01-analisis-de-sistema/05-restricciones.md) | Participantes, comportamiento esperado y condiciones de diseño. |
+| 3. Atributos de calidad | [Atributos de calidad](docs/01-analisis-de-sistema/04-atributos-de-calidad.md) | Escenarios, criterios y evaluación propuesta. |
+| 4. Drivers arquitectónicos | [Drivers](docs/01-analisis-de-sistema/06-drivers-arquitectonicos.md) | Necesidades que condicionan decisiones. |
+| 5. Decisiones arquitectónicas | [Registros ADR](docs/01-analisis-de-sistema/07-decisiones-arquitectonicas.md) | Contexto, alternativas, decisiones y consecuencias. |
+| 6. Estilo arquitectónico | [Estilo](docs/02-arquitectura-software/estilo-arquitectonico.md) | Organización global, servicios y límites de ejecución. |
+| Enfoque adicional | [Clean Architecture](docs/02-arquitectura-software/enfoque-arquitectonico.md) | Responsabilidades, contratos y dependencias internas. |
+| Vista general | [Arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md) | Capas, módulos, datos y flujo de reserva. |
 
 
 ## Diagramas
 
 | Diagrama | Qué permite entender | Imagen SVG |
 |---|---|---|
-| Arquitectura inicial | Participantes, tres capas lógicas y colaboración de servicios. | [SVG](arquitectura/imagenes/arquitectura-inicial.svg) |
-| Estilo arquitectónico | Cliente, backend administrado y servicios externos. | [SVG](arquitectura/imagenes/estilo-arquitectonico.svg) |
-| Clean Architecture | Dependencias del código y un ejemplo de confirmación de reserva. | [SVG](arquitectura/imagenes/enfoque-arquitectonico.svg) |
+| Arquitectura inicial | Participantes, tres capas lógicas y colaboración de servicios. | [SVG](img/arquitectura-inicial.svg) |
+| Estilo arquitectónico | Cliente, backend administrado y servicios externos. | [SVG](img/estilo-arquitectonico.svg) |
+| Clean Architecture | Dependencias del código y un ejemplo de confirmación de reserva. | [SVG](img/enfoque-arquitectonico.svg) |
 
 Los colores distinguen responsabilidades y las etiquetas explican su significado. Las flechas de colaboración y las dependencias del código se muestran en vistas separadas. Los diagramas se muestran directamente en SVG para conservar nitidez al ampliarlos. Este formato mantiene el texto y las formas vectoriales.
 
@@ -60,31 +60,15 @@ Efectivo y Yape se registran mediante confirmación manual. La plataforma no tra
 
 Los documentos expresan comportamiento esperado y decisiones de diseño. La estructura Clean Architecture es un objetivo gradual y los valores de rendimiento y disponibilidad son metas pendientes de medir. No se presentan porcentajes de avance ni se afirma que todas las capacidades estén implementadas o validadas.
 
-La continuación de la Guía 03 es documental: no añade funcionalidades, no requiere un boilerplate y no reestructura el código de la aplicación. La carpeta mantiene su nombre original para continuar el entregable anterior.
+El primer sprint reúne el análisis, la arquitectura, el diseño de software y el modelo C4. La demostración técnica se separa de la documentación.
 
 ## Organización
 
 ```text
 .
-├── README.md
-├── .gitignore
-├── analisis-de-sistema/
-│   ├── 00-necesidad-del-negocio.md
-│   ├── 01-actores.md
-│   ├── 02-historias-de-usuario.md
-│   ├── 03-requisitos-funcionales.md
-│   ├── 04-atributos-de-calidad.md
-│   ├── 05-restricciones.md
-│   ├── 06-drivers-arquitectonicos.md
-│   └── 07-decisiones-arquitectonicas.md
-└── arquitectura/
-    ├── arquitectura-inicial.md
-    ├── estilo-arquitectonico.md
-    ├── enfoque/
-    │   └── enfoque-arquitectonico.md
-    └── imagenes/
-        ├── arquitectura-inicial.svg
-        ├── estilo-arquitectonico.svg
-        └── enfoque-arquitectonico.svg
+├── docs/
+│   ├── 01-analisis-de-sistema/
+│   └── 02-arquitectura-software/
+├── img/
+└── README.md
 ```
-

@@ -26,4 +26,4 @@ Los drivers son requisitos, atributos de calidad o restricciones cuya influencia
 
 Las prioridades orientan el diseño, no eliminan requisitos. DA06 conserva su significado de seguridad; DA11 explicita la mantenibilidad general del núcleo y DA09 se concentra en capacidades previstas.
 
-La respuesta completa a cada driver se desarrolla en las [decisiones arquitectónicas](07-decisiones-arquitectonicas.md) y en la [matriz de trazabilidad](../arquitectura/trazabilidad-arquitectonica.md).
+La respuesta completa a cada driver se desarrolla en las [decisiones arquitectónicas](07-decisiones-arquitectonicas.md).

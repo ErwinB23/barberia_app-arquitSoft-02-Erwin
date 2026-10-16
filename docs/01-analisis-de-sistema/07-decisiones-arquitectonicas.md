@@ -6,7 +6,7 @@ Estas decisiones definen la propuesta de arquitectura de App Barbería para el l
 
 Un ADR (Architecture Decision Record) registra el contexto, la decisión, las alternativas y sus consecuencias. Se conserva su identificador cuando evoluciona y se documenta por qué se revisa.
 
-La elección central es mantener Supabase, organizar por funcionalidades y aplicar Clean Architecture gradualmente.
+La elección central es utilizar Supabase, organizar por funcionalidades y aplicar Clean Architecture gradualmente.
 
 ## Cuadro de decisiones arquitectónicas
 
@@ -36,7 +36,7 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Contexto.** Las capacidades de Barbería deben evolucionar con límites claros y una infraestructura operable por el proyecto.
 
-**Decisión.** Conservar Supabase, organizar el código por funcionalidades y delimitar responsabilidades. No se introducirán microservicios de negocio ni una API propia Node.js en esta etapa.
+**Decisión.** Utilizar Supabase, organizar el código por funcionalidades y delimitar responsabilidades. No se introducirán microservicios de negocio ni una API propia Node.js en esta etapa.
 
 **Alternativas consideradas.** API propia como monolito modular: permitiría centralizar reglas en un servidor propio, pero agrega despliegue y mantenimiento sin una necesidad identificada. Microservicios: agregan coordinación distribuida, comunicaciones y operación independientes que el alcance inicial no exige.
 
@@ -58,7 +58,7 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Alternativas consideradas.** Mantener llamadas y reglas en componentes: simplifica un primer flujo, pero mezcla responsabilidades. Reestructurar todo inmediatamente: añade riesgo y trabajo sin validar antes los contratos.
 
-**Consecuencias.** La transición será por funcionalidades. Las reglas transaccionales que se mantengan en SQL siguen vinculadas a PostgreSQL; el enfoque no implica independencia tecnológica completa del backend. Los adaptadores transforman tipos externos a tipos internos sin crear fuentes contradictorias.
+**Consecuencias.** La organización se desarrollará por funcionalidades. Las reglas transaccionales que se mantengan en SQL siguen vinculadas a PostgreSQL; el enfoque no implica independencia tecnológica completa del backend. Los adaptadores transforman tipos externos a tipos internos sin crear fuentes contradictorias.
 
 **Verificación y criterio de revisión.** Revisión de dependencias y pruebas de reglas puras, casos de uso y adaptadores. Revisar la estructura si añade capas sin una responsabilidad concreta.
 
@@ -223,6 +223,3 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 **Consecuencias.** Los objetivos preliminares de AC04 y AC05 requieren validación. Las réplicas de lectura pueden tener retraso y no reciben escrituras; la confirmación y revalidación de reservas se realizan sobre la base principal. Escalar requiere recursos y presupuesto adecuados.
 
 **Verificación y criterio de revisión.** Prueba de carga documentada con mezcla de operaciones y volumen representativos; medir percentil 95 y errores. Revisar la decisión cuando se identifique un cuello de botella que no se resuelva razonablemente con esta estrategia.
-
-
-

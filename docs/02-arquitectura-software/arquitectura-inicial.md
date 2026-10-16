@@ -4,13 +4,13 @@
 
 App Barbería utilizará una arquitectura cliente-servidor de tres capas lógicas, organizada por funcionalidades y apoyada en Supabase como backend administrado. Será una plataforma SaaS multi-tenant con PostgreSQL compartido y aislamiento lógico entre barberías.
 
-La vista inicial responde a qué componentes participan y cómo colaboran. El [estilo arquitectónico](estilo-arquitectonico.md) describe la organización global; el [enfoque Clean Architecture](enfoque/enfoque-arquitectonico.md) define responsabilidades y dependencias internas.
+La vista inicial responde a qué componentes participan y cómo colaboran. El [estilo arquitectónico](estilo-arquitectonico.md) describe la organización global; el [enfoque Clean Architecture](enfoque-arquitectonico.md) define responsabilidades y dependencias internas.
 
 Este documento presenta un diseño inicial. No afirma que las capacidades previstas estén terminadas o que los objetivos de calidad se hayan alcanzado.
 
 ## Diagrama general
 
-![Arquitectura inicial de App Barbería: actores, tres capas e integraciones](imagenes/arquitectura-inicial.svg)
+![Arquitectura inicial de App Barbería: actores, tres capas e integraciones](../../img/arquitectura-inicial.svg)
 
 **Figura 1. Vista lógica de la arquitectura inicial.** Se lee de arriba hacia abajo. Las flechas indican colaboración; no son relaciones entre tablas ni importaciones del código. Las tarjetas ámbar indican capacidades previstas.
 
@@ -99,6 +99,6 @@ Los avisos internos guardados en la transacción participan de su atomicidad. El
 
 Se medirán consultas y operaciones antes de aumentar recursos o incorporar caché. Si se evalúan réplicas, se destinarán a lecturas adecuadas a su posible retraso; la confirmación y revalidación de reservas usarán la base principal.
 
-Reseñas y ubicación son ampliaciones previstas. La incorporación de una API propia o microservicios exige una necesidad comprobada y una revisión de las [decisiones](../analisis-de-sistema/07-decisiones-arquitectonicas.md). El crecimiento por sí solo no obliga a cambiar de estilo.
+Reseñas y ubicación son ampliaciones previstas. La incorporación de una API propia o microservicios exige una necesidad comprobada y una revisión de las [decisiones](../01-analisis-de-sistema/07-decisiones-arquitectonicas.md). El crecimiento por sí solo no obliga a cambiar de estilo.
 
-Los criterios y objetivos pendientes de evaluación se encuentran en [atributos de calidad](../analisis-de-sistema/04-atributos-de-calidad.md) y [trazabilidad](trazabilidad-arquitectonica.md).
+Los criterios y objetivos pendientes de evaluación se encuentran en [atributos de calidad](../01-analisis-de-sistema/04-atributos-de-calidad.md).
