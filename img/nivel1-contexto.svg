@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1560" viewBox="0 0 1800 1560">
+<title>nivel1 contexto · App Barbería</title>
+<desc>Diagrama académico de la propuesta de arquitectura. Las etiquetas y leyendas distinguen responsabilidades, colaboración y capacidades previstas.</desc>
+<rect width="1800" height="1560" fill="#f6f9fd"/>
+<rect x="45" y="36" width="1710" height="185" rx="24" fill="#162b47" stroke="none" stroke-width="2"/>
+<text x="82" y="64" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#9fc6ff" dominant-baseline="text-before-edge">APP BARBERÍA / C4 · NIVEL 1</text>
+<text x="82" y="103" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#ffffff" dominant-baseline="text-before-edge">Contexto del sistema</text>
+<text x="82" y="164" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#d8e5f5" dominant-baseline="text-before-edge">Quiénes usan la plataforma y con qué sistemas externos se relaciona</text>
+<ellipse cx="1677.03125" cy="124.109375" rx="7.734375" ry="7.734375" fill="none" stroke="#83ddc2" stroke-width="3"/>
+<ellipse cx="1706.25" cy="124.109375" rx="7.734375" ry="7.734375" fill="none" stroke="#83ddc2" stroke-width="3"/>
+<polyline points="1679.609375,119.8125 1706.25,87.15625" fill="none" stroke="#83ddc2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1703.671875,119.8125 1677.03125,87.15625" fill="none" stroke="#83ddc2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="65" y="265" width="530" height="120" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<ellipse cx="104.0" cy="295.5" rx="7.21875" ry="7.21875" fill="none" stroke="#2468c9" stroke-width="3"/>
+<polyline points="88.25,323.0625 88.25,316.5 92.84375,308.625 115.15625,308.625 119.75,316.5 119.75,323.0625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="143" y="287" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Cliente</text>
+<text x="85" y="342" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Explora y reserva</text>
+<rect x="635" y="265" width="530" height="120" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<ellipse cx="662.1875" cy="317.15625" rx="5.90625" ry="5.90625" fill="none" stroke="#2468c9" stroke-width="3"/>
+<ellipse cx="684.5" cy="317.15625" rx="5.90625" ry="5.90625" fill="none" stroke="#2468c9" stroke-width="3"/>
+<polyline points="664.15625,313.875 684.5,288.9375" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="682.53125,313.875 662.1875,288.9375" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="713" y="287" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Barbero</text>
+<text x="655" y="342" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Gestiona su agenda</text>
+<rect x="1205" y="265" width="530" height="120" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="1228.90625" y="301.40625" width="30.1875" height="22.3125" rx="2" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<polyline points="1225.625,301.40625 1231.53125,289.59375 1256.46875,289.59375 1262.375,301.40625 1225.625,301.40625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1235.46875" y="310.59375" width="7.875" height="13.125" rx="1" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<rect x="1247.9375" y="309.28125" width="6.5625" height="6.5625" rx="1" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<text x="1283" y="287" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Administrador</text>
+<text x="1225" y="342" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Organiza su barbería</text>
+<polyline points="330,385 330,445" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="900,385 900,445" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1470,385 1470,445" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="330,445 1470,445" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="900,445 900,524" fill="none" stroke="#2468c9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="900,524 907.0,509.0 893.0,509.0" fill="#2468c9"/>
+<text x="950" y="475" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Consulta · reserva · gestión de citas</text>
+<rect x="350" y="530" width="1100" height="270" rx="18" fill="#eaf8f2" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="376.21875" y="562.4375" width="36.5625" height="32.34375" rx="6" fill="#f6f9fd" stroke="#147d68" stroke-width="3"/>
+<polyline points="376.21875,572.28125 412.78125,572.28125" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="385.359375,556.8125 385.359375,567.359375" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="403.640625,556.8125 403.640625,567.359375" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="383.953125,580.015625 390.28125,580.015625" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="398.71875,580.015625 405.046875,580.015625" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="383.953125,587.046875 390.28125,587.046875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="435" y="555" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">APP BARBERÍA</text>
+<text x="374" y="614" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">SISTEMA EN ALCANCE</text>
+<text x="374" y="655" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Conecta clientes y barberías. Organiza servicios, profesionales, disponibilidad, reservas,</text>
+<text x="374" y="689.5" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">atención y pagos manuales.</text>
+<rect x="65" y="1000" width="530" height="240" rx="18" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2"/>
+<ellipse cx="100.359375" cy="1038.765625" rx="9.84375" ry="9.84375" fill="none" stroke="#2468c9" stroke-width="3"/>
+<polyline points="107.390625,1045.796875 125.671875,1064.078125 129.890625,1059.859375 125.671875,1055.640625" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="117.9375,1055.640625 122.15625,1051.421875" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="150" y="1025" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Google</text>
+<text x="89" y="1084" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">SISTEMA EXTERNO</text>
+<text x="89" y="1125" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Permite acceder con una cuenta Google.</text>
+<rect x="635" y="1000" width="530" height="240" rx="18" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2"/>
+<rect x="659.8125" y="1032.4375" width="39.375" height="28.125" rx="4" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
+<polyline points="660.515625,1034.546875 679.5,1047.90625 698.484375,1034.546875" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="660.515625,1059.15625 673.171875,1047.203125" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="698.484375,1059.15625 685.828125,1047.203125" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="720" y="1025" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Correo electrónico</text>
+<text x="659" y="1084" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">SISTEMA EXTERNO</text>
+<text x="659" y="1125" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Entrega invitaciones y mensajes de</text>
+<text x="659" y="1159.5" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">acceso.</text>
+<rect x="1205" y="1000" width="530" height="240" rx="18" fill="#fff5e5" stroke="#d6e1ee" stroke-width="2"/>
+<ellipse cx="1249.5" cy="1039.46875" rx="12.65625" ry="12.65625" fill="none" stroke="#926018" stroke-width="3"/>
+<polyline points="1238.25,1047.90625 1249.5,1066.1875 1260.75,1047.90625" fill="none" stroke="#926018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="1249.5" cy="1038.765625" rx="4.21875" ry="4.21875" fill="none" stroke="#926018" stroke-width="3"/>
+<text x="1290" y="1025" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Mapas, previsto</text>
+<text x="1229" y="1084" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">SISTEMA EXTERNO</text>
+<text x="1229" y="1125" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Facilitará consultar ubicaciones y</text>
+<text x="1229" y="1159.5" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">proximidad.</text>
+<polyline points="900,800 900,866" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="330,866 1470,866" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="330,866 330,995" fill="none" stroke="#147d68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="330,995 337.0,980.0 323.0,980.0" fill="#147d68"/>
+<rect x="160" y="910" width="340" height="40" rx="8" fill="#f6f9fd" stroke="none" stroke-width="2"/>
+<text x="278.75" y="919" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Identidad</text>
+<polyline points="900,866 900,995" fill="none" stroke="#147d68" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polygon points="900,995 907.0,980.0 893.0,980.0" fill="#147d68"/>
+<rect x="730" y="910" width="340" height="40" rx="8" fill="#f6f9fd" stroke="none" stroke-width="2"/>
+<text x="807.5" y="919" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Comunicaciones</text>
+<polyline points="1470,866 1470,995" fill="none" stroke="#926018" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<polygon points="1470,995 1477.0,980.0 1463.0,980.0" fill="#926018"/>
+<rect x="1300" y="910" width="340" height="40" rx="8" fill="#f6f9fd" stroke="none" stroke-width="2"/>
+<text x="1363.75" y="919" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Ubicación, prevista</text>
+<rect x="65" y="1280" width="1670" height="94" rx="16" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
+<polyline points="108.0,1303.75 123.8125,1309.9375 122.4375,1327.125 115.5625,1337.4375 108.0,1342.25 100.4375,1337.4375 93.5625,1327.125 92.1875,1309.9375 108.0,1303.75" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="99.75,1322.3125 105.9375,1328.5 116.9375,1316.8125" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="153" y="1306" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">Cada barbería accede solo a su información privada según membresía y permisos.</text>
+<polyline points="65,1400 1735,1400" fill="none" stroke="#d6e1ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="65" y="1422" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">ALCANCE DE LA VISTA</text>
+<text x="65" y="1458" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Personas y sistemas, sin detalles de tecnologías ni tablas. Azul: personas y servicios externos.</text>
+<text x="65" y="1491.12" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Verde: sistema en alcance. Ámbar y línea discontinua: capacidad prevista.</text>
+</svg>
