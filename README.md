@@ -1,74 +1,85 @@
-# App Barbería: análisis del sistema y propuesta arquitectónica
+# App Barbería: primer sprint de arquitectura
 
 | Dato | Información |
 |---|---|
 | Estudiante | Erwin Brayam Inca Pauccara |
 | Curso | Arquitectura de Software - Semestre 2026-II |
-| Trabajo base | PRIMER SPRINT: ANÁLISIS, ARQUITECTURA Y DISEÑO - SEMANAS 4, 5 Y 6 |
+| Entrega | Análisis, arquitectura y diseño de software - Semanas 4, 5 y 6 |
 
-## Descripción y necesidad
+## Propuesta
 
-App Barbería es una plataforma para que clientes exploren establecimientos, consulten servicios y profesionales y programen una atención. Los barberos podrán gestionar disponibilidad y agenda; los administradores organizarán catálogo, personal, horarios, políticas y pagos autorizados.
+App Barbería permitirá explorar establecimientos, consultar servicios y profesionales y programar una atención. Los barberos organizarán su agenda y los administradores gestionarán la operación de su establecimiento.
 
-En Ayacucho-Huamanga, acudir sin conocer disponibilidad puede generar esperas y desplazamientos innecesarios. La gestión manual también dificulta coordinar citas y mantener información consistente. La propuesta busca mejorar esa planificación y proteger los datos de cada establecimiento.
+El problema que se busca resolver es la dificultad para conocer disponibilidad y coordinar citas, que puede generar esperas y cruces de atención en Ayacucho-Huamanga.
 
-La plataforma será SaaS multi-tenant: varias barberías compartirán infraestructura con aislamiento lógico y permisos contextuales. Este alcance no incluye cobros por suscripción.
+La solución será cliente-servidor, con tres capas lógicas, módulos por funcionalidad y Supabase como backend administrado. Se utilizarán Expo/React Native, TypeScript, Supabase Auth y PostgreSQL, con contratos y adaptadores según Clean Architecture.
 
-## Decisión de arquitectura
+Varias barberías compartirán infraestructura, con acceso privado limitado por usuario, recurso y membresía. Efectivo y Yape tendrán confirmación manual; no se incluye una pasarela automática, facturación fiscal o ERP. Reseñas, mapas y carga multimedia se incorporarán por etapas.
 
-**Cliente-servidor, tres capas lógicas, módulos por funcionalidades y Supabase como backend administrado.** Se aplicará Clean Architecture de forma gradual para controlar dependencias y encapsular servicios externos.
+## Vista del sistema
 
-Se mantendrán Expo/React Native y TypeScript en la presentación, Supabase Auth para identidad y PostgreSQL para persistencia y operaciones transaccionales. Edge Functions se usarán para integraciones de servidor cuando corresponda. No se incorpora una API propia Node.js ni microservicios de negocio en esta propuesta.
+![Contexto de App Barbería: personas y servicios externos](img/nivel1-contexto.svg)
 
-Las reglas transaccionales conservadas en PostgreSQL seguirán vinculadas a esa tecnología. Encapsularlas mediante contratos mejora la separación del código, pero no significa independencia completa del backend.
+Esta vista muestra personas y sistemas. La [arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md) desarrolla las capas y responsabilidades. Los diagramas se incluyen únicamente en SVG para mantener nitidez al ampliarlos.
 
-## Vista inicial
+## Documentación
 
-![Arquitectura inicial de App Barbería](img/arquitectura-inicial.svg)
+| Bloque | Archivos y propósito |
+|---|---|
+| Análisis del sistema | [Necesidad](docs/01-analisis-de-sistema/00-necesidad-del-negocio.md), [actores](docs/01-analisis-de-sistema/01-actores.md), [historias](docs/01-analisis-de-sistema/02-historias-de-usuario.md) y [requisitos](docs/01-analisis-de-sistema/03-requisitos-funcionales.md): problema, participantes y funciones. |
+| Calidad y condiciones | [Atributos](docs/01-analisis-de-sistema/04-atributos-de-calidad.md), [restricciones](docs/01-analisis-de-sistema/05-restricciones.md) y [escenarios](docs/01-analisis-de-sistema/08-escenarios-atributos-calidad.md): criterios y medidas propuestas. |
+| Justificación arquitectónica | [Drivers](docs/01-analisis-de-sistema/06-drivers-arquitectonicos.md) y [decisiones](docs/01-analisis-de-sistema/07-decisiones-arquitectonicas.md): por qué se elige cada solución. |
+| Arquitectura | [Inicial](docs/02-arquitectura-software/arquitectura-inicial.md), [estilo](docs/02-arquitectura-software/estilo-arquitectonico.md), [enfoque](docs/02-arquitectura-software/enfoque-arquitectonico.md) y [componentes](docs/02-arquitectura-software/componentes-arquitectonicos.md): estructura y colaboración. |
+| Diseño de software | [Diseño interno](docs/03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md), [patrones](docs/03-diseño-de-software/diseño-interno/patrones-de-diseño.md) y [SOLID](docs/03-diseño-de-software/diseño-interno/principios-de-diseño.md): detalle del flujo CrearReserva. |
+| Modelo C4 | [C1: contexto](docs/04-modelo-c4/Nivel1-DiagramadeContextodelSistema.md), [C2: contenedores](docs/04-modelo-c4/Nivel2-DiagramadeContenedores.md), [C3: componentes](docs/04-modelo-c4/Nivel3-Diagrama-de-Componentes.md) y [C4: código](docs/04-modelo-c4/Nivel4-DiagramadeCodigo.md): vistas de mayor a menor alcance. |
+| Tecnología | [Demostración de reservas](tecnologia/barberia-clean-architecture/README.md): caso de uso, contrato, adaptador, pruebas y tres resultados simulados. |
 
-La imagen presenta actores, capas, seguridad e integraciones. Las capacidades previstas aparecen en ámbar. Consultar la [explicación de la arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md).
-
-## Documentos del proceso arquitectónico
-
-| Etapa | Documento | Contenido |
-|---|---|---|
-| 1. Necesidad del negocio | [Necesidad del negocio](docs/01-analisis-de-sistema/00-necesidad-del-negocio.md) | Problema, objetivos, valor y límites. |
-| 2. Requisitos | [Actores](docs/01-analisis-de-sistema/01-actores.md), [historias](docs/01-analisis-de-sistema/02-historias-de-usuario.md), [requisitos funcionales](docs/01-analisis-de-sistema/03-requisitos-funcionales.md) y [restricciones](docs/01-analisis-de-sistema/05-restricciones.md) | Participantes, comportamiento esperado y condiciones de diseño. |
-| 3. Atributos de calidad | [Atributos de calidad](docs/01-analisis-de-sistema/04-atributos-de-calidad.md) | Escenarios, criterios y evaluación propuesta. |
-| 4. Drivers arquitectónicos | [Drivers](docs/01-analisis-de-sistema/06-drivers-arquitectonicos.md) | Necesidades que condicionan decisiones. |
-| 5. Decisiones arquitectónicas | [Registros ADR](docs/01-analisis-de-sistema/07-decisiones-arquitectonicas.md) | Contexto, alternativas, decisiones y consecuencias. |
-| 6. Estilo arquitectónico | [Estilo](docs/02-arquitectura-software/estilo-arquitectonico.md) | Organización global, servicios y límites de ejecución. |
-| Enfoque adicional | [Clean Architecture](docs/02-arquitectura-software/enfoque-arquitectonico.md) | Responsabilidades, contratos y dependencias internas. |
-| Vista general | [Arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md) | Capas, módulos, datos y flujo de reserva. |
-
-
-## Diagramas
-
-| Diagrama | Qué permite entender | Imagen SVG |
-|---|---|---|
-| Arquitectura inicial | Participantes, tres capas lógicas y colaboración de servicios. | [SVG](img/arquitectura-inicial.svg) |
-| Estilo arquitectónico | Cliente, backend administrado y servicios externos. | [SVG](img/estilo-arquitectonico.svg) |
-| Clean Architecture | Dependencias del código y un ejemplo de confirmación de reserva. | [SVG](img/enfoque-arquitectonico.svg) |
-
-Los colores distinguen responsabilidades y las etiquetas explican su significado. Las flechas de colaboración y las dependencias del código se muestran en vistas separadas. Los diagramas se muestran directamente en SVG para conservar nitidez al ampliarlos. Este formato mantiene el texto y las formas vectoriales.
-
-## Alcance y estado de la propuesta
-
-El núcleo contempla identidad, perfiles, barberías, catálogo, barberos, horarios, disponibilidad, reservas, atención, pagos, invitaciones, membresías, favoritos, notificaciones e historial. Reseñas, geolocalización y carga multimedia se prevén por etapas.
-
-Efectivo y Yape se registran mediante confirmación manual. La plataforma no transfiere dinero, no integra una pasarela ni emite comprobantes fiscales. Los recordatorios iniciales son internos; push no forma parte de esta versión.
-
-Los documentos expresan comportamiento esperado y decisiones de diseño. La estructura Clean Architecture es un objetivo gradual y los valores de rendimiento y disponibilidad son metas pendientes de medir. No se presentan porcentajes de avance ni se afirma que todas las capacidades estén implementadas o validadas.
-
-El primer sprint reúne el análisis, la arquitectura, el diseño de software y el modelo C4. La demostración técnica se separa de la documentación.
-
-## Organización
+## Organización del repositorio
 
 ```text
 .
 ├── docs/
-│   ├── 01-analisis-de-sistema/
-│   └── 02-arquitectura-software/
-├── img/
+│   ├── 01-analisis-de-sistema/       Necesidad, requisitos, calidad, ADR y escenarios
+│   ├── 02-arquitectura-software/    Capas, estilo, enfoque y componentes
+│   ├── 03-diseño-de-software/
+│   │   └── diseño-interno/         Módulo, patrones y principios
+│   └── 04-modelo-c4/               Contexto, contenedores, componentes y código
+├── img/                           Diagramas SVG
+├── tecnologia/
+│   └── barberia-clean-architecture/ Demostración mínima en TypeScript
+├── .gitignore
 └── README.md
 ```
+
+## Ejecutar la demostración
+
+Con Node.js 22.18 o superior y npm, desde la carpeta del ejemplo:
+
+```bash
+cd tecnologia/barberia-clean-architecture
+npm ci
+npm run check
+npm test
+npm run demo
+```
+
+La demo simula respuestas RPC y no requiere credenciales. Muestra reserva confirmada, horario ocupado y selección incompleta. Node se utiliza para ejecutar el ejemplo; el backend propuesto es Supabase.
+
+Las pruebas verifican el código y el contrato del ejemplo. Seguridad, concurrencia y capacidad del backend deberán evaluarse con los escenarios definidos; las metas de calidad no se presentan como resultados medidos.
+
+## Recorrido para exponer en 12 minutos
+
+| Tiempo | Qué explicar |
+|---|---|
+| 2 minutos | Problema, usuarios y requisitos principales. |
+| 2 minutos | Drivers y decisiones: Supabase, aislamiento y transacciones. |
+| 3 minutos | C1, C2 y C3: sistema, servicios y componentes. |
+| 2 minutos | C4, patrones y SOLID del flujo de reserva. |
+| 2 minutos | Demostración: éxito, conflicto y entrada inválida. |
+| 1 minuto | Escenarios de calidad y alcance previsto. |
+
+Cada componente se relaciona con sus requisitos en el documento correspondiente. La entrega se realiza mediante la URL del repositorio y su exposición.
+
+## Referencia de clase
+
+La organización sigue la Guía 04 y el [repositorio de la profesora](https://github.com/devlizbethjaico/Marketplace-arquitSoft-02). Se conserva un [fork de referencia](https://github.com/ErwinB23/Marketplace-arquitSoft-02). Los contenidos y diagramas de este repositorio corresponden a App Barbería.

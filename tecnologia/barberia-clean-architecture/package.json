@@ -1,0 +1,17 @@
+{
+  "name": "barberia-clean-architecture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "demo": "node src/presentacion/demo.ts",
+    "test": "node --test pruebas/reserva.test.mjs",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2"
+  }
+}

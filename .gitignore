@@ -11,3 +11,7 @@ Desktop.ini
 .env.*
 !.env.example
 *.log
+
+# Dependencias de la demostración
+node_modules/
+dist/
