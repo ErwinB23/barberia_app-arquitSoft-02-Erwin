@@ -56,7 +56,6 @@ Esta vista muestra personas y sistemas. La [arquitectura inicial](docs/02-arquit
 Con Node.js 22.18 o superior y npm, desde la carpeta del ejemplo:
 
 ```bash
-cd tecnologia/barberia-clean-architecture
 npm ci
 npm run check
 npm test
@@ -66,20 +65,3 @@ npm run demo
 La demo simula respuestas RPC y no requiere credenciales. Muestra reserva confirmada, horario ocupado y selección incompleta. Node se utiliza para ejecutar el ejemplo; el backend propuesto es Supabase.
 
 Las pruebas verifican el código y el contrato del ejemplo. Seguridad, concurrencia y capacidad del backend deberán evaluarse con los escenarios definidos; las metas de calidad no se presentan como resultados medidos.
-
-## Recorrido para exponer en 12 minutos
-
-| Tiempo | Qué explicar |
-|---|---|
-| 2 minutos | Problema, usuarios y requisitos principales. |
-| 2 minutos | Drivers y decisiones: Supabase, aislamiento y transacciones. |
-| 3 minutos | C1, C2 y C3: sistema, servicios y componentes. |
-| 2 minutos | C4, patrones y SOLID del flujo de reserva. |
-| 2 minutos | Demostración: éxito, conflicto y entrada inválida. |
-| 1 minuto | Escenarios de calidad y alcance previsto. |
-
-Cada componente se relaciona con sus requisitos en el documento correspondiente. La entrega se realiza mediante la URL del repositorio y su exposición.
-
-## Referencia de clase
-
-La organización sigue la Guía 04 y el [repositorio de la profesora](https://github.com/devlizbethjaico/Marketplace-arquitSoft-02). Se conserva un [fork de referencia](https://github.com/ErwinB23/Marketplace-arquitSoft-02). Los contenidos y diagramas de este repositorio corresponden a App Barbería.

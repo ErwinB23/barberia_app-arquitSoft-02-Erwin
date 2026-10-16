@@ -2,7 +2,7 @@
 
 ## Componente seleccionado
 
-Se detalla el flujo CrearReserva del componente Reservas y agenda de C3. Se muestran los tipos, clases, interfaz y colaboración que tendrá la demostración técnica. No es necesario dibujar todas las clases del sistema para explicar este flujo.
+Se detalla el flujo CrearReserva del componente Reservas y agenda de C3. Se muestran sus tipos, clases, interfaz y colaboración.
 
 ## Estructura
 

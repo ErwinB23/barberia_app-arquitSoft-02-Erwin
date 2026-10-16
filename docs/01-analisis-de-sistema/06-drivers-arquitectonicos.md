@@ -22,7 +22,7 @@ Los drivers son requisitos, atributos de calidad o restricciones cuya influencia
 |---|---|---|
 | Alta | DA01, DA02, DA04, DA05, DA06 | Protegen acceso, integridad, estados e historial; un fallo afecta directamente una operación de negocio. |
 | Media | DA03, DA07, DA08, DA10, DA11 | Determinan respuesta, comunicaciones, crecimiento, experiencia y evolución del núcleo. |
-| Evolución del alcance | DA09 | Prepara reseñas, mapas y otros cambios sin exigir su implementación en el laboratorio. |
+| Evolución del alcance | DA09 | Prepara la incorporación gradual de reseñas, mapas y otros cambios. |
 
 Las prioridades orientan el diseño, no eliminan requisitos. DA06 conserva su significado de seguridad; DA11 explicita la mantenibilidad general del núcleo y DA09 se concentra en capacidades previstas.
 

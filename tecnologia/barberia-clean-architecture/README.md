@@ -15,7 +15,7 @@ npm run demo
 
 La demo funciona sin credenciales ni red: simula la respuesta RPC para mostrar confirmación, conflicto de horario y entrada incompleta.
 
-## Archivos que conviene abrir
+## Organización del código
 
 | Archivo | Qué explica |
 |---|---|

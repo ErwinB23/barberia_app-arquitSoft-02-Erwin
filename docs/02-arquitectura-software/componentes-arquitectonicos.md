@@ -8,7 +8,7 @@ Definir responsabilidades y colaboraciones de App Barbería. Los módulos repres
 
 ![Componentes internos de la aplicación Barbería y su relación con Supabase](../../img/nivel3-componentes.svg)
 
-La vista detalla la aplicación Expo/React Native y mantiene los servicios de servidor fuera de ese contenedor. Es la misma vista que se desarrollará en el nivel C3, para no mantener dos diagramas distintos de los mismos componentes.
+La vista detalla la aplicación Expo/React Native y mantiene los servicios de servidor fuera de ese contenedor. Corresponde al nivel C3 del modelo C4.
 
 ## Responsabilidades y origen
 

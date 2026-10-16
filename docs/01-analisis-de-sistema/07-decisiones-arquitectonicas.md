@@ -2,7 +2,7 @@
 
 ## Alcance y estado
 
-Estas decisiones definen la propuesta de arquitectura de App Barbería para el laboratorio.
+Estas decisiones definen la propuesta de arquitectura de App Barbería.
 
 Un ADR (Architecture Decision Record) registra el contexto, la decisión, las alternativas y sus consecuencias. Se conserva su identificador cuando evoluciona y se documenta por qué se revisa.
 
