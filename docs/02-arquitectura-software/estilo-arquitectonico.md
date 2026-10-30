@@ -6,6 +6,8 @@
 
 ![Estilo arquitectónico y límites de ejecución de App Barbería](../../img/estilo-arquitectonico.svg)
 
+Las tres franjas muestran presentación, aplicación/negocio y datos. En la segunda capa, el cliente coordina la solicitud y el servidor aplica permisos y reglas definitivas; las flechas distinguen solicitud y respuesta. Debajo se muestran los módulos del negocio y cómo varias barberías comparten la plataforma con protección de su información privada.
+
 ## Qué significa
 
 | Dimensión | Aplicación en Barbería |
@@ -18,7 +20,7 @@
 
 ## Límites de ejecución
 
-El dispositivo ejecuta interfaz y coordinación. Auth gestiona identidad; la API expone consultas y RPC; PostgreSQL aplica reglas definitivas y transacciones. Las Edge Functions integran servicios como correo cuando se necesita ejecución segura de servidor.
+La aplicación cliente, en el dispositivo o navegador, ejecuta la interfaz y coordina las solicitudes. Auth gestiona identidad; la API expone consultas y RPC; PostgreSQL aplica reglas definitivas y transacciones. Las Edge Functions integran servicios como correo cuando se necesita ejecución segura de servidor.
 
 Las funciones SQL pueden combinar negocio y acceso a datos dentro del mismo servicio. Las capas lógicas y los contenedores C4 describen aspectos distintos del sistema.
 

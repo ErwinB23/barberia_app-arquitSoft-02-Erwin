@@ -6,7 +6,7 @@ App Barbería se organizará como una solución cliente-servidor con tres capas 
 
 ![Arquitectura inicial de App Barbería](../../img/arquitectura-inicial.svg)
 
-Se lee de arriba hacia abajo: actores, presentación, aplicación/negocio y datos. Las tarjetas ámbar indican capacidades previstas. Son responsabilidades lógicas, no tres servidores obligatorios.
+Se lee de arriba hacia abajo: actores, presentación, aplicación/negocio y datos. Las tarjetas ámbar indican capacidades previstas. Son responsabilidades lógicas, no tres servidores obligatorios. La aplicación móvil y la aplicación web pueden compartir código, pero C2 las representa como clientes separados por su entorno de ejecución. Android es la prioridad y web se valida por etapas.
 
 ## Capas
 

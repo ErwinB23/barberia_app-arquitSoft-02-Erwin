@@ -6,6 +6,8 @@ Esta vista abre **App Barbería**, el sistema de C1. Muestra aplicaciones, servi
 
 ![C2: aplicaciones, servicios gestionados y datos](../../img/nivel2-contenedores.svg)
 
+Para leerlo, sigue las líneas azules desde móvil y las violetas desde web. Ambos clientes utilizan las conexiones **1: acceso e identidad**, **2: consultas y reservas** y **3: invitaciones**, explicadas debajo del diagrama. Son identificadores de relaciones, no pasos consecutivos. Los puentes indican que dos líneas se cruzan sin conectarse. El backend y sus integraciones se leen de izquierda a derecha; mapas queda separado como ampliación prevista.
+
 ## Contenedores y servicios
 
 | Nombre del diagrama | Tecnología | Responsabilidad |

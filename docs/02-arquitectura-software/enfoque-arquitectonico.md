@@ -6,6 +6,8 @@ Separar reglas, coordinación, interfaz y acceso externo. La propuesta organiza 
 
 ![Dependencias y ejecución del enfoque Clean Architecture en Barbería](../../img/enfoque-arquitectonico.svg)
 
+El recuadro central agrupa Aplicación y Dominio. Presentación e Infraestructura quedan en los bordes y dependen del código interior. Las flechas superiores muestran dependencias de código; las inferiores, llamadas durante la confirmación de una reserva. Composición conecta las implementaciones al iniciar.
+
 ## Responsabilidades
 
 | Parte | Qué contiene | Ejemplo para una reserva |
@@ -40,7 +42,7 @@ Los módulos pueden usar funciones o clases según la responsabilidad. No se cre
 
 ## Flujo de confirmación
 
-La presentación llama a CrearReserva. Este normaliza la entrada y solicita confirmar mediante ReservaTransaccionalGateway. SupabaseReservaAdapter transforma los campos e invoca create_reservation por RPC. El resultado se traduce a confirmación, conflicto o error controlado.
+La presentación llama a CrearReserva. Este normaliza la entrada y solicita confirmar mediante ReservaTransaccionalGateway. SupabaseReservaAdapter transforma los campos y llama a la API de datos de Supabase mediante HTTPS/RPC. PostgREST ejecuta la función create_reservation en PostgreSQL, que valida y confirma la operación. El resultado se traduce a confirmación, conflicto o error controlado.
 
 El contrato representa una operación completa: no se hacen llamadas independientes para guardar reserva, servicios y pago desde el cliente.
 

@@ -1,42 +1,38 @@
 # C4. Código
 
-## Componente seleccionado
+## Componente que se abre
 
-Se detalla el flujo CrearReserva del componente Reservas y agenda de C3. Se muestran sus tipos, clases, interfaz y colaboración.
+Se detalla **Coordinación de reservas**, el componente violeta mostrado en C3. El marco violeta contiene la clase CrearReserva y la interfaz que utiliza. Debajo quedan elementos de los componentes vecinos: la función y los tipos del Modelo de reserva, en verde, y la clase del Adaptador de reservas, en ámbar.
 
-## Estructura
+![C4: clases, interfaz, tipos y función independiente](../../img/nivel4-codigo.svg)
 
-![Tipos, contrato y adaptador de CrearReserva](../../img/nivel4-codigo.svg)
+## Correspondencia con el código
 
-| Elemento | Tipo | Responsabilidad |
+| Elemento | Tipo y ubicación | Responsabilidad |
 |---|---|---|
-| SolicitudReserva | Tipo de dominio | Datos seleccionados por el cliente. |
-| normalizarSolicitud | Función de dominio | Normalizar y validar la forma de entrada; no comprueba permisos ni disponibilidad. |
-| ResultadoReserva | Tipo de dominio | Éxito con id o fallo con código y mensaje. |
-| CrearReserva | Clase de aplicación | Coordinar validación y llamada al contrato. |
-| ReservaTransaccionalGateway | Interfaz de aplicación | Definir confirmar(solicitud) como una operación completa. |
-| SupabaseReservaAdapter | Clase de infraestructura | Implementar el contrato con create_reservation por RPC. |
-| crearFlujoReserva | Función de composición | Construir el adaptador y entregarlo al caso de uso. |
+| CrearReserva | Clase de aplicacion/crear-reserva.ts | Recibe el gateway, normaliza la entrada y coordina la confirmación. |
+| ReservaTransaccionalGateway | Interfaz de aplicacion/reserva-transaccional.contrato.ts | Define `confirmar(solicitud: SolicitudReserva): Promise<ResultadoReserva>`. |
+| SolicitudReserva | Tipo de dominio/reserva.ts | barberId, items, startsAt y paymentMethod. |
+| ResultadoReserva | Unión de tipos de dominio/reserva.ts | Éxito con reservaId o fallo con codigo y mensaje. |
+| normalizarSolicitud | Función independiente de dominio/reserva.ts | Recibe unknown y devuelve SolicitudReserva o lanza un error de entrada. |
+| SupabaseReservaAdapter | Clase del componente Adaptador de reservas | Implementa el gateway y mapea la RPC. |
 
-Las flechas continuas representan referencias; las discontinuas, uso de tipos. El triángulo hueco identifica implementación de una interfaz. normalizarSolicitud es una función independiente del mismo archivo de tipos, no un método de SolicitudReserva.
+CrearReserva dispone de un constructor que recibe ReservaTransaccionalGateway. Su método `ejecutar(entrada: unknown)` devuelve `Promise<ResultadoReserva>`. La función normalizarSolicitud no pertenece al tipo SolicitudReserva; se representa por separado.
 
-## Secuencia
+## Lectura de relaciones
 
-![Secuencia de confirmación de reserva](../../img/nivel4-secuencia.svg)
+- **CrearReserva usa el contrato:** ReservaTransaccionalGateway define la operación confirmar que necesita el caso de uso. El contrato es una interfaz, no otro servidor.
+- **CrearReserva llama a normalizarSolicitud:** la función comprueba formato y datos básicos antes de solicitar la confirmación. Los permisos y la disponibilidad definitiva se comprueban en servidor.
+- **SupabaseReservaAdapter implementa el contrato:** la línea discontinua con triángulo apunta a la interfaz que cumple esta clase. Composición construye el adaptador y lo entrega a CrearReserva, como muestra C3.
 
-| Paso | Acción |
-|---|---|
-| 1 | Presentación entrega servicios, barbero, horario y medio de pago a CrearReserva. |
-| 2 | El caso de uso normaliza la entrada y usa ReservaTransaccionalGateway. |
-| 3 | SupabaseReservaAdapter mapea los campos e invoca create_reservation con la sesión del usuario. |
-| 4 | PostgreSQL revalida permisos, disponibilidad y políticas y ejecuta las escrituras relacionadas. |
-| 5 | El adaptador convierte el UUID devuelto en éxito o el conflicto 23P01 en HORARIO_OCUPADO. |
-| 6 | Presentación informa el resultado y permite continuar. |
+Las tarjetas SolicitudReserva y ResultadoReserva explican los tipos utilizados en las firmas. `unknown` indica una entrada aún por validar; `Promise<ResultadoReserva>` indica que el resultado se obtiene de forma asíncrona. El diagrama selecciona los elementos relevantes de código; la tabla anterior conserva su ubicación exacta.
 
-Una entrada inválida se rechaza sin llamada remota. Ante falta de autorización se deniega la operación. Si se pierde la respuesta, se consultan las citas antes de reenviar; la escritura no se reintenta automáticamente.
+## Secuencia complementaria
 
-## Qué se demuestra
+![Secuencia de llamadas y respuestas de confirmación](../../img/nivel4-secuencia.svg)
 
-El diseño hace visible Adapter, el contrato transaccional, la composición y la inversión de dependencias. La reserva se confirma en servidor; elegir cash o yape no confirma recepción del pago.
+La secuencia es una vista dinámica adicional, distinta del diagrama estático de código. Incluye presentación, caso de uso, adaptador, API de datos y PostgreSQL. Conserva los nombres de C2 y C3 y permite seguir la solicitud hasta la función create_reservation.
 
-La demostración simula respuestas de la RPC para explicar el recorrido. La concurrencia y los permisos reales requieren pruebas de PostgreSQL según EQ-01, EQ-02 y EQ-03. El [diseño interno](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md) desarrolla responsabilidades y errores.
+Una entrada inválida evita la llamada remota. Un conflicto 23P01 informa horario ocupado. Si se pierde la respuesta, se consultan las citas antes de reenviar. La demo simula el servidor; permisos y concurrencia reales se verificarán mediante EQ-01, EQ-02 y EQ-03. Elegir cash o yape no confirma recepción del pago.
+
+El [diseño interno](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md) y la [demostración técnica](../../tecnologia/barberia-clean-architecture/README.md) completan esta vista.

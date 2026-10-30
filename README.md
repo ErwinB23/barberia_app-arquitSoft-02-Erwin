@@ -20,7 +20,7 @@ Varias barberías compartirán infraestructura, con acceso privado limitado por 
 
 ![Contexto de App Barbería: personas y servicios externos](img/nivel1-contexto.svg)
 
-Esta vista muestra personas y sistemas. La [arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md) desarrolla las capas y responsabilidades. Los diagramas se incluyen únicamente en SVG para mantener nitidez al ampliarlos.
+Esta vista muestra personas y sistemas. La [arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md) desarrolla las capas y responsabilidades. Los diagramas se incluyen únicamente en SVG para mantener nitidez al ampliarlos. El modelo C4 mantiene un acercamiento concreto: App Barbería en C1, Aplicación móvil en C2, Coordinación de reservas en C3 y su clase y contrato en C4. La secuencia de reserva es una vista dinámica complementaria.
 
 ## Documentación
 
