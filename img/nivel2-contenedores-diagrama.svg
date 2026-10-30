@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="2150" viewBox="0 0 1900 2150" role="img" aria-labelledby="title desc">
+<title id="title">C2 · Contenedores de App Barbería</title>
+<desc id="desc">Abre el sistema de C1: cada aplicación, servicio y almacén tiene una responsabilidad de ejecución.</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="1" dy="2" stdDeviation="1" flood-opacity="0.13"/></filter></defs>
+<rect width="1900" height="2150" fill="white"/>
+<text x="646.01" y="55.84" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#202124">C2 · Contenedores de App Barbería</text>
+<text x="441.00" y="99.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Abre el sistema de C1: cada aplicación, servicio y almacén tiene una responsabilidad de ejecución.</text>
+<rect x="60" y="335" width="1780" height="1450" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="78.00" y="370.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">APP BARBERÍA · límite del sistema</text>
+<rect x="100" y="750" width="380" height="195" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="191.00" y="809.12" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">Aplicación móvil</text>
+<text x="127.50" y="847.55" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Contenedor · Expo / React Native</text>
+<text x="146.02" y="875.05" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">TypeScript · prioridad Android</text>
+<text x="144.50" y="902.55" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Interfaz y coordinación por rol.</text>
+<rect x="1420" y="750" width="380" height="195" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1519.50" y="809.12" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">Aplicación web</text>
+<text x="1456.00" y="847.55" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Contenedor · React Native Web</text>
+<text x="1446.01" y="875.05" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">TypeScript · validación por etapas</text>
+<text x="1484.51" y="902.55" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Acceso desde navegador.</text>
+<rect x="700" y="450" width="500" height="160" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="856.01" y="504.44" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Supabase Auth</text>
+<text x="770.50" y="544.12" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Contenedor / servicio administrado</text>
+<text x="841.00" y="572.87" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Identidad y sesiones.</text>
+<rect x="700" y="850" width="500" height="160" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="837.50" y="904.44" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Función de correo</text>
+<text x="740.01" y="944.12" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Contenedor · Edge Function / TypeScript</text>
+<text x="745.50" y="972.87" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Autoriza y solicita envío de invitaciones.</text>
+<rect x="700" y="1250" width="500" height="160" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="872.00" y="1304.44" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">API de datos</text>
+<text x="755.50" y="1344.12" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Contenedor · PostgREST (Supabase)</text>
+<text x="758.00" y="1372.87" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Consultas REST y operaciones RPC.</text>
+<path d="M700 1562a250.0 17 0 0 1 500 0V1728a250.0 17 0 0 1 -500 0Z" fill="#effff7" stroke="#008765" stroke-width="2" filter="url(#shadow)"/>
+<ellipse cx="950.0" cy="1562" rx="250.0" ry="17" fill="#effff7" stroke="#008765" stroke-width="2"/>
+<text x="865.50" y="1612.75" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">Base de datos</text>
+<text x="784.01" y="1652.12" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Contenedor · PostgreSQL / SQL</text>
+<text x="797.00" y="1680.87" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Datos, reglas y transacciones</text>
+<text x="792.00" y="1709.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Permisos, RLS y restricciones.</text>
+<rect x="700" y="140" width="500" height="150" fill="#f1f2f5" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="905.50" y="188.19" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Google</text>
+<text x="864.00" y="228.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Sistema externo</text>
+<text x="898.00" y="258.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Identidad.</text>
+<rect x="100" y="1860" width="400" height="165" fill="#fff2d8" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="188.00" y="1915.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Servicio de mapas</text>
+<text x="169.00" y="1956.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Sistema externo previsto</text>
+<text x="186.00" y="1986.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Mapas y ubicaciones.</text>
+<rect x="1420" y="1860" width="380" height="165" fill="#f1f2f5" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1500.50" y="1916.62" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">Servicio de correo</text>
+<text x="1526.50" y="1955.99" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Sistema externo</text>
+<text x="1467.50" y="1984.74" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Resend / correo de acceso.</text>
+<polyline points="480,785 570,785 570,560 700,560" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="700.00,560.00 687.00,554.00 687.00,566.00" fill="#454545"/>
+<rect x="386" y="627" width="96.00" height="61.00" fill="#f8f8f5"/>
+<text x="390.00" y="650.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">autentica</text>
+<text x="390.00" y="678.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">HTTPS</text>
+<polyline points="1420,785 1330,785 1330,560 1200,560" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1200.00,560.00 1213.00,566.00 1213.00,554.00" fill="#454545"/>
+<rect x="1346" y="627" width="96.00" height="61.00" fill="#f8f8f5"/>
+<text x="1350.00" y="650.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">autentica</text>
+<text x="1350.00" y="678.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">HTTPS</text>
+<polyline points="480,875 700,875" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="700.00,875.00 687.00,869.00 687.00,881.00" fill="#454545"/>
+<rect x="491" y="797" width="172.00" height="58.50" fill="#f8f8f5"/>
+<text x="495.00" y="819.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">solicita invitación</text>
+<text x="495.00" y="845.99" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">HTTPS</text>
+<polyline points="1420,875 1200,875" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1200.00,875.00 1213.00,881.00 1213.00,869.00" fill="#454545"/>
+<rect x="1211" y="797" width="172.00" height="58.50" fill="#f8f8f5"/>
+<text x="1215.00" y="819.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">solicita invitación</text>
+<text x="1215.00" y="845.99" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">HTTPS</text>
+<polyline points="480,915 570,915 570,1325 700,1325" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="700.00,1325.00 687.00,1319.00 687.00,1331.00" fill="#454545"/>
+<rect x="586" y="1087" width="211.00" height="61.00" fill="#f8f8f5"/>
+<text x="590.00" y="1110.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">consulta y reserva</text>
+<text x="590.00" y="1138.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">HTTPS · REST/RPC</text>
+<polyline points="1420,915 1330,915 1330,1325 1200,1325" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1200.00,1325.00 1213.00,1331.00 1213.00,1319.00" fill="#454545"/>
+<rect x="1346" y="1087" width="211.00" height="61.00" fill="#f8f8f5"/>
+<text x="1350.00" y="1110.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">consulta y reserva</text>
+<text x="1350.00" y="1138.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">HTTPS · REST/RPC</text>
+<polyline points="950,1010 950,1250" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="950.00,1250.00 956.00,1237.00 944.00,1237.00" fill="#454545"/>
+<rect x="971" y="1092" width="174.00" height="88.50" fill="#f8f8f5"/>
+<text x="975.00" y="1115.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">verifica invitación</text>
+<text x="975.00" y="1143.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">y permisos</text>
+<text x="975.00" y="1170.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">HTTPS / REST</text>
+<polyline points="950,1410 950,1545" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="950.00,1545.00 956.00,1532.00 944.00,1532.00" fill="#454545"/>
+<rect x="971" y="1447" width="176.00" height="61.00" fill="#f8f8f5"/>
+<text x="975.00" y="1470.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">ejecuta consultas</text>
+<text x="975.00" y="1498.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">y funciones SQL</text>
+<polyline points="950,450 950,290" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="950.00,290.00 944.00,303.00 956.00,303.00" fill="#454545"/>
+<rect x="971" y="362" width="167.00" height="61.00" fill="#f8f8f5"/>
+<text x="975.00" y="385.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">delega identidad</text>
+<text x="975.00" y="413.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">OAuth / HTTPS</text>
+<polyline points="1200,490 1870,490 1870,1940 1800,1940" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1800.00,1940.00 1813.00,1946.00 1813.00,1934.00" fill="#454545"/>
+<rect x="1496" y="1792" width="279.00" height="58.50" fill="#f8f8f5"/>
+<text x="1500.00" y="1814.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">confirmación y recuperación</text>
+<text x="1500.00" y="1840.99" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">SMTP configurado</text>
+<polyline points="1200,965 1250,965 1250,1940 1420,1940" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1420.00,1940.00 1407.00,1934.00 1407.00,1946.00" fill="#454545"/>
+<rect x="1046" y="1802" width="181.00" height="61.00" fill="#f8f8f5"/>
+<text x="1050.00" y="1825.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">envía invitaciones</text>
+<text x="1050.00" y="1853.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">HTTPS (Resend)</text>
+<polyline points="290,945 290,1860" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 6"/>
+<polygon points="290.00,1860.00 296.00,1847.00 284.00,1847.00" fill="#454545"/>
+<rect x="306" y="1647" width="210.00" height="61.00" fill="#f8f8f5"/>
+<text x="310.00" y="1670.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">consulta ubicaciones</text>
+<text x="310.00" y="1698.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">HTTPS · previsto</text>
+<circle cx="1250" cy="1325" r="11" fill="#ffffe3"/>
+<path d="M1250 1313V1337" stroke="#454545" stroke-width="2"/>
+<path d="M1262 1325 C1259 1305 1241 1305 1238 1325" fill="none" stroke="#ffffe3" stroke-width="7"/>
+<path d="M1262 1325 C1259 1305 1241 1305 1238 1325" fill="none" stroke="#454545" stroke-width="2"/>
+<text x="45.00" y="2090.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Flechas: solicitudes; las respuestas regresan por la misma interfaz. Puente: cruce sin conexión. Ámbar: previsto.</text>
+<text x="45.00" y="2130.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Los tres roles de C1 utilizan móvil o web. RPC: llamada a una función. RLS: políticas de acceso por fila.</text>
+</svg>

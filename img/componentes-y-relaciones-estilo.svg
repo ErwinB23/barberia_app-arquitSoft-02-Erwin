@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2600" height="2210" viewBox="0 0 2600 2210"><defs><marker id="arrow" markerWidth="11" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#627284"/></marker><marker id="flow" markerWidth="11" markerHeight="10" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L10 5 L0 10 Z" fill="#388269"/></marker></defs><rect x="0" y="0" width="2600" height="2190" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="1300" y="60" font-family="Arial, sans-serif" font-size="42" font-weight="700" fill="#223449" text-anchor="middle">APP BARBERÍA · COMPONENTES Y RELACIONES DEL SISTEMA</text>
+<text x="1300" y="105" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#506176" text-anchor="middle">Estilo cliente-servidor · Organización modular · Tres capas lógicas · Supabase como backend administrado</text>
+<rect x="610" y="145" width="390" height="85" rx="4" fill="#F4F5F7" stroke="#627284" stroke-width="2" />
+<text x="805" y="197" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#223449" text-anchor="middle">Cliente</text>
+<rect x="1100" y="145" width="390" height="85" rx="4" fill="#F4F5F7" stroke="#627284" stroke-width="2" />
+<text x="1295" y="197" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#223449" text-anchor="middle">Barbero</text>
+<rect x="1590" y="145" width="390" height="85" rx="4" fill="#F4F5F7" stroke="#627284" stroke-width="2" />
+<text x="1785" y="197" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#223449" text-anchor="middle">Administrador</text>
+<path d="M805 230 V252 H1785 V230 M1295 230 V252" fill="none" stroke="#627284" stroke-width="3"/>
+<rect x="70" y="280" width="2460" height="830" rx="4" fill="#FFFEF3" stroke="#8271AE" stroke-width="2" stroke-dasharray="11 7"/>
+<rect x="92" y="260" width="880" height="41" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="110" y="291" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#223449" text-anchor="start">CLIENTE · Dispositivo móvil / navegador</text>
+<path d="M1295 252 V340" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="1315" y="295" width="380" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="1320" y="320" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">utilizan las vistas de su rol</text>
+<rect x="750" y="340" width="1100" height="120" rx="4" fill="#EBF2FC" stroke="#648AB3" stroke-width="2" />
+<text x="1300" y="387" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#223449" text-anchor="middle">1. PRESENTACIÓN · Aplicación móvil y acceso web</text>
+<text x="1300" y="432" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#506176" text-anchor="middle">Expo · React Native · Expo Router · Pantallas según rol</text>
+<path d="M1300 460 V530" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="1315" y="478" width="365" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="1320" y="503" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">invoca los casos de uso</text>
+<rect x="110" y="530" width="2380" height="410" rx="4" fill="#FFFDF8" stroke="#8271AE" stroke-width="2" />
+<text x="140" y="569" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#223449" text-anchor="start">2. APLICACIÓN Y NEGOCIO · Módulos funcionales en la aplicación</text>
+<rect x="140" y="600" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="330" y="640" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Catálogo y barberos</text>
+<text x="330" y="710" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Servicios y profesionales</text>
+<rect x="620" y="600" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="810" y="640" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Horarios y</text>
+<text x="810" y="672" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">disponibilidad</text>
+<text x="810" y="710" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Intervalos consultables</text>
+<rect x="1100" y="600" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="1290" y="640" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Reservas e historial</text>
+<text x="1290" y="710" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Confirmar y gestionar citas</text>
+<rect x="1580" y="600" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="1770" y="640" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Atención y agenda</text>
+<text x="1770" y="710" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Seguimiento de la atención</text>
+<rect x="2060" y="600" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="2250" y="640" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Pagos manuales</text>
+<text x="2250" y="710" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Efectivo y Yape</text>
+<path d="M520 665 H620" fill="none" stroke="#388269" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#flow)"/>
+<text x="570" y="648" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#388269" text-anchor="middle">duración</text>
+<path d="M1000 665 H1100" fill="none" stroke="#388269" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#flow)"/>
+<text x="1050" y="648" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#388269" text-anchor="middle">horarios</text>
+<path d="M1480 665 H1580" fill="none" stroke="#388269" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#flow)"/>
+<text x="1530" y="648" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#388269" text-anchor="middle">citas</text>
+<path d="M1960 665 H2060" fill="none" stroke="#388269" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#flow)"/>
+<text x="2010" y="648" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#388269" text-anchor="middle">atención</text>
+<rect x="140" y="775" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="330" y="815" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Identidad y perfil</text>
+<text x="330" y="885" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Acceso y datos personales</text>
+<rect x="620" y="775" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="810" y="815" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Barberías y</text>
+<text x="810" y="847" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">administración</text>
+<text x="810" y="885" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Configuración del local</text>
+<rect x="1100" y="775" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="1290" y="815" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Exploración y</text>
+<text x="1290" y="847" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">favoritos</text>
+<text x="1290" y="885" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Descubrimiento y selección</text>
+<rect x="1580" y="775" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="1770" y="815" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Invitaciones y</text>
+<text x="1770" y="847" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">membresías</text>
+<text x="1770" y="885" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Incorporación de personal</text>
+<rect x="2060" y="775" width="380" height="130" rx="4" fill="#F0ECFA" stroke="#8271AE" stroke-width="2" />
+<text x="2250" y="815" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#223449" text-anchor="middle">Notificaciones</text>
+<text x="2250" y="885" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Avisos y recordatorios</text>
+<path d="M1960 840 H2060" fill="none" stroke="#388269" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#flow)"/>
+<text x="2010" y="823" font-family="Arial, sans-serif" font-size="20" font-weight="400" fill="#388269" text-anchor="middle">avisos</text>
+<text x="140" y="761" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#388269" text-anchor="start">Relación funcional central: cada módulo aporta información al siguiente para gestionar una cita.</text>
+<path d="M1300 940 V1000" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="1315" y="952" width="340" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="1320" y="977" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">usan sus adaptadores</text>
+<rect x="310" y="1000" width="1980" height="80" rx="4" fill="#EFF2F5" stroke="#627284" stroke-width="2" />
+<text x="1300" y="1033" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#223449" text-anchor="middle">Acceso remoto encapsulado · Contratos y adaptadores por funcionalidad</text>
+<text x="1300" y="1064" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#506176" text-anchor="middle">SDK de Supabase · Conversión de solicitudes, resultados y errores</text>
+<rect x="70" y="1240" width="2460" height="650" rx="4" fill="#F7FCF9" stroke="#388269" stroke-width="2" stroke-dasharray="11 7"/>
+<rect x="700" y="1220" width="510" height="41" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="720" y="1251" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#223449" text-anchor="start">SERVIDOR · SUPABASE (BaaS)</text>
+<path d="M400 1080 V1340" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="415" y="1157" width="345" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="420" y="1182" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">Autenticación · HTTPS</text>
+<path d="M1280 1080 V1340" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="1295" y="1145" width="400" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="1300" y="1170" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">Datos · HTTPS REST / RPC</text>
+<rect x="1295" y="1180" width="360" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="1300" y="1205" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">con sesión del usuario</text>
+<path d="M2180 1080 V1340" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="2195" y="1157" width="260" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="2200" y="1182" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">Envío · HTTPS</text>
+<rect x="150" y="1340" width="500" height="140" rx="4" fill="#EBF2FC" stroke="#648AB3" stroke-width="2" />
+<text x="400" y="1385" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#223449" text-anchor="middle">Supabase Auth</text>
+<text x="400" y="1425" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#506176" text-anchor="middle">Identidad y sesiones</text>
+<text x="400" y="1457" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#506176" text-anchor="middle">Acceso por correo o Google</text>
+<rect x="980" y="1340" width="600" height="140" rx="4" fill="#EBF2FC" stroke="#648AB3" stroke-width="2" />
+<text x="1280" y="1385" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#223449" text-anchor="middle">API de datos · PostgREST</text>
+<text x="1280" y="1425" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#506176" text-anchor="middle">Consultas REST y funciones por RPC</text>
+<text x="1280" y="1457" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#506176" text-anchor="middle">Contexto de autorización del usuario</text>
+<rect x="1930" y="1340" width="500" height="140" rx="4" fill="#EBF2FC" stroke="#648AB3" stroke-width="2" />
+<text x="2180" y="1385" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#223449" text-anchor="middle">Edge Function de correo</text>
+<text x="2180" y="1425" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Autoriza el envío de invitaciones</text>
+<text x="2180" y="1457" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Credenciales protegidas en servidor</text>
+<path d="M1930 1410 H1580" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<text x="1755" y="1380" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">verifica invitación</text>
+<text x="1755" y="1450" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">y permisos · REST</text>
+<rect x="800" y="1580" width="1050" height="260" rx="4" fill="#FFFBEF" stroke="#A68B4D" stroke-width="2" />
+<text x="825" y="1617" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#223449" text-anchor="start">POSTGRESQL · Reglas de servidor y persistencia</text>
+<path d="M1130 1480 V1520 H760 V1735 H825" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="805" y="1485" width="315" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="810" y="1510" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">RPC: ejecuta función</text>
+<path d="M1480 1480 V1540 H1900 V1735 H1815" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="1915" y="1555" width="405" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="1920" y="1580" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">REST: operación autorizada</text>
+<rect x="825" y="1665" width="470" height="140" rx="4" fill="#EAF5EE" stroke="#388269" stroke-width="2" />
+<text x="1060" y="1707" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#223449" text-anchor="middle">Reglas y transacciones</text>
+<text x="1060" y="1745" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Permisos, precios y disponibilidad</text>
+<text x="1060" y="1777" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="middle">Confirmación atómica de reserva</text>
+<path d="M1295 1735 H1365" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<text x="1330" y="1711" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#506176" text-anchor="middle">SQL</text>
+<path d="M1365 1687 V1782 C1365 1813,1815 1813,1815 1782 V1687" fill="#ECFAF4" stroke="#388269" stroke-width="2"/><ellipse cx="1590" cy="1687" rx="225" ry="22" fill="#ECFAF4" stroke="#388269" stroke-width="2"/>
+<text x="1590" y="1738" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#223449" text-anchor="middle">3. DATOS COMPARTIDOS</text>
+<text x="1590" y="1773" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#506176" text-anchor="middle">Barberías · Catálogo · Citas · Pagos</text>
+<rect x="150" y="1590" width="550" height="230" rx="4" fill="white" stroke="#A9BCB2" stroke-width="2" />
+<text x="178" y="1631" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#388269" text-anchor="start">AUTORIZACIÓN E INTEGRIDAD</text>
+<text x="178" y="1674" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#223449" text-anchor="start">RLS y permisos sobre los datos.</text>
+<text x="178" y="1708" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#223449" text-anchor="start">Membresía, rol y propiedad.</text>
+<text x="178" y="1742" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#223449" text-anchor="start">Relaciones por barbershop_id.</text>
+<text x="178" y="1776" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#223449" text-anchor="start">Restricciones contra citas superpuestas.</text>
+<path d="M190 1480 V1530 H105 V1920 H400 V1950" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="175" y="1890" width="250" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="180" y="1915" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">OAuth / HTTPS</text>
+<path d="M2330 1480 V1950" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<rect x="1945" y="1890" width="365" height="34" rx="4" fill="white" stroke="none" stroke-width="2" />
+<text x="1950" y="1915" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">Envía invitación · HTTPS</text>
+<rect x="150" y="1950" width="500" height="105" rx="4" fill="#F1F2F4" stroke="#627284" stroke-width="2" />
+<text x="400" y="1990" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#223449" text-anchor="middle">Google · Sistema externo</text>
+<text x="400" y="2031" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#506176" text-anchor="middle">Proveedor de identidad</text>
+<rect x="1930" y="1950" width="500" height="105" rx="4" fill="#F1F2F4" stroke="#627284" stroke-width="2" />
+<text x="2180" y="1990" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#223449" text-anchor="middle">Resend · Sistema externo</text>
+<text x="2180" y="2031" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#506176" text-anchor="middle">Entrega de correo de invitación</text>
+<path d="M100 2095 H2500" stroke="#BCC5CD" stroke-width="2"/>
+<path d="M125 2134 H200" fill="none" stroke="#627284" stroke-width="3"  marker-end="url(#arrow)"/>
+<text x="220" y="2142" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#223449" text-anchor="start">Llamada o uso de servicio; respuesta por la misma relación.</text>
+<path d="M1230 2134 H1305" fill="none" stroke="#388269" stroke-width="3" stroke-dasharray="8 6" marker-end="url(#flow)"/>
+<text x="1325" y="2142" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#388269" text-anchor="start">Información entre módulos del flujo de cita.</text>
+<text x="125" y="2180" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#506176" text-anchor="start">Vista lógica propuesta: los módulos no son despliegues independientes. Las flechas describen colaboración, no importaciones del código.</text></svg>

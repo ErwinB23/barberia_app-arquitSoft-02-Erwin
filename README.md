@@ -20,7 +20,7 @@ Varias barberías compartirán infraestructura, con acceso privado limitado por 
 
 ![Contexto de App Barbería: personas y servicios externos](img/nivel1-contexto.svg)
 
-Esta vista muestra personas y sistemas. La [arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md) desarrolla las capas y responsabilidades. Los diagramas se incluyen únicamente en SVG para mantener nitidez al ampliarlos.
+Esta vista muestra quién utiliza App Barbería y con qué sistemas externos se comunica. La [arquitectura inicial](docs/02-arquitectura-software/arquitectura-inicial.md) desarrolla las capas y responsabilidades. Los diagramas están en SVG para mantener la nitidez al ampliarlos. C1 presenta el sistema completo; C2 detalla sus aplicaciones, servicios y base de datos; C3 describe los componentes de la aplicación móvil para reservar; y C4 muestra las clases, la interfaz y los tipos relacionados con Coordinación de reservas. La secuencia de reserva complementa estas vistas mostrando las llamadas y respuestas en el tiempo.
 
 ## Documentación
 
@@ -53,9 +53,10 @@ Esta vista muestra personas y sistemas. La [arquitectura inicial](docs/02-arquit
 
 ## Ejecutar la demostración
 
-Con Node.js 22.18 o superior y npm, desde la carpeta del ejemplo:
+Con Node.js 22.18 o superior y npm, ejecuta lo siguiente desde la raíz del repositorio:
 
 ```bash
+cd tecnologia/barberia-clean-architecture
 npm ci
 npm run check
 npm test

@@ -4,7 +4,15 @@
 
 Separar reglas, coordinación, interfaz y acceso externo. La propuesta organiza cada funcionalidad con responsabilidades claras y dependencias hacia el interior.
 
+## Diagrama
+
+![Clean Architecture aplicada al módulo Reservas](../../img/enfoque-clean-reservas.svg)
+
+![Clean Architecture: responsabilidades y dependencias del código](../../img/enfoque-arquitectonico-diagrama.svg)
+
 ![Dependencias y ejecución del enfoque Clean Architecture en Barbería](../../img/enfoque-arquitectonico.svg)
+
+El primer diagrama detalla Clean Architecture para el módulo Reservas: Presentación invoca el caso de uso; Aplicación define el contrato; Infraestructura lo implementa; y ambos utilizan tipos del Dominio. También distingue la llamada remota a Supabase de las dependencias del código. El segundo diagrama resume las responsabilidades y dependencias internas. El tercero complementa esta organización con el recorrido de ejecución. Composición conecta el caso de uso con el adaptador al iniciar.
 
 ## Responsabilidades
 
@@ -40,13 +48,13 @@ Los módulos pueden usar funciones o clases según la responsabilidad. No se cre
 
 ## Flujo de confirmación
 
-La presentación llama a CrearReserva. Este normaliza la entrada y solicita confirmar mediante ReservaTransaccionalGateway. SupabaseReservaAdapter transforma los campos e invoca create_reservation por RPC. El resultado se traduce a confirmación, conflicto o error controlado.
+La presentación llama a CrearReserva. Este normaliza la entrada y solicita confirmar mediante ReservaTransaccionalGateway. SupabaseReservaAdapter transforma los campos y llama a la API de datos de Supabase mediante HTTPS/RPC. PostgREST ejecuta la función create_reservation en PostgreSQL, que valida y confirma la operación. El resultado se traduce a confirmación, conflicto o error controlado.
 
 El contrato representa una operación completa: no se hacen llamadas independientes para guardar reserva, servicios y pago desde el cliente.
 
 ## Autoridad de las reglas
 
-La validación del cliente ayuda a corregir una selección incompleta. El servidor verifica identidad, membresía, estado, precios y disponibilidad definitiva y conserva la transacción. Las restricciones de PostgreSQL impiden intervalos activos superpuestos.
+La validación del cliente ayuda a corregir una selección incompleta. El servidor verifica la identidad, los permisos sobre la reserva, el estado, los precios y la disponibilidad definitiva. Para operaciones del personal también comprueba su membresía y rol en la barbería. Las escrituras relacionadas se realizan en una sola transacción. Las restricciones de PostgreSQL impiden intervalos activos superpuestos.
 
 Parte de las reglas permanece en SQL. Por ello, la organización del código cliente aplica Clean Architecture, pero el backend conserva una dependencia explícita de PostgreSQL. Encapsular una RPC no elimina esa dependencia.
 

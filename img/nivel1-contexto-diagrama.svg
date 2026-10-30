@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1350" viewBox="0 0 1700 1350" role="img" aria-labelledby="title desc">
+<title id="title">C1 · Contexto de App Barbería</title>
+<desc id="desc">Alcance: el sistema completo, sus usuarios y los sistemas externos.</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="1" dy="2" stdDeviation="1" flood-opacity="0.13"/></filter></defs>
+<rect width="1700" height="1350" fill="white"/>
+<text x="589.01" y="55.84" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#202124">C1 · Contexto de App Barbería</text>
+<text x="501.50" y="99.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Alcance: el sistema completo, sus usuarios y los sistemas externos.</text>
+<rect x="100" y="180" width="400" height="160" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="257.00" y="218.19" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Cliente</text>
+<text x="256.00" y="258.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Persona</text>
+<text x="140.00" y="288.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Consulta oferta y gestiona sus</text>
+<text x="272.00" y="318.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">citas.</text>
+<rect x="650" y="180" width="400" height="160" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="800.50" y="233.19" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Barbero</text>
+<text x="806.00" y="273.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Persona</text>
+<text x="686.50" y="303.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Gestiona agenda y atenciones.</text>
+<rect x="1200" y="180" width="400" height="160" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1311.50" y="218.19" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Administrador</text>
+<text x="1269.00" y="258.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Persona de una barbería</text>
+<text x="1243.00" y="288.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Gestiona catálogo, personal y</text>
+<text x="1364.50" y="318.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">pagos.</text>
+<rect x="470" y="500" width="760" height="340" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="488.00" y="535.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">SISTEMA EN</text>
+<text x="488.00" y="565.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">ESTUDIO</text>
+<rect x="530" y="570" width="640" height="210" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="769.00" y="633.19" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">App Barbería</text>
+<text x="742.00" y="673.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Sistema de software</text>
+<text x="662.50" y="703.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Organiza oferta, horarios, reservas,</text>
+<text x="655.50" y="733.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">atención y registro manual de pagos.</text>
+<rect x="100" y="1050" width="400" height="170" fill="#f1f2f5" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="255.50" y="1108.19" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Google</text>
+<text x="214.00" y="1148.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Sistema externo</text>
+<text x="145.00" y="1178.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Identidad con cuenta Google.</text>
+<rect x="650" y="1050" width="400" height="170" fill="#f1f2f5" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="738.50" y="1093.19" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Servicio de correo</text>
+<text x="764.00" y="1133.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Sistema externo</text>
+<text x="707.50" y="1163.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Invitaciones y mensajes de</text>
+<text x="809.00" y="1193.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">acceso.</text>
+<rect x="1200" y="1050" width="400" height="170" fill="#fff2d8" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1288.00" y="1108.19" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Servicio de mapas</text>
+<text x="1269.00" y="1148.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Sistema externo previsto</text>
+<text x="1286.00" y="1178.81" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Mapas y ubicaciones.</text>
+<polyline points="300,340 300,430 680,430 680,570" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="680.00,570.00 686.00,557.00 674.00,557.00" fill="#454545"/>
+<rect x="321" y="367" width="198.00" height="34.75" fill="#f8f8f5"/>
+<text x="325.00" y="391.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">consulta y reserva</text>
+<polyline points="850,340 850,570" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="850.00,570.00 856.00,557.00 844.00,557.00" fill="#454545"/>
+<rect x="646" y="347" width="180.00" height="63.50" fill="#f8f8f5"/>
+<text x="650.00" y="371.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">gestiona agenda</text>
+<text x="650.00" y="400.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">y atención</text>
+<polyline points="1400,340 1400,430 1040,430 1040,570" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1040.00,570.00 1046.00,557.00 1034.00,557.00" fill="#454545"/>
+<rect x="1126" y="367" width="239.00" height="34.75" fill="#f8f8f5"/>
+<text x="1130.00" y="391.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">administra su barbería</text>
+<polyline points="680,780 680,935 300,935 300,1050" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="300.00,1050.00 306.00,1037.00 294.00,1037.00" fill="#454545"/>
+<rect x="311" y="947" width="203.00" height="63.50" fill="#f8f8f5"/>
+<text x="315.00" y="971.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">delega el acceso</text>
+<text x="315.00" y="1000.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">con cuenta Google</text>
+<polyline points="850,780 850,1050" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="850.00,1050.00 856.00,1037.00 844.00,1037.00" fill="#454545"/>
+<rect x="871" y="902" width="164.00" height="63.50" fill="#f8f8f5"/>
+<text x="875.00" y="926.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">solicita entrega</text>
+<text x="875.00" y="955.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">de mensajes</text>
+<polyline points="1040,780 1040,935 1400,935 1400,1050" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 6"/>
+<polygon points="1400.00,1050.00 1406.00,1037.00 1394.00,1037.00" fill="#454545"/>
+<rect x="1156" y="947" width="225.00" height="63.50" fill="#f8f8f5"/>
+<text x="1160.00" y="971.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">consulta ubicaciones</text>
+<text x="1160.00" y="1000.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">(ampliación prevista)</text>
+<text x="45.00" y="1290.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Flecha: uso de otro elemento. Trazo discontinuo y ámbar: capacidad prevista. Gris: sistema externo.</text>
+<text x="45.00" y="1330.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">El administrador pertenece a una barbería. El detalle interno de App Barbería se abre en C2.</text>
+</svg>

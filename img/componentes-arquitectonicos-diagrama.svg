@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1565" viewBox="0 0 1600 1565" role="img" aria-labelledby="title desc">
+<title id="title">Componentes arquitectónicos · Confirmar una reserva</title>
+<desc id="desc">Vista de colaboración entre componentes de la aplicación móvil.</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="1" dy="2" stdDeviation="1" flood-opacity="0.13"/></filter></defs>
+<rect width="1600" height="1565" fill="white"/>
+<text x="333.00" y="55.84" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#202124">Componentes arquitectónicos · Confirmar una reserva</text>
+<text x="470.50" y="99.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Vista de colaboración entre componentes de la aplicación móvil.</text>
+<rect x="60" y="165" width="1480" height="975" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="78.00" y="200.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">APLICACIÓN MÓVIL · componentes internos</text>
+<rect x="620" y="245" width="480" height="125" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="705.50" y="280.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Presentación de reservas</text>
+<text x="720.50" y="321.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Recoge servicios y horario</text>
+<text x="689.50" y="351.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Muestra confirmación o conflicto</text>
+<rect x="620" y="550" width="480" height="155" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="702.50" y="600.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Coordinación de reservas</text>
+<text x="716.50" y="641.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Caso de uso CrearReserva</text>
+<text x="690.50" y="671.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Normaliza y coordina la solicitud</text>
+<rect x="100" y="550" width="350" height="155" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="162.50" y="600.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Modelo de reserva</text>
+<text x="169.00" y="641.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Solicitud y resultado</text>
+<text x="175.52" y="671.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Validaciones puras</text>
+<rect x="620" y="890" width="480" height="145" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="721.00" y="935.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Adaptador de reservas</text>
+<text x="716.01" y="976.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Transforma datos y errores</text>
+<text x="761.50" y="1006.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Llama a Supabase</text>
+<rect x="1180" y="245" width="300" height="155" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1251.50" y="296.62" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">Composición</text>
+<text x="1251.50" y="336.00" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Crea y conecta</text>
+<text x="1202.50" y="364.75" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">caso de uso y adaptador</text>
+<rect x="60" y="1235" width="1480" height="260" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="78.00" y="1270.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">BACKEND ADMINISTRADO · SUPABASE</text>
+<rect x="620" y="1305" width="480" height="125" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="782.00" y="1340.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">API de datos</text>
+<text x="797.50" y="1381.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">PostgREST</text>
+<text x="730.00" y="1411.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">RPC: create_reservation</text>
+<path d="M1200 1307a150.0 17 0 0 1 300 0V1443a150.0 17 0 0 1 -300 0Z" fill="#effff7" stroke="#008765" stroke-width="2" filter="url(#shadow)"/>
+<ellipse cx="1350.0" cy="1307" rx="150.0" ry="17" fill="#effff7" stroke="#008765" stroke-width="2"/>
+<text x="1278.00" y="1357.12" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">PostgreSQL</text>
+<text x="1276.51" y="1396.49" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Verifica reglas</text>
+<text x="1256.50" y="1425.24" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Guarda la reserva</text>
+<polyline points="860,370 860,550" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="860.00,550.00 866.00,537.00 854.00,537.00" fill="#454545"/>
+<rect x="881" y="437" width="194.00" height="34.75" fill="#f8f8f5"/>
+<text x="885.00" y="461.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">1. envía selección</text>
+<polyline points="620,627 450,627" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="450.00,627.00 463.00,633.00 463.00,621.00" fill="#454545"/>
+<rect x="471" y="547" width="87.00" height="63.50" fill="#f8f8f5"/>
+<text x="475.00" y="571.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">valida</text>
+<text x="475.00" y="600.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">entrada</text>
+<polyline points="860,705 860,890" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="860.00,890.00 866.00,877.00 854.00,877.00" fill="#454545"/>
+<rect x="881" y="762" width="242.00" height="63.50" fill="#f8f8f5"/>
+<text x="885.00" y="786.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">2. solicita confirmación</text>
+<text x="885.00" y="815.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">mediante un contrato</text>
+<polyline points="1260,400 1260,627 1100,627" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 6"/>
+<polygon points="1100.00,627.00 1113.00,633.00 1113.00,621.00" fill="#454545"/>
+<rect x="1106" y="452" width="102.00" height="61.00" fill="#f8f8f5"/>
+<text x="1110.00" y="475.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">crea caso</text>
+<text x="1110.00" y="503.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">de uso</text>
+<polyline points="1400,400 1400,962 1100,962" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 6"/>
+<polygon points="1100.00,962.00 1113.00,968.00 1113.00,956.00" fill="#454545"/>
+<rect x="1416" y="777" width="105.00" height="61.00" fill="#f8f8f5"/>
+<text x="1420.00" y="800.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">crea</text>
+<text x="1420.00" y="828.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">adaptador</text>
+<polyline points="860,1035 860,1305" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="860.00,1305.00 866.00,1292.00 854.00,1292.00" fill="#454545"/>
+<rect x="881" y="1167" width="244.00" height="63.50" fill="#f8f8f5"/>
+<text x="885.00" y="1191.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">3. confirma en servidor</text>
+<text x="885.00" y="1220.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">HTTPS / RPC</text>
+<polyline points="1100,1367 1200,1367" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1200.00,1367.00 1187.00,1361.00 1187.00,1373.00" fill="#454545"/>
+<rect x="1116" y="1307" width="52.00" height="33.50" fill="#f8f8f5"/>
+<text x="1120.00" y="1330.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">SQL</text>
+<text x="45.00" y="1540.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Línea continua: colaboración. Línea discontinua: construcción. El resultado vuelve por el mismo recorrido.</text>
+</svg>

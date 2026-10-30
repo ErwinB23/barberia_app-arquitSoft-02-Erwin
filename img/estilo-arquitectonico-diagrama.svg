@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1590" viewBox="0 0 1700 1590" role="img" aria-labelledby="title desc">
+<title id="title">Estilo arquitectónico · Cliente-servidor modular</title>
+<desc id="desc">Tres capas lógicas: presentación, aplicación/negocio y datos.</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="1" dy="2" stdDeviation="1" flood-opacity="0.13"/></filter></defs>
+<rect width="1700" height="1590" fill="white"/>
+<text x="443.00" y="55.84" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#202124">Estilo arquitectónico · Cliente-servidor modular</text>
+<text x="534.01" y="99.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Tres capas lógicas: presentación, aplicación/negocio y datos.</text>
+<rect x="60" y="185" width="650" height="890" fill="#fffef0" stroke="#9990d8" stroke-width="1.7"/>
+<text x="78.00" y="220.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">CLIENTE · dispositivo o navegador</text>
+<rect x="990" y="480" width="650" height="1000" fill="#fffef0" stroke="#9990d8" stroke-width="1.7"/>
+<text x="1008.00" y="515.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">SERVIDOR · backend Supabase (BaaS)</text>
+<rect x="100" y="265" width="570" height="230" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="118.00" y="300.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">1. PRESENTACIÓN</text>
+<rect x="100" y="555" width="570" height="460" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="118.00" y="590.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">2. APLICACIÓN / NEGOCIO</text>
+<rect x="1030" y="555" width="570" height="535" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="1048.00" y="590.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">2. APLICACIÓN / NEGOCIO</text>
+<rect x="1030" y="1170" width="570" height="260" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="1048.00" y="1205.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">3. DATOS</text>
+<rect x="140" y="340" width="490" height="115" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="270.50" y="385.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Interfaz de usuario</text>
+<text x="279.00" y="426.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Expo · React Native</text>
+<rect x="140" y="660" width="490" height="190" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="265.50" y="715.07" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Aplicación modular</text>
+<text x="202.50" y="754.75" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Reservas · Horarios · Catálogo · …</text>
+<text x="236.50" y="783.50" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Casos de uso y adaptadores</text>
+<text x="242.50" y="812.25" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Coordinación de solicitudes</text>
+<rect x="1070" y="660" width="490" height="150" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1178.50" y="709.12" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">Servicios de Supabase</text>
+<text x="1112.01" y="748.50" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Auth · API REST/RPC · Edge Functions</text>
+<text x="1151.00" y="777.25" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Identidad, datos e integraciones</text>
+<rect x="1070" y="925" width="490" height="125" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1197.00" y="961.94" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Reglas del servidor</text>
+<text x="1140.00" y="1001.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Permisos, disponibilidad y precios</text>
+<text x="1156.51" y="1030.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Transacciones en PostgreSQL</text>
+<path d="M1070 1247a245.0 17 0 0 1 490 0V1403a245.0 17 0 0 1 -490 0Z" fill="#effff7" stroke="#008765" stroke-width="2" filter="url(#shadow)"/>
+<ellipse cx="1315.0" cy="1247" rx="245.0" ry="17" fill="#effff7" stroke="#008765" stroke-width="2"/>
+<text x="1172.00" y="1292.75" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">PostgreSQL compartido</text>
+<text x="1181.50" y="1332.12" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Datos de varias barberías</text>
+<text x="1135.00" y="1360.87" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Permisos por usuario y membresía</text>
+<text x="1214.50" y="1389.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">RLS y restricciones</text>
+<polyline points="385,455 385,660" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="385.00,660.00 391.00,647.00 379.00,647.00" fill="#454545"/>
+<rect x="406" y="507" width="184.00" height="34.75" fill="#f8f8f5"/>
+<text x="410.00" y="531.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">envía una acción</text>
+<polyline points="630,715 1070,715" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1070.00,715.00 1057.00,709.00 1057.00,721.00" fill="#454545"/>
+<rect x="761" y="632" width="176.00" height="63.50" fill="#f8f8f5"/>
+<text x="765.00" y="656.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Solicitud HTTPS</text>
+<text x="765.00" y="685.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">REST / RPC</text>
+<polyline points="1070,780 630,780" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="630.00,780.00 643.00,786.00 643.00,774.00" fill="#454545"/>
+<rect x="761" y="802" width="188.00" height="34.75" fill="#f8f8f5"/>
+<text x="765.00" y="826.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Resultado o error</text>
+<polyline points="1315,810 1315,925" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1315.00,925.00 1321.00,912.00 1309.00,912.00" fill="#454545"/>
+<rect x="1336" y="842" width="122.00" height="63.50" fill="#f8f8f5"/>
+<text x="1340.00" y="866.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">operación</text>
+<text x="1340.00" y="895.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">de negocio</text>
+<polyline points="1315,1050 1315,1230" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1315.00,1230.00 1321.00,1217.00 1309.00,1217.00" fill="#454545"/>
+<rect x="1336" y="1107" width="192.00" height="63.50" fill="#f8f8f5"/>
+<text x="1340.00" y="1131.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">consulta y guarda</text>
+<text x="1340.00" y="1160.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">con autorización</text>
+<text x="45.00" y="1540.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">La capa de aplicación/negocio se reparte: el cliente coordina y el servidor aplica las reglas definitivas.</text>
+</svg>

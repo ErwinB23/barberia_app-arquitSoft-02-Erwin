@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1110" viewBox="0 0 1600 1110" role="img" aria-labelledby="title desc">
+<title id="title">Enfoque arquitectónico · Clean Architecture</title>
+<desc id="desc">Módulo Reservas: las flechas indican dependencias del código.</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="1" dy="2" stdDeviation="1" flood-opacity="0.13"/></filter></defs>
+<rect width="1600" height="1110" fill="white"/>
+<text x="423.01" y="55.84" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#202124">Enfoque arquitectónico · Clean Architecture</text>
+<text x="473.00" y="99.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Módulo Reservas: las flechas indican dependencias del código.</text>
+<rect x="700" y="170" width="820" height="755" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="718.00" y="205.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">NÚCLEO · APLICACIÓN Y DOMINIO</text>
+<rect x="80" y="270" width="450" height="185" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="202.02" y="335.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">PRESENTACIÓN</text>
+<text x="193.00" y="376.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Pantallas y mensajes</text>
+<text x="199.50" y="406.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Expo / React Native</text>
+<rect x="760" y="270" width="700" height="235" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1029.00" y="345.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">APLICACIÓN</text>
+<text x="920.50" y="386.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">CrearReserva coordina la operación</text>
+<text x="937.00" y="416.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Define el contrato para confirmar</text>
+<text x="1047.50" y="446.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">una reserva</text>
+<rect x="80" y="690" width="450" height="185" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="175.00" y="742.57" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">INFRAESTRUCTURA</text>
+<text x="196.00" y="782.25" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Adaptador Supabase</text>
+<text x="174.00" y="811.00" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Convierte datos y errores</text>
+<text x="188.00" y="839.75" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Implementa el contrato</text>
+<rect x="760" y="690" width="700" height="185" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1053.00" y="755.69" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">DOMINIO</text>
+<text x="944.50" y="796.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Solicitud y resultado de reserva</text>
+<text x="950.52" y="826.31" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">Validaciones puras de entrada</text>
+<polyline points="530,350 760,350" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="760.00,350.00 747.00,344.00 747.00,356.00" fill="#454545"/>
+<rect x="536" y="277" width="158.00" height="63.50" fill="#f8f8f5"/>
+<text x="540.00" y="301.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">invoca</text>
+<text x="540.00" y="330.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">el caso de uso</text>
+<polyline points="1110,505 1110,690" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="1110.00,690.00 1116.00,677.00 1104.00,677.00" fill="#454545"/>
+<rect x="1136" y="562" width="155.00" height="63.50" fill="#f8f8f5"/>
+<text x="1140.00" y="586.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">usa tipos</text>
+<text x="1140.00" y="615.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">y validaciones</text>
+<polyline points="530,750 620,750 620,440 760,440" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="760.00,440.00 747.00,434.00 747.00,446.00" fill="#454545"/>
+<rect x="361" y="552" width="226.00" height="63.50" fill="#f8f8f5"/>
+<text x="365.00" y="576.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">depende del contrato</text>
+<text x="365.00" y="605.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">y lo implementa</text>
+<polyline points="530,830 760,830" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="760.00,830.00 747.00,824.00 747.00,836.00" fill="#454545"/>
+<rect x="566" y="847" width="95.00" height="33.50" fill="#f8f8f5"/>
+<text x="570.00" y="870.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">usa tipos</text>
+<text x="45.00" y="995.68" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#202124">Regla: Aplicación y Dominio no importan Expo ni el SDK de Supabase.</text>
+<text x="45.00" y="1045.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Composición conecta el caso de uso con el adaptador. El servidor conserva permisos y transacciones en PostgreSQL.</text>
+</svg>

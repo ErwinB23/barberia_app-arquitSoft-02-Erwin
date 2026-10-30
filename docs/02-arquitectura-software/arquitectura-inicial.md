@@ -4,9 +4,13 @@
 
 App Barbería se organizará como una solución cliente-servidor con tres capas lógicas y módulos por funcionalidad. Supabase proporcionará el backend administrado y PostgreSQL compartido conservará los datos de las barberías con acceso contextual.
 
+## Diagrama
+
+![Arquitectura inicial: usuarios, módulos y servicios](../../img/arquitectura-inicial-diagrama.svg)
+
 ![Arquitectura inicial de App Barbería](../../img/arquitectura-inicial.svg)
 
-Se lee de arriba hacia abajo: actores, presentación, aplicación/negocio y datos. Las tarjetas ámbar indican capacidades previstas. Son responsabilidades lógicas, no tres servidores obligatorios.
+Ambas vistas se leen de arriba hacia abajo: usuarios, presentación, aplicación/negocio y datos. El primer diagrama muestra los diez módulos del alcance inicial; la segunda imagen resume esas funciones y señala en ámbar las ampliaciones previstas. Las capas agrupan responsabilidades y no equivalen a tres servidores. Móvil y web pueden compartir código, pero se representan por separado en C2 porque se ejecutan en entornos distintos. Android es la prioridad y web se valida por etapas.
 
 ## Capas
 
@@ -45,9 +49,9 @@ Consultar disponibilidad no garantiza la confirmación posterior. Elegir efectiv
 
 ## Seguridad e integraciones
 
-Los datos privados se autorizan por usuario, recurso y membresía activa de la barbería. RLS y permisos protegen tablas; las funciones privilegiadas verifican autorización explícita. La identidad del cliente se deriva de su sesión y no de un identificador editable enviado por la pantalla.
+El acceso a datos privados depende del usuario y del recurso solicitado. El cliente accede a sus propias reservas; el personal necesita además una membresía activa con el rol adecuado en la barbería. RLS (seguridad a nivel de fila) define qué registros puede consultar o modificar cada usuario. Estas políticas y los permisos protegen las tablas; las funciones privilegiadas verifican autorización explícita. La identidad del cliente se deriva de su sesión y no de un identificador editable enviado por la pantalla.
 
-Google participa en el acceso mediante Auth. El correo se utiliza para invitaciones y mensajes de acceso; su entrega externa se separa de la operación principal. Los avisos internos que pertenezcan a una transacción conservan su atomicidad. Las tareas programadas generan recordatorios con deduplicación.
+Google participa en el acceso mediante Auth. El correo se utiliza para invitaciones y mensajes de acceso; su entrega externa se separa de la operación principal. Los avisos internos que pertenezcan a una transacción conservan su atomicidad. Las tareas programadas generan recordatorios evitando avisos repetidos para el mismo evento.
 
 Reseñas, mapas y carga multimedia se incorporarán por etapas. No se incluyen pasarela de cobro, facturación fiscal o ERP.
 

@@ -2,9 +2,15 @@
 
 ## Alcance
 
-Representa App Barbería como un único sistema de software y muestra quién lo utiliza y con qué sistemas externos se relaciona. El detalle interno se abre en C2.
+Representa App Barbería como un único sistema de software y muestra quién lo utiliza y con qué sistemas externos se relaciona. C2 detalla las aplicaciones, los servicios y la base de datos que forman el sistema.
+
+## Diagrama
+
+![C1: usuarios y sistemas externos de App Barbería](../../img/nivel1-contexto-diagrama.svg)
 
 ![C1: contexto y relaciones de App Barbería](../../img/nivel1-contexto.svg)
+
+Las dos imágenes representan el mismo alcance con distribuciones y colores diferentes. Cada una incluye su propia leyenda.
 
 ## Elementos y relaciones
 
@@ -22,7 +28,7 @@ Las relaciones de cada persona se dibujan por separado para hacer visible su int
 
 ## Límites y notación
 
-- Azul: personas; verde: sistema en estudio; gris: sistemas externos.
+- En la segunda imagen, azul identifica personas; verde, el sistema en estudio; y gris, sistemas externos.
 - Ámbar y trazo discontinuo en la relación de mapas: ampliación prevista.
 - Una persona puede tener membresías en varias barberías. Cada membresía delimita el acceso privado; no se define un administrador global.
 - Efectivo y Yape se registran y confirman manualmente. No se representa una pasarela financiera.

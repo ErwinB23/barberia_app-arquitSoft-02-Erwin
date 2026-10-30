@@ -4,7 +4,7 @@
 
 | Actor | ¿Qué necesita realizar? |
 |---|---|
-| Cliente | Crear y gestionar su cuenta, explorar barberías, consultar servicios y profesionales, administrar favoritas, reservar, reprogramar o cancelar citas, consultar pagos e historial, recibir avisos y valorar una atención completada. |
+| Cliente | Crear y gestionar su cuenta, explorar barberías, consultar servicios y profesionales, administrar favoritas, reservar, reprogramar o cancelar citas, consultar pagos e historial, recibir avisos y, como ampliación prevista, valorar una atención completada. |
 | Barbero | Consultar su agenda, gestionar su perfil profesional, horarios y bloqueos, iniciar y finalizar atenciones, registrar inasistencias y confirmar pagos en efectivo de sus propias atenciones cuando tenga autorización. |
 | Administrador de barbería | Registrar y administrar el establecimiento, gestionar catálogo y personal, asignar servicios, configurar horarios y políticas, administrar invitaciones, consultar reservas y confirmar pagos y reembolsos autorizados. |
 

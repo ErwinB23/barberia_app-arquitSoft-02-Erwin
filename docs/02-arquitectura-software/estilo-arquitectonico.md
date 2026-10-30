@@ -4,7 +4,15 @@
 
 **Cliente-servidor con tres capas lógicas, organización modular por funcionalidades y Supabase como backend administrado (BaaS).**
 
+**Diagrama**
+
+![Vista general de los componentes y sus relaciones](../../img/componentes-y-relaciones-estilo.svg)
+
+![Estilo arquitectónico: cliente-servidor modular y capas lógicas](../../img/estilo-arquitectonico-diagrama.svg)
+
 ![Estilo arquitectónico y límites de ejecución de App Barbería](../../img/estilo-arquitectonico.svg)
+
+El primer diagrama muestra los módulos principales y cómo colaboran en el flujo de una cita. Las flechas verdes discontinuas representan el intercambio funcional entre módulos; las flechas continuas representan llamadas a servicios. El segundo diagrama presenta la organización cliente-servidor y las tres capas lógicas. El tercero complementa estas vistas con los límites de ejecución y los módulos del negocio.
 
 ## Qué significa
 
@@ -18,7 +26,7 @@
 
 ## Límites de ejecución
 
-El dispositivo ejecuta interfaz y coordinación. Auth gestiona identidad; la API expone consultas y RPC; PostgreSQL aplica reglas definitivas y transacciones. Las Edge Functions integran servicios como correo cuando se necesita ejecución segura de servidor.
+La aplicación cliente, en el dispositivo o navegador, ejecuta la interfaz y coordina las solicitudes. Auth gestiona identidad; la API expone consultas y RPC; PostgreSQL aplica reglas definitivas y transacciones. Las Edge Functions integran servicios como correo cuando se necesita ejecución segura de servidor.
 
 Las funciones SQL pueden combinar negocio y acceso a datos dentro del mismo servicio. Las capas lógicas y los contenedores C4 describen aspectos distintos del sistema.
 

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3000" height="2000" viewBox="0 0 3000 2000"><defs><marker id="dep" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L11 6 L0 12 Z" fill="#607081"/></marker><marker id="impl" markerWidth="15" markerHeight="14" refX="14" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L14 7 L0 14 Z" fill="white" stroke="#9277B3" stroke-width="2"/></marker><marker id="remote" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0 L11 6 L0 12 Z" fill="#25709A"/></marker></defs><rect x="0" y="0" width="3000" height="2000" rx="7" fill="white" stroke="none" stroke-width="2.5" />
+<text x="1500" y="65" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#233449" text-anchor="middle">APP BARBERÍA · CLEAN ARCHITECTURE</text>
+<text x="1500" y="113" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#556579" text-anchor="middle">Propuesta del módulo Reservas · Responsabilidades, contratos y dependencias hacia el núcleo</text>
+<rect x="60" y="195" width="2380" height="1465" rx="7" fill="#FBFBFC" stroke="#607081" stroke-width="2.5" stroke-dasharray="12 8"/>
+<rect x="90" y="174" width="1230" height="44" rx="7" fill="white" stroke="none" stroke-width="2.5" />
+<text x="110" y="207" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#233449" text-anchor="start">APLICACIÓN CLIENTE · Expo / React Native / TypeScript</text>
+<text x="1250" y="278" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#233449" text-anchor="middle">REGLA CENTRAL: EL CÓDIGO EXTERNO DEPENDE DE LOS CONTRATOS DEL NÚCLEO</text>
+<rect x="650" y="350" width="1150" height="1050" rx="18" fill="#F0F7EB" stroke="#6E9A68" stroke-width="2.5" />
+<text x="1225" y="402" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#233449" text-anchor="middle">APLICACIÓN · Casos de uso y puertos propios</text>
+<text x="1225" y="442" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#556579" text-anchor="middle">Independiente de pantallas, SDK y formatos de tablas</text>
+<rect x="720" y="490" width="480" height="220" rx="7" fill="white" stroke="#6E9A68" stroke-width="2.5" />
+<text x="960" y="529" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#6E9A68" text-anchor="middle">CASO DE USO</text>
+<text x="960" y="575" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#233449" text-anchor="middle">CrearReserva</text>
+<text x="960" y="623" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Normaliza la solicitud</text>
+<text x="960" y="655" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Coordina la confirmación</text>
+<text x="960" y="687" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Depende del contrato, no del adaptador</text>
+<rect x="1330" y="490" width="400" height="220" rx="7" fill="white" stroke="#6E9A68" stroke-width="2.5" />
+<text x="1530" y="529" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#6E9A68" text-anchor="middle">CONTRATO / PUERTO</text>
+<text x="1530" y="574" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#233449" text-anchor="middle">ReservaTransaccionalGateway</text>
+<text x="1530" y="621" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">confirmar(solicitud)</text>
+<text x="1530" y="653" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Promise&lt;ResultadoReserva></text>
+<text x="1530" y="685" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Una confirmación completa</text>
+<path d="M1200 600 H1330" fill="none" stroke="#607081" stroke-width="3"  marker-end="url(#dep)"/>
+<text x="1265" y="577" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#556579" text-anchor="middle">usa</text>
+<rect x="720" y="940" width="1010" height="390" rx="18" fill="#FFF6D9" stroke="#C19A40" stroke-width="2.5" />
+<text x="1225" y="987" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#233449" text-anchor="middle">DOMINIO · Tipos y validaciones puras</text>
+<rect x="750" y="1030" width="450" height="120" rx="7" fill="white" stroke="#C19A40" stroke-width="2.5" />
+<text x="975" y="1074" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#233449" text-anchor="middle">SolicitudReserva</text>
+<text x="975" y="1112" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#556579" text-anchor="middle">Barbero, servicios, horario y medio de pago</text>
+<rect x="1250" y="1030" width="450" height="120" rx="7" fill="white" stroke="#C19A40" stroke-width="2.5" />
+<text x="1475" y="1074" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#233449" text-anchor="middle">ResultadoReserva</text>
+<text x="1475" y="1112" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#556579" text-anchor="middle">Confirmación o error con significado propio</text>
+<rect x="750" y="1180" width="950" height="115" rx="7" fill="white" stroke="#C19A40" stroke-width="2.5" />
+<text x="1225" y="1223" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#233449" text-anchor="middle">normalizarSolicitud · Función independiente</text>
+<text x="1225" y="1267" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Comprueba forma de entrada, servicios, zona horaria y medio permitido.</text>
+<path d="M960 710 V940" fill="none" stroke="#607081" stroke-width="3"  marker-end="url(#dep)"/>
+<rect x="758" y="802" width="345" height="40" rx="7" fill="white" stroke="none" stroke-width="2.5" />
+<text x="765" y="830" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="start">usa tipos y validaciones</text>
+<path d="M1530 710 V940" fill="none" stroke="#607081" stroke-width="3"  marker-end="url(#dep)"/>
+<rect x="1348" y="802" width="275" height="40" rx="7" fill="white" stroke="none" stroke-width="2.5" />
+<text x="1355" y="830" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="start">usa tipos propios</text>
+<text x="1225" y="1374" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#233449" text-anchor="middle">EL DOMINIO NO IMPORTA REACT NATIVE, SDK DE SUPABASE NI TIPOS DE TABLAS.</text>
+<rect x="110" y="350" width="470" height="1050" rx="7" fill="#EAF2FC" stroke="#527AA5" stroke-width="2.5" />
+<text x="345" y="404" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#233449" text-anchor="middle">PRESENTACIÓN</text>
+<text x="345" y="445" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="middle">Interacción con el usuario</text>
+<rect x="140" y="490" width="410" height="220" rx="7" fill="white" stroke="#527AA5" stroke-width="2.5" />
+<text x="345" y="538" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#233449" text-anchor="middle">Pantalla / hook de reserva</text>
+<text x="345" y="588" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Recoge la selección del cliente</text>
+<text x="345" y="624" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Invoca CrearReserva</text>
+<text x="345" y="660" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Muestra confirmación o conflicto</text>
+<path d="M550 600 H720" fill="none" stroke="#607081" stroke-width="3"  marker-end="url(#dep)"/>
+<text x="635" y="572" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#556579" text-anchor="middle">usa</text>
+<rect x="140" y="990" width="410" height="150" rx="7" fill="white" stroke="#527AA5" stroke-width="2.5" />
+<text x="345" y="1038" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#233449" text-anchor="middle">Expo / React Native</text>
+<text x="345" y="1080" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="middle">Componentes y navegación</text>
+<text x="345" y="1113" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="middle">Detalles de interfaz</text>
+<path d="M345 710 V990" fill="none" stroke="#607081" stroke-width="3"  marker-end="url(#dep)"/>
+<rect x="223" y="824" width="260" height="40" rx="7" fill="white" stroke="none" stroke-width="2.5" />
+<text x="230" y="852" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="start">usa el framework</text>
+<text x="145" y="1220" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#233449" text-anchor="start">Valida para orientar al usuario.</text>
+<text x="145" y="1256" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#233449" text-anchor="start">La pantalla no decide precios,</text>
+<text x="145" y="1292" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#233449" text-anchor="start">permisos ni disponibilidad final.</text>
+<rect x="1870" y="350" width="530" height="1050" rx="7" fill="#F2EAF8" stroke="#9277B3" stroke-width="2.5" />
+<text x="2135" y="404" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#233449" text-anchor="middle">INFRAESTRUCTURA</text>
+<text x="2135" y="445" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="middle">Adaptadores y proveedor concreto</text>
+<rect x="1900" y="490" width="470" height="220" rx="7" fill="white" stroke="#9277B3" stroke-width="2.5" />
+<text x="2135" y="532" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#9277B3" text-anchor="middle">ADAPTADOR</text>
+<text x="2135" y="578" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#233449" text-anchor="middle">SupabaseReservaAdapter</text>
+<text x="2135" y="624" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Implementa el contrato de confirmación</text>
+<text x="2135" y="656" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Convierte datos y traduce errores</text>
+<text x="2135" y="688" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Devuelve tipos propios al caso de uso</text>
+<path d="M1900 600 H1730" fill="none" stroke="#9277B3" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#impl)"/>
+<text x="1815" y="567" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#9277B3" text-anchor="middle">implementa</text>
+<rect x="1900" y="990" width="470" height="150" rx="7" fill="white" stroke="#9277B3" stroke-width="2.5" />
+<text x="2135" y="1037" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#233449" text-anchor="middle">Cliente RPC · SDK Supabase</text>
+<text x="2135" y="1081" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="middle">Invocación: create_reservation</text>
+<text x="2135" y="1114" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="middle">Configuración y tipos externos</text>
+<path d="M2135 710 V990" fill="none" stroke="#607081" stroke-width="3"  marker-end="url(#dep)"/>
+<rect x="2008" y="824" width="210" height="40" rx="7" fill="white" stroke="none" stroke-width="2.5" />
+<text x="2015" y="852" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#556579" text-anchor="start">usa el SDK</text>
+<text x="1905" y="1220" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#233449" text-anchor="start">Las credenciales públicas y los detalles</text>
+<text x="1905" y="1256" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#233449" text-anchor="start">del proveedor permanecen fuera</text>
+<text x="1905" y="1292" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#233449" text-anchor="start">del dominio y del caso de uso.</text>
+<rect x="2500" y="890" width="450" height="455" rx="7" fill="#F3F4F6" stroke="#607081" stroke-width="2.5" />
+<text x="2725" y="940" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#233449" text-anchor="middle">BACKEND SUPABASE</text>
+<text x="2725" y="980" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Fuera de la aplicación cliente</text>
+<rect x="2525" y="1015" width="400" height="108" rx="7" fill="white" stroke="#607081" stroke-width="2.5" />
+<text x="2725" y="1057" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#233449" text-anchor="middle">API de datos · PostgREST</text>
+<text x="2725" y="1096" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Ejecuta la función por RPC</text>
+<path d="M2370 1065 H2525" fill="none" stroke="#25709A" stroke-width="3"  marker-end="url(#remote)"/>
+<text x="2447" y="1035" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#25709A" text-anchor="middle">HTTPS</text>
+<text x="2447" y="1100" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#25709A" text-anchor="middle">RPC</text>
+<path d="M2725 1123 V1160" fill="none" stroke="#25709A" stroke-width="3"  marker-end="url(#remote)"/>
+<rect x="2525" y="1160" width="400" height="145" rx="7" fill="#EEF7F2" stroke="#6E9A68" stroke-width="2.5" />
+<text x="2725" y="1201" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#233449" text-anchor="middle">PostgreSQL</text>
+<text x="2725" y="1238" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Permisos y disponibilidad final</text>
+<text x="2725" y="1271" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#556579" text-anchor="middle">Transacción y persistencia</text>
+<rect x="110" y="1470" width="2290" height="145" rx="7" fill="white" stroke="#607081" stroke-width="2.5" />
+<text x="142" y="1515" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#233449" text-anchor="start">COMPOSICIÓN · crearFlujoReserva</text>
+<text x="142" y="1556" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#233449" text-anchor="start">Construye SupabaseReservaAdapter y lo entrega a CrearReserva mediante ReservaTransaccionalGateway.</text>
+<text x="142" y="1595" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#556579" text-anchor="start">Este punto conoce las implementaciones concretas; el caso de uso conserva únicamente la referencia al contrato.</text>
+<text x="110" y="1730" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#233449" text-anchor="start">CÓMO LEER LAS RELACIONES</text>
+<path d="M120 1780 H220" fill="none" stroke="#607081" stroke-width="3"  marker-end="url(#dep)"/>
+<text x="245" y="1788" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#233449" text-anchor="start">Depende de / usa un tipo, contrato o implementación.</text>
+<path d="M120 1840 H220" fill="none" stroke="#9277B3" stroke-width="3" stroke-dasharray="10 6" marker-end="url(#impl)"/>
+<text x="245" y="1848" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#9277B3" text-anchor="start">Implementa un contrato definido dentro del núcleo.</text>
+<path d="M120 1900 H220" fill="none" stroke="#25709A" stroke-width="3"  marker-end="url(#remote)"/>
+<text x="245" y="1908" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#25709A" text-anchor="start">Llamada remota en ejecución; la respuesta regresa por la misma relación.</text>
+<rect x="1510" y="1700" width="1440" height="235" rx="7" fill="#FFFBEF" stroke="#C19A40" stroke-width="2.5" />
+<text x="1540" y="1746" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#233449" text-anchor="start">ALCANCE Y LÍMITE DE ESTA PROPUESTA</text>
+<text x="1540" y="1792" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#233449" text-anchor="start">Las dependencias muestran qué código conoce a otro; no son el orden de ejecución.</text>
+<text x="1540" y="1831" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#233449" text-anchor="start">Las reglas transaccionales en SQL siguen vinculadas a PostgreSQL.</text>
+<text x="1540" y="1870" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#233449" text-anchor="start">El cliente ayuda a corregir la entrada; el servidor autoriza y confirma la reserva.</text>
+<text x="1540" y="1909" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#233449" text-anchor="start">Este diseño del módulo Reservas guía una adopción gradual por funcionalidades.</text></svg>

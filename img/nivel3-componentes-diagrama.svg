@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1630" viewBox="0 0 1600 1630" role="img" aria-labelledby="title desc">
+<title id="title">C3 · Componentes de la Aplicación móvil</title>
+<desc id="desc">Abre el contenedor móvil de C2. Alcance parcial: confirmar una reserva con sesión disponible.</desc>
+<defs><filter id="shadow" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="1" dy="2" stdDeviation="1" flood-opacity="0.13"/></filter></defs>
+<rect width="1600" height="1630" fill="white"/>
+<text x="447.01" y="55.84" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#202124">C3 · Componentes de la Aplicación móvil</text>
+<text x="316.01" y="99.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Abre el contenedor móvil de C2. Alcance parcial: confirmar una reserva con sesión disponible.</text>
+<rect x="60" y="165" width="1480" height="1060" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
+<text x="78.00" y="200.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">APLICACIÓN MÓVIL · límite del contenedor</text>
+<rect x="620" y="245" width="480" height="180" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="705.50" y="295.06" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Presentación de reservas</text>
+<text x="681.50" y="334.75" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Componente · Expo / React Native</text>
+<text x="701.50" y="363.50" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Recoge la selección y muestra</text>
+<text x="736.00" y="392.25" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">confirmación o conflicto.</text>
+<rect x="620" y="590" width="480" height="180" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="702.50" y="640.07" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Coordinación de reservas</text>
+<text x="728.01" y="679.75" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Componente · TypeScript</text>
+<text x="674.52" y="708.50" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Valida la entrada y solicita confirmar</text>
+<text x="748.50" y="737.25" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">mediante un contrato.</text>
+<rect x="100" y="590" width="350" height="180" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="165.00" y="641.62" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">Modelo de reserva</text>
+<text x="151.51" y="680.05" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Componente · TypeScript</text>
+<text x="135.01" y="707.55" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Tipos de solicitud y resultado</text>
+<text x="142.51" y="735.05" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Validación pura de entrada.</text>
+<rect x="620" y="945" width="480" height="180" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="721.00" y="996.94" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">Adaptador de reservas</text>
+<text x="652.51" y="1035.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Componente · TypeScript / Supabase SDK</text>
+<text x="702.50" y="1063.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Implementa el contrato y traduce</text>
+<text x="715.00" y="1090.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">los datos y errores de la RPC.</text>
+<rect x="1180" y="245" width="300" height="180" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="1251.50" y="296.62" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">Composición</text>
+<text x="1206.51" y="335.06" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Componente · TypeScript</text>
+<text x="1231.00" y="362.56" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Construye y conecta</text>
+<text x="1208.51" y="390.06" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">caso de uso y adaptador.</text>
+<rect x="620" y="1380" width="480" height="165" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
+<text x="782.00" y="1422.57" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">API de datos</text>
+<text x="695.00" y="1462.24" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Contenedor de C2 · PostgREST</text>
+<text x="673.50" y="1490.99" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Backend administrado en Supabase</text>
+<text x="720.50" y="1519.74" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Recibe create_reservation.</text>
+<polyline points="860,425 860,590" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="860.00,590.00 866.00,577.00 854.00,577.00" fill="#454545"/>
+<rect x="881" y="482" width="169.00" height="34.75" fill="#f8f8f5"/>
+<text x="885.00" y="506.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">envía selección</text>
+<polyline points="620,680 450,680" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="450.00,680.00 463.00,686.00 463.00,674.00" fill="#454545"/>
+<rect x="471" y="592" width="87.00" height="63.50" fill="#f8f8f5"/>
+<text x="475.00" y="616.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">valida</text>
+<text x="475.00" y="645.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">entrada</text>
+<polyline points="860,770 860,945" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="860.00,945.00 866.00,932.00 854.00,932.00" fill="#454545"/>
+<rect x="881" y="822" width="217.00" height="63.50" fill="#f8f8f5"/>
+<text x="885.00" y="846.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">solicita confirmación</text>
+<text x="885.00" y="875.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">mediante el contrato</text>
+<polyline points="1260,425 1260,680 1100,680" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 6"/>
+<polygon points="1100.00,680.00 1113.00,686.00 1113.00,674.00" fill="#454545"/>
+<rect x="1106" y="477" width="102.00" height="61.00" fill="#f8f8f5"/>
+<text x="1110.00" y="500.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">crea caso</text>
+<text x="1110.00" y="528.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">de uso</text>
+<polyline points="1400,425 1400,1035 1100,1035" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 6"/>
+<polygon points="1100.00,1035.00 1113.00,1041.00 1113.00,1029.00" fill="#454545"/>
+<rect x="1416" y="832" width="105.00" height="61.00" fill="#f8f8f5"/>
+<text x="1420.00" y="855.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">crea</text>
+<text x="1420.00" y="883.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">adaptador</text>
+<polyline points="620,1035 275,1035 275,770" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="275.00,770.00 269.00,783.00 281.00,783.00" fill="#454545"/>
+<rect x="296" y="927" width="199.00" height="61.00" fill="#f8f8f5"/>
+<text x="300.00" y="950.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">usa tipos de</text>
+<text x="300.00" y="978.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">solicitud y resultado</text>
+<polyline points="860,1125 860,1380" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="860.00,1380.00 866.00,1367.00 854.00,1367.00" fill="#454545"/>
+<rect x="881" y="1277" width="219.00" height="63.50" fill="#f8f8f5"/>
+<text x="885.00" y="1301.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">confirma en servidor</text>
+<text x="885.00" y="1330.37" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">HTTPS / RPC</text>
+<text x="45.00" y="1600.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Continua: colaboración entre componentes. Discontinua: construcción e inyección de dependencias.</text>
+</svg>

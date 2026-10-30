@@ -31,6 +31,8 @@ En la demostración técnica, src contiene solamente este flujo. En la aplicaci�
 | SupabaseReservaAdapter | Transformar campos, llamar a RPC y traducir errores. | Contrato y cliente RPC. |
 | Composición | Crear las implementaciones y conectarlas. | Caso de uso y adaptador. |
 
+En C3, CrearReserva y ReservaTransaccionalGateway forman Coordinación de reservas. Los tipos y normalizarSolicitud pertenecen al componente vecino Modelo de reserva; SupabaseReservaAdapter pertenece a Adaptador de reservas. normalizarSolicitud es una función independiente, no un método de SolicitudReserva. ejecutar y confirmar devuelven `Promise<ResultadoReserva>`.
+
 El SDK no se importa desde dominio o aplicación. La función de composición puede conocer ambas partes para conectarlas.
 
 ## Contrato y reglas
@@ -48,6 +50,8 @@ El SDK no se importa desde dominio o aplicación. La función de composición pu
 La RPC create_reservation recibe p_barber_id, p_items, p_starts_at y p_payment_method. Devuelve el UUID de la reserva. p_items contiene service_id y style_id; el cliente no decide el precio.
 
 ## Secuencia y errores
+
+La secuencia es una vista dinámica complementaria al diagrama estático de código. Incluye la API de datos antes de PostgreSQL, respetando los servicios definidos en C2.
 
 ![Secuencia de confirmación y conflicto de reserva](../../../img/nivel4-secuencia.svg)
 

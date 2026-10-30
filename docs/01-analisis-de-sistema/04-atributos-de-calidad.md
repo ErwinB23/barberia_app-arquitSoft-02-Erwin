@@ -2,7 +2,7 @@
 
 | ID | Atributo | Escenario de calidad | Criterio propuesto |
 |---|---|---|---|
-| AC01 | Seguridad | Un usuario intenta consultar una reserva ajena o ejecutar una operación administrativa sin permisos. | El servidor rechaza el acceso, no entrega datos privados y valida identidad, membresía y relación con el recurso. La comunicación usa HTTPS. |
+| AC01 | Seguridad | Un usuario intenta consultar una reserva ajena o ejecutar una operación administrativa sin permisos. | El servidor rechaza el acceso, no entrega datos privados y valida identidad y relación con el recurso; en operaciones del personal, también comprueba membresía y rol. La comunicación usa HTTPS. |
 | AC02 | Aislamiento entre barberías | Un administrador del establecimiento A intenta gestionar datos privados del establecimiento B. | Las políticas y relaciones por barbería impiden el acceso cruzado, aunque se modifiquen identificadores en la solicitud. |
 | AC03 | Integridad transaccional | Dos clientes intentan reservar un mismo intervalo para un barbero al mismo tiempo. | Como máximo se confirma una de las solicitudes que compiten por el mismo intervalo; no quedan reservas ni pagos asociados parcialmente creados. |
 | AC04 | Rendimiento | Clientes consultan catálogo, disponibilidad y reservas durante horas de alta demanda. | Objetivo preliminar: el 95 % de las consultas principales responde en un máximo de 3 segundos con 100 usuarios concurrentes en el escenario de prueba definido, excluyendo interacción humana y carga de mapas externos. |
@@ -16,3 +16,9 @@
 ## Evaluación
 
 Cada atributo se desarrolla con fuente, estímulo, artefacto, entorno, respuesta y medida en [escenarios de atributos de calidad](08-escenarios-atributos-calidad.md). Las metas de rendimiento y disponibilidad están pendientes de validación.
+
+El atributo indica **qué cualidad se espera**; el escenario explica **cómo se comprobará**. Cada escenario incluye herramienta propuesta, procedimiento, evidencia y estado. Por ejemplo, AC04 exige tiempos adecuados y EQ-04 propone k6 para generar consultas simultáneas y comparar los tiempos con la meta.
+
+Las herramientas se explican en el documento de escenarios. Las pruebas E2E recorren las pantallas como lo haría un usuario; las pruebas de integración comprueban la colaboración con el backend; las pruebas de carga aumentan las solicitudes; y el monitoreo observa el servicio durante un periodo. Se elige el método según el atributo. La evaluación con usuarios complementa la automatización para comprobar comprensión y facilidad de uso.
+
+Este apartado define el plan de evaluación. Los resultados se incorporarán cuando se ejecuten las pruebas y se conserve la evidencia correspondiente.

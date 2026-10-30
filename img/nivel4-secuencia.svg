@@ -1,87 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2140" viewBox="0 0 1800 2140">
-<title>nivel4 secuencia · App Barbería</title>
-<desc>Diagrama académico de la propuesta de arquitectura. Las etiquetas y leyendas distinguen responsabilidades, colaboración y capacidades previstas.</desc>
-<rect width="1800" height="2140" fill="#f6f9fd"/>
-<rect x="45" y="36" width="1710" height="185" rx="24" fill="#162b47" stroke="none" stroke-width="2"/>
-<text x="82" y="64" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#9fc6ff" dominant-baseline="text-before-edge">APP BARBERÍA / C4 · NIVEL 4</text>
-<text x="82" y="103" font-family="Arial, sans-serif" font-size="43" font-weight="700" fill="#ffffff" dominant-baseline="text-before-edge">Secuencia: confirmar una reserva</text>
-<text x="82" y="164" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#d8e5f5" dominant-baseline="text-before-edge">Recorrido de una solicitud · Éxito, conflicto de horario y error de entrada</text>
-<ellipse cx="1677.03125" cy="124.109375" rx="7.734375" ry="7.734375" fill="none" stroke="#83ddc2" stroke-width="3"/>
-<ellipse cx="1706.25" cy="124.109375" rx="7.734375" ry="7.734375" fill="none" stroke="#83ddc2" stroke-width="3"/>
-<polyline points="1679.609375,119.8125 1706.25,87.15625" fill="none" stroke="#83ddc2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="1703.671875,119.8125 1677.03125,87.15625" fill="none" stroke="#83ddc2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="65" y="285" width="330" height="115" rx="14" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2"/>
-<rect x="88.90625" y="308.78125" width="20.1875" height="34.4375" rx="7" fill="#f6f9fd" stroke="#2468c9" stroke-width="3"/>
-<polyline points="95.4375,312.9375 102.5625,312.9375" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="96.625,338.46875 101.375,338.46875" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="134" y="314" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Presentación</text>
-<rect x="510" y="285" width="330" height="115" rx="14" fill="#f3effb" stroke="#d6e1ee" stroke-width="2"/>
-<polyline points="527.375,319.46875 544.0,310.5625 560.625,319.46875 544.0,328.375 527.375,319.46875" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="527.375,326.59375 544.0,335.5 560.625,326.59375" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="527.375,333.71875 544.0,342.625 560.625,333.71875" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="579" y="314" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">CrearReserva</text>
-<rect x="955" y="285" width="330" height="115" rx="14" fill="#fff5e5" stroke="#d6e1ee" stroke-width="2"/>
-<polyline points="981.875,309.96875 981.875,320.0625" fill="none" stroke="#926018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="996.125,309.96875 996.125,320.0625" fill="none" stroke="#926018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="977.125" y="320.0625" width="23.75" height="13.0625" rx="7" fill="#f6f9fd" stroke="#926018" stroke-width="3"/>
-<polyline points="989.0,333.125 989.0,340.84375 997.90625,340.84375" fill="none" stroke="#926018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="1024" y="314" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Adaptador</text>
-<rect x="1400" y="285" width="330" height="115" rx="14" fill="#eaf8f2" stroke="#d6e1ee" stroke-width="2"/>
-<ellipse cx="1434.0" cy="314.421875" rx="15.4375" ry="4.453125" fill="#eaf8f2" stroke="#147d68" stroke-width="3"/>
-<polyline points="1418.5625,314.71875 1418.5625,336.6875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="1449.4375,314.71875 1449.4375,336.6875" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="1418.5625,324.8125 1423.3125,328.96875 1434.0,330.75 1444.6875,328.96875 1449.4375,324.8125" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="1418.5625,335.5 1423.3125,339.65625 1434.0,341.4375 1444.6875,339.65625 1449.4375,335.5" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="1469" y="314" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">PostgreSQL</text>
-<polyline points="230,400 230,1830" fill="none" stroke="#d6e1ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polyline points="675,400 675,1830" fill="none" stroke="#d6e1ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polyline points="1120,400 1120,1830" fill="none" stroke="#d6e1ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polyline points="1565,400 1565,1830" fill="none" stroke="#d6e1ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<rect x="250" y="470" width="405" height="39" rx="5" fill="#f6f9fd" stroke="none" stroke-width="2"/>
-<text x="351.75" y="477" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">1. ejecutar(entrada)</text>
-<polyline points="230,520 675,520" fill="none" stroke="#2468c9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="675,520 660.0,513.0 660.0,527.0" fill="#2468c9"/>
-<rect x="550" y="565" width="250" height="88" rx="12" fill="#f3effb" stroke="#d6e1ee" stroke-width="2"/>
-<text x="588.5078125" y="583" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">Valida la entrada</text>
-<text x="603.0" y="619" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">sin usar el SDK</text>
-<rect x="695" y="710" width="405" height="39" rx="5" fill="#f6f9fd" stroke="none" stroke-width="2"/>
-<text x="782.5" y="717" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">2. confirmar(solicitud)</text>
-<polyline points="675,760 1120,760" fill="none" stroke="#7052b8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="1120,760 1105.0,753.0 1105.0,767.0" fill="#7052b8"/>
-<rect x="1140" y="875" width="405" height="39" rx="5" fill="#f6f9fd" stroke="none" stroke-width="2"/>
-<text x="1207.5" y="882" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">3. RPC create_reservation</text>
-<polyline points="1120,925 1565,925" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<polygon points="1565,925 1550.0,918.0 1550.0,932.0" fill="#147d68"/>
-<rect x="1318" y="980" width="398" height="210" rx="14" fill="#eaf8f2" stroke="#bbdccc" stroke-width="2"/>
-<text x="1340" y="1004" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Identidad y permisos</text>
-<text x="1340" y="1037.12" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Disponibilidad y políticas</text>
-<text x="1340" y="1070.2399999999998" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Escrituras + historial</text>
-<text x="1340" y="1103.3599999999997" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Una transacción</text>
-<rect x="89" y="1230" width="1623" height="300" rx="16" fill="#eff8f3" stroke="#c3dfd2" stroke-width="2"/>
-<text x="112" y="1248" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">SI SE CONFIRMA</text>
-<rect x="1140" y="1298" width="405" height="39" rx="5" fill="#f6f9fd" stroke="none" stroke-width="2"/>
-<text x="1263.5" y="1305" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">4. id de reserva</text>
-<polyline points="1565,1348 1120,1348" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polygon points="1120,1348 1135.0,1355.0 1135.0,1341.0" fill="#147d68"/>
-<rect x="695" y="1385" width="405" height="39" rx="5" fill="#f6f9fd" stroke="none" stroke-width="2"/>
-<text x="792.0" y="1392" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">5. resultado de éxito</text>
-<polyline points="1120,1435 675,1435" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polygon points="675,1435 690.0,1442.0 690.0,1428.0" fill="#147d68"/>
-<rect x="250" y="1458" width="405" height="39" rx="5" fill="#f6f9fd" stroke="none" stroke-width="2"/>
-<text x="328.0" y="1465" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">6. mostrar confirmación</text>
-<polyline points="675,1508 230,1508" fill="none" stroke="#147d68" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polygon points="230,1508 245.0,1515.0 245.0,1501.0" fill="#147d68"/>
-<rect x="89" y="1560" width="1623" height="200" rx="16" fill="#fff5e5" stroke="#e5c792" stroke-width="2"/>
-<text x="112" y="1578" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">SI EL HORARIO SE OCUPÓ</text>
-<rect x="1140" y="1610" width="405" height="39" rx="5" fill="#f6f9fd" stroke="none" stroke-width="2"/>
-<text x="1256.75" y="1617" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Conflicto: 23P01</text>
-<polyline points="1565,1660 1120,1660" fill="none" stroke="#926018" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polygon points="1120,1660 1135.0,1667.0 1135.0,1653.0" fill="#926018"/>
-<text x="112" y="1716" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">El resultado vuelve a la pantalla: elegir otro horario; no queda una reserva parcial.</text>
-<rect x="65" y="1850" width="1670" height="82" rx="15" fill="#ffffff" stroke="#d6e1ee" stroke-width="2"/>
-<text x="93" y="1878" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">Entrada inválida: el caso de uso devuelve el error sin llamar al adaptador.</text>
-<polyline points="65,1960 1735,1960" fill="none" stroke="#d6e1ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text x="65" y="1982" font-family="Arial, sans-serif" font-size="23" font-weight="700" fill="#20364f" dominant-baseline="text-before-edge">ALCANCE DE LA SECUENCIA</text>
-<text x="65" y="2018" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">El medio elegido no confirma el pago: efectivo y Yape se registran manualmente.</text>
-<text x="65" y="2051.12" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">La demo simula la RPC; la garantía de concurrencia requiere pruebas de la función y la base de datos.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1720" viewBox="0 0 2400 1720" role="img" aria-labelledby="title desc">
+<title id="title">Secuencia · Solicitud y respuesta de una reserva · App Barbería</title>
+<desc id="desc">Vista dinámica complementaria. La demo simula el backend; el diagrama muestra la interacción prevista con el servidor.</desc>
+<rect width="2400" height="1720" fill="white"/>
+<rect x="0" y="0" width="2400" height="140" rx="0" fill="#162b47" stroke="#162b47" stroke-width="2"/>
+<text x="42.0" y="21.0" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="white" dominant-baseline="text-before-edge">Secuencia · Solicitud y respuesta de una reserva</text>
+<text x="44.0" y="87.0" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#d5e4ed" dominant-baseline="text-before-edge">Vista dinámica complementaria. La demo simula el backend; el diagrama muestra la interacción prevista con el servidor.</text>
+<rect x="45" y="195" width="390" height="110" rx="12" fill="#eef5ff" stroke="#2468c9" stroke-width="2"/>
+<text x="143.0" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Presentación</text>
+<text x="157.0" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Aplicación móvil</text>
+<path d="M240 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
+<rect x="525" y="195" width="390" height="110" rx="12" fill="#f3effb" stroke="#7052b8" stroke-width="2"/>
+<text x="620.5" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">CrearReserva</text>
+<text x="654.5" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Caso de uso</text>
+<path d="M720 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
+<rect x="1005" y="195" width="390" height="110" rx="12" fill="#fff5e5" stroke="#926018" stroke-width="2"/>
+<text x="1123.0" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Adaptador</text>
+<text x="1063.0" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">SupabaseReservaAdapter</text>
+<path d="M1200 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
+<rect x="1485" y="195" width="390" height="110" rx="12" fill="#eaf8f2" stroke="#147d68" stroke-width="2"/>
+<text x="1586.0" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">API de datos</text>
+<text x="1620.0" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">PostgREST</text>
+<path d="M1680 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
+<rect x="1965" y="195" width="390" height="110" rx="12" fill="#eaf8f2" stroke="#147d68" stroke-width="2"/>
+<text x="2070.5" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">PostgreSQL</text>
+<text x="2116.5" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Servidor</text>
+<path d="M2160 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
+<g data-relation="ui-crear"><polyline points="240,420 720,420" fill="none" stroke="#2468c9" stroke-width="3.5" stroke-linejoin="round"/>
+<polygon points="720.0,420.0 704.0,412.0 704.0,428.0" fill="#2468c9" stroke="#2468c9" stroke-width="2"/>
+<text x="265.0" y="335.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">1. Entrega datos</text>
+<text x="265.0" y="366.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">ejecutar(entrada)</text>
+</g>
+<g data-relation="crear-adapter"><polyline points="720,625 1200,625" fill="none" stroke="#7052b8" stroke-width="3.5" stroke-linejoin="round"/>
+<polygon points="1200.0,625.0 1184.0,617.0 1184.0,633.0" fill="#7052b8" stroke="#7052b8" stroke-width="2"/>
+<text x="745.0" y="540.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#7052b8" dominant-baseline="text-before-edge">2. Solicita confirmación</text>
+<text x="745.0" y="571.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#7052b8" dominant-baseline="text-before-edge">confirmar(solicitud)</text>
+</g>
+<g data-relation="adapter-api"><polyline points="1200,760 1680,760" fill="none" stroke="#2468c9" stroke-width="3.5" stroke-linejoin="round"/>
+<polygon points="1680.0,760.0 1664.0,752.0 1664.0,768.0" fill="#2468c9" stroke="#2468c9" stroke-width="2"/>
+<text x="1225.0" y="675.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">3. Invoca RPC</text>
+<text x="1225.0" y="706.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">HTTPS · create_reservation</text>
+</g>
+<g data-relation="api-db"><polyline points="1680,895 2160,895" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round"/>
+<polygon points="2160.0,895.0 2144.0,887.0 2144.0,903.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
+<text x="1705.0" y="810.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">4. Ejecuta función</text>
+<text x="1705.0" y="841.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">SQL · create_reservation</text>
+</g>
+<rect x="520" y="435" width="400" height="95" rx="12" fill="#f3effb" stroke="#7052b8" stroke-width="2"/>
+<text x="539.0" y="449.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#7052b8" dominant-baseline="text-before-edge">Normaliza y valida la entrada.</text>
+<text x="539.0" y="477.8" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#7052b8" dominant-baseline="text-before-edge">Si es inválida, detiene la llamada.</text>
+<rect x="1945" y="930" width="410" height="125" rx="12" fill="#eaf8f2" stroke="#147d68" stroke-width="2"/>
+<text x="1960.0" y="944.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">Revalida permisos, reglas</text>
+<text x="1960.0" y="974.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">y disponibilidad. Guarda</text>
+<text x="1960.0" y="1004.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">todo en una transacción.</text>
+<g data-relation="db-api"><polyline points="2160,1160 1680,1160" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<polygon points="1680.0,1160.0 1696.0,1168.0 1696.0,1152.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
+<text x="1705.0" y="1082.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">5. Devuelve identificador</text>
+<text x="1705.0" y="1113.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">UUID de reserva</text>
+</g>
+<g data-relation="api-adapter"><polyline points="1680,1270 1200,1270" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<polygon points="1200.0,1270.0 1216.0,1278.0 1216.0,1262.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
+<text x="1225.0" y="1192.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">6. Respuesta de la RPC</text>
+</g>
+<g data-relation="adapter-crear"><polyline points="1200,1380 720,1380" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<polygon points="720.0,1380.0 736.0,1388.0 736.0,1372.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
+<text x="745.0" y="1302.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">7. ResultadoReserva</text>
+<text x="745.0" y="1333.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">Éxito o error comprensible</text>
+</g>
+<g data-relation="crear-ui"><polyline points="720,1490 240,1490" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<polygon points="240.0,1490.0 256.0,1498.0 256.0,1482.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
+<text x="265.0" y="1412.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">8. Devuelve el resultado</text>
+</g>
+<rect x="45" y="1525" width="2310" height="75" rx="12" fill="#f7f9fc" stroke="#cbd8e5" stroke-width="2"/>
+<text x="63.0" y="1543.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">La presentación informa confirmación o error. Ante conflicto: horario ocupado. Si se pierde la respuesta, consultar citas antes de reenviar.</text>
+<path d="M40 1616H2360" stroke="#cbd8e5"/>
+<text x="44.0" y="1634.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Línea continua: solicitud. Línea discontinua: respuesta. El servidor confirma la operación de forma completa.</text>
+<text x="44.0" y="1671.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Elegir efectivo o Yape registra el medio elegido; la recepción del pago se confirma manualmente.</text>
 </svg>

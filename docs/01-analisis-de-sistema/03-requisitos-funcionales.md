@@ -86,6 +86,7 @@
 ## Delimitaciones
 
 - RF43 y RF44 describen reseñas y geolocalización como capacidades previstas para una incorporación gradual.
+- La imagen de referencia de RF31 puede indicarse mediante una URL; la carga de archivos desde la aplicación corresponde a la ampliación multimedia prevista.
 - La confirmación y el reembolso de pagos registran una operación realizada por el personal; no transfieren dinero ni constituyen facturación electrónica.
 - Los recordatorios se plantean inicialmente como notificaciones internas. Push no es un requisito de esta primera versión.
 - La elección de cualquier barbero disponible debe producir una reserva asignada a un profesional concreto al confirmar.
