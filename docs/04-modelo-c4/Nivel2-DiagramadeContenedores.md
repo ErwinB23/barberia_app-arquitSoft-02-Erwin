@@ -1,40 +1,38 @@
 # C2. Contenedores
 
-## Objetivo
+## Sistema que se abre
 
-Abrir el sistema de C1 y mostrar aplicaciones, servicios de ejecución y almacenamiento. En C4, contenedor no significa Docker: representa una aplicación o almacén con una responsabilidad técnica definida.
+Esta vista abre **App Barbería**, el sistema de C1. Muestra aplicaciones, servicios gestionados y almacenamiento con límites de ejecución definidos. Un contenedor C4 puede ser una aplicación o almacén; no implica Docker ni microservicios de negocio.
 
-![Contenedores y servicios de App Barbería](../../img/nivel2-contenedores.svg)
+![C2: aplicaciones, servicios gestionados y datos](../../img/nivel2-contenedores.svg)
 
-## Elementos del sistema
+## Contenedores y servicios
 
-| Contenedor o servicio | Tecnología | Responsabilidad |
+| Nombre del diagrama | Tecnología | Responsabilidad |
 |---|---|---|
-| Aplicación móvil / Web | Expo, React Native, TypeScript | Interfaz, navegación, coordinación de casos de uso y adaptadores. Android es la prioridad; web e iOS se validarán por etapas. |
-| Auth | Supabase Auth | Identidad, sesiones y recuperación; la autorización por barbería depende de membresías y recursos. |
-| API de datos | Supabase / PostgREST | Consultas REST autorizadas e invocación RPC de funciones PostgreSQL. |
-| Base de datos y funciones | PostgreSQL | Información persistente, reglas transaccionales, permisos, RLS y restricciones. Incluye tareas internas de recordatorio. |
-| Edge Function de correo | TypeScript / Supabase | Validar e integrar el envío de invitaciones mediante el proveedor de correo. |
+| Aplicación móvil | Expo, React Native, TypeScript | Presentación y coordinación por rol. Se prioriza Android. |
+| Aplicación web | Expo / React Native Web, TypeScript | Acceso desde navegador, con validación por etapas. |
+| Supabase Auth | Supabase Auth | Identidad, acceso y sesiones. |
+| API de datos | PostgREST administrado por Supabase | Consultas REST y RPC con el contexto autorizado. |
+| Función de correo | Supabase Edge Functions, TypeScript | Verifica la invitación y la autorización e integra su envío. |
+| Base de datos | PostgreSQL y SQL | Datos de aplicación, reglas, transacciones, permisos y restricciones. |
 
-Se incluyen la configuración, funciones y datos del backend dentro de la solución. Supabase administra su infraestructura; no son servidores propios que debamos desarrollar desde cero.
+Móvil y web pueden compartir código, pero se representan por separado porque se ejecutan en entornos diferentes. Los servicios Supabase pertenecen al alcance técnico de la solución y se agrupan como infraestructura administrada. La vista no pretende describir todos los procesos internos del proveedor.
 
-## Comunicaciones principales
+## Relaciones principales
 
-| Origen | Destino | Comunicación y propósito |
+| Origen | Destino | Intención e interfaz |
 |---|---|---|
-| Usuario | Aplicación | Interacción móvil o navegador. |
-| Aplicación | Auth | HTTPS para acceso y sesión. |
-| Aplicación | API | HTTPS con contexto del usuario; REST para consultas y RPC para operaciones de servidor. |
-| API | PostgreSQL | SQL y funciones; verificar permisos, ejecutar transacciones y persistir. |
-| Aplicación | Edge Function | Invocación HTTPS autorizada para el envío de una invitación registrada. |
-| Auth | Google / correo de acceso | Integración de identidad y mensajes de confirmación o recuperación. |
-| Edge Function | Correo | HTTPS con credenciales solo en servidor. |
-| Aplicación | Mapas, previsto | Consulta de mapas con restricciones del proveedor y ubicación autorizada. |
+| Ambos clientes | Supabase Auth | Autenticación y sesión por HTTPS. |
+| Ambos clientes | API de datos | Consultar y confirmar operaciones mediante HTTPS, REST/RPC y sesión del usuario. |
+| API de datos | Base de datos | Ejecutar SQL y funciones transaccionales. |
+| Ambos clientes | Función de correo | Solicitar el envío de una invitación registrada por HTTPS. |
+| Función de correo | API de datos | Consultar invitación, membresía y establecimiento antes de enviar. |
+| Supabase Auth | Google | Delegar identidad mediante OAuth/HTTPS. |
+| Supabase Auth | Servicio de correo | Enviar confirmación y recuperación por el mecanismo de correo configurado. |
+| Función de correo | Servicio de correo | Enviar invitaciones con Resend mediante HTTPS. |
+| Aplicación móvil, por etapas | Servicio de mapas | Consultar mapas y ubicaciones autorizadas por HTTPS. |
 
-## Seguridad y consistencia
+Los tres roles de C1 utilizan los clientes según sus permisos. La API rechaza accesos indebidos y PostgreSQL confirma la reserva y sus escrituras relacionadas dentro de una transacción. No se añaden API propia Node.js, pasarela automática ni caché inicial.
 
-El dispositivo no contiene claves privilegiadas. Auth identifica a la persona; permisos, RLS y funciones verifican su acceso al recurso y a la barbería. Las funciones privilegiadas incluyen comprobaciones explícitas.
-
-La confirmación de reserva y sus escrituras relacionadas ocurren en una transacción de PostgreSQL. Los avisos internos pueden pertenecer a esa transacción; la entrega externa de correo se ejecuta por separado.
-
-Esta vista refleja ADR-001, ADR-003, ADR-004, ADR-005 y ADR-006. No incluye una API propia Node.js ni caché inicial. El siguiente nivel detalla [los componentes de la aplicación](Nivel3-Diagrama-de-Componentes.md).
+Los marcos discontinuos delimitan grupos. El acceso web se valida por etapas; mapas aparece en ámbar como ampliación. El siguiente nivel abre únicamente la [Aplicación móvil](Nivel3-Diagrama-de-Componentes.md).
