@@ -6,29 +6,29 @@ Estas decisiones definen la propuesta de arquitectura de App Barbería.
 
 Un ADR (Architecture Decision Record) registra el contexto, la decisión, las alternativas y sus consecuencias. Se conserva su identificador cuando evoluciona y se documenta por qué se revisa.
 
-La elección central es utilizar Supabase, organizar por funcionalidades y aplicar Clean Architecture gradualmente.
+La propuesta adopta el estilo cliente-servidor con Supabase como backend administrado. Clean Architecture organiza las dependencias internas de cada funcionalidad desde su primera implementación; agrupar el código por funcionalidades es una forma de ordenar el proyecto, no un segundo enfoque arquitectónico. Las capacidades pueden entregarse por etapas sin cambiar esta regla de diseño.
 
 ## Cuadro de decisiones arquitectónicas
 
 | ID | Decisión arquitectónica | Driver relacionado | Justificación | Resultado |
 |---|---|---|---|---|
-| [ADR-001](#adr-001) | Organización modular con Supabase | DA08 - Crecimiento y respuesta<br>DA09 - Evolución del alcance<br>DA11 - Mantenibilidad | Organizar las funcionalidades con límites claros y aprovechar los servicios administrados para facilitar mantenimiento y evolución. | Módulos de identidad, barberías, catálogo, horarios, reservas, atención, pagos y comunicación, apoyados en Supabase. |
-| [ADR-002](#adr-002) | Clean Architecture gradual | DA09 - Evolución del alcance<br>DA11 - Mantenibilidad | Separar reglas y casos de uso de las pantallas y los detalles del proveedor, controlando las dependencias internas. | Dominio, Aplicación, Presentación e Infraestructura por módulo; contratos internos y adaptación progresiva. |
-| [ADR-003](#adr-003) | Presentación Expo y comunicación HTTPS mediante REST/RPC | DA06 - Seguridad de identidad y secretos<br>DA10 - Experiencia móvil | Ofrecer interfaces móviles y acceso seguro al backend, reutilizando las tecnologías elegidas para el proyecto. | Expo, React Native y Expo Router; solicitudes HTTPS mediante adaptadores del SDK, REST/RPC e invocación de funciones. |
+| [ADR-001](#adr-001) | Organización funcional con Supabase | DA08 - Crecimiento y respuesta<br>DA09 - Reseñas, mapas e imágenes<br>DA11 - Dependencias del núcleo | Delimitar responsabilidades del negocio y aprovechar los servicios administrados para operar y hacer crecer la plataforma. | Funcionalidades de identidad, barberías, catálogo, horarios, reservas, atención, pagos, reseñas, ubicación, imágenes y comunicación, apoyadas en Supabase. |
+| [ADR-002](#adr-002) | Clean Architecture desde el inicio | DA09 - Reseñas, mapas e imágenes<br>DA11 - Dependencias del núcleo | Mantener reglas y casos de uso independientes de pantallas, SDK y formatos del proveedor en cliente y servidor. | Dominio y aplicación como núcleo; presentación e infraestructura dependen de contratos internos en cada funcionalidad. |
+| [ADR-003](#adr-003) | Presentación Expo y comunicación HTTPS | DA06 - Seguridad de identidad y secretos<br>DA10 - Experiencia móvil | Ofrecer interfaces móviles y acceso seguro a las operaciones del backend. | Expo, React Native y Expo Router; adaptadores HTTPS para Auth, consultas REST y Edge Functions de operaciones críticas; RPC desde el servidor hacia la API de datos cuando corresponda. |
 | [ADR-004](#adr-004) | Base y esquema compartidos con aislamiento por barbería | DA01 - Aislamiento entre barberías | Permitir que varios establecimientos compartan la plataforma sin acceder a información privada de otros. | PostgreSQL compartido; relaciones por barbershop_id y controles de propiedad, membresía y acceso. |
-| [ADR-005](#adr-005) | Identidad y autorización contextual en servidor | DA01 - Aislamiento entre barberías<br>DA06 - Seguridad de identidad y secretos | Verificar quién solicita la operación y qué permisos tiene sobre el recurso y la barbería correspondiente. | Supabase Auth, membresías activas, permisos y RLS; validaciones explícitas en funciones de servidor y secretos protegidos. |
-| [ADR-006](#adr-006) | Operaciones críticas transaccionales | DA02 - Concurrencia de reservas<br>DA03 - Disponibilidad combinada<br>DA04 - Consistencia de atención y pago | Evitar citas superpuestas y escrituras parciales al confirmar reservas o modificar estados relacionados. | Funciones PostgreSQL con revalidación, transacciones, bloqueos y restricciones de exclusión de intervalos activos. |
+| [ADR-005](#adr-005) | Identidad y autorización contextual en servidor | DA01 - Aislamiento entre barberías<br>DA06 - Seguridad de identidad y secretos | Verificar usuario, recurso, asignación y membresía antes de permitir operaciones privadas. | Supabase Auth, RLS y comprobaciones de servidor; el barbero confirma pagos de sus citas y el administrador actúa en su barbería. |
+| [ADR-006](#adr-006) | Casos de uso de servidor y operaciones atómicas | DA02 - Concurrencia de reservas<br>DA03 - Disponibilidad combinada<br>DA04 - Consistencia de atención y pago | Coordinar reglas de negocio sin perder consistencia ante solicitudes simultáneas. | Casos de uso de servidor con contratos de persistencia; funciones PostgreSQL para escrituras atómicas, comprobaciones definitivas y restricciones de intervalos. |
 | [ADR-007](#adr-007) | Preservación de condiciones históricas | DA05 - Conservación del historial | Impedir que cambios posteriores del catálogo o las políticas alteren las condiciones de reservas anteriores. | Datos descriptivos, precios, duración y políticas conservados en la reserva, con reglas definidas para su actualización. |
-| [ADR-008](#adr-008) | Pagos manuales con permisos y estados definidos | DA04 - Consistencia de atención y pago | Controlar el registro de efectivo, Yape y reembolsos según autorización y estado, dentro del alcance previsto. | Confirmación manual por personal autorizado y transiciones de pago validadas; sin cobros automáticos mediante pasarela. |
+| [ADR-008](#adr-008) | Pagos manuales con permisos y estados definidos | DA04 - Consistencia de atención y pago | Controlar quién verifica la recepción de efectivo o Yape y evitar confirmaciones duplicadas. | Pago pendiente hasta confirmación manual por barbero asignado o administrador autorizado; transiciones y autor registrados; reembolsos externos registrados. |
 | [ADR-009](#adr-009) | Entrega externa separada y avisos internos consistentes | DA07 - Comunicaciones secundarias | Conservar la operación principal cuando falla el correo externo y mantener coherencia de avisos y recordatorios. | Correo fuera de la transacción principal; avisos internos consistentes y recordatorios deduplicados. Reintentos persistentes por evaluar. |
-| [ADR-010](#adr-010) | Integraciones mediante contratos y adaptadores | DA09 - Evolución del alcance<br>DA11 - Mantenibilidad | Limitar el impacto de cambios de proveedor y evitar dependencias externas dispersas en pantallas y reglas. | Contratos y adaptadores de Supabase y correo; incorporación gradual de reseñas, mapas y archivos previstos. |
+| [ADR-010](#adr-010) | Integraciones mediante contratos y adaptadores | DA09 - Reseñas, mapas e imágenes<br>DA11 - Dependencias del núcleo | Limitar el impacto de cambios de proveedor y evitar dependencias externas dispersas en las reglas. | Contratos y adaptadores para persistencia, correo, mapas y almacenamiento de imágenes; reseñas y ubicación forman parte de las funcionalidades del sistema. |
 | [ADR-011](#adr-011) | Crecimiento y rendimiento basados en mediciones | DA03 - Disponibilidad combinada<br>DA08 - Crecimiento y respuesta | Detectar cuellos de botella y asignar recursos según la carga real antes de añadir infraestructura. | Métricas, índices, filtros y paginación; evaluación de recursos, costos, caché o réplicas según evidencia. |
 
 El resultado describe lo que se espera obtener con cada decisión. Su explicación, alternativas y consecuencias se desarrollan a continuación.
 
 <a id="adr-001"></a>
 
-## ADR-001: Organización modular con Supabase como backend
+## ADR-001: Organización funcional con Supabase como backend
 
 **Estado:** adoptada para la propuesta de diseño.
 
@@ -36,35 +36,35 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Contexto.** Las capacidades de Barbería deben evolucionar con límites claros y una infraestructura operable por el proyecto.
 
-**Decisión.** Utilizar Supabase, organizar el código por funcionalidades y delimitar responsabilidades. No se introducirán microservicios de negocio ni una API propia Node.js en esta etapa.
+**Decisión.** Utilizar Supabase como backend administrado y organizar el código por funcionalidades con límites explícitos. Este agrupamiento convive con Clean Architecture: cada funcionalidad aplica la regla de dependencias de ADR-002. No se introducirán microservicios de negocio ni una API propia Node.js en esta propuesta.
 
 **Alternativas consideradas.** API propia como monolito modular: permitiría centralizar reglas en un servidor propio, pero agrega despliegue y mantenimiento sin una necesidad identificada. Microservicios: agregan coordinación distribuida, comunicaciones y operación independientes que el alcance inicial no exige.
 
-**Consecuencias.** Se aprovechan PostgreSQL, Auth y las funciones del backend. La modularidad debe demostrarse mediante contratos y límites, no solo carpetas. Existe dependencia de las interfaces y configuración del proveedor.
+**Consecuencias.** Se aprovechan PostgreSQL, Auth y Edge Functions. La separación entre funcionalidades debe demostrarse mediante contratos y límites, no solo carpetas. Se diseñan también reseñas, ubicación e imágenes; su entrega puede planificarse por etapas. La infraestructura conserva una dependencia de las interfaces del proveedor.
 
 **Verificación y criterio de revisión.** Contratos de módulo definidos; accesos remotos encapsulados; ninguna operación requiere desplegar un microservicio nuevo. Revisar esta decisión si una necesidad concreta de proceso, control u operación no puede resolverse razonablemente con la estructura elegida.
 
 <a id="adr-002"></a>
 
-## ADR-002: Clean Architecture con adopción gradual
+## ADR-002: Clean Architecture desde el inicio
 
 **Estado:** adoptada para la propuesta de diseño.
 
 **Origen:** DA09, DA11; AC08; RC09.
 
-**Contexto.** Las pantallas y los formatos de persistencia pueden acoplarse a las reglas si las funcionalidades crecen sin controlar importaciones.
+**Contexto.** Las funcionalidades se construirán desde cero. Sus reglas y casos de uso deben conservar límites de dependencia antes de integrar pantallas, formatos de persistencia y servicios externos.
 
-**Decisión.** Organizar dominio, aplicación, presentación e infraestructura por módulo. Definir contratos en el interior e implementarlos con adaptadores. El dominio TypeScript no importará React Native, el SDK ni los tipos generados de Supabase.
+**Decisión.** Aplicar Clean Architecture desde la primera implementación de cada funcionalidad, tanto en el cliente como en los casos de uso que se ejecuten en servidor. El dominio contiene reglas y tipos propios; la aplicación coordina casos de uso y define los contratos que necesita; presentación e infraestructura dependen de ese núcleo. La composición conecta implementaciones concretas. Dominio y aplicación no importan React Native, SDK, Edge Functions ni tipos generados de Supabase.
 
-**Alternativas consideradas.** Mantener llamadas y reglas en componentes: simplifica un primer flujo, pero mezcla responsabilidades. Reestructurar todo inmediatamente: añade riesgo y trabajo sin validar antes los contratos.
+**Alternativas consideradas.** Mantener llamadas y reglas en componentes: mezcla responsabilidades. Conservar toda la lógica del negocio en funciones SQL: vincula los casos de uso a PostgreSQL y dificulta probar sus reglas de forma independiente.
 
-**Consecuencias.** La organización se desarrollará por funcionalidades. Las reglas transaccionales que se mantengan en SQL siguen vinculadas a PostgreSQL; el enfoque no implica independencia tecnológica completa del backend. Los adaptadores transforman tipos externos a tipos internos sin crear fuentes contradictorias.
+**Consecuencias.** Las reglas de negocio que puedan expresarse sin infraestructura vivirán en el dominio y los casos de uso. PostgreSQL conservará las comprobaciones definitivas que requieren datos actuales, permisos, concurrencia y restricciones transaccionales; estas garantías se prueban también en la base de datos. La aplicación invoca dichas operaciones mediante contratos, sin importar detalles SQL. No se duplicarán reglas con versiones contradictorias en cliente y servidor.
 
-**Verificación y criterio de revisión.** Revisión de dependencias y pruebas de reglas puras, casos de uso y adaptadores. Revisar la estructura si añade capas sin una responsabilidad concreta.
+**Verificación y criterio de revisión.** Revisar importaciones de cada funcionalidad y probar reglas y casos de uso sin SDK, interfaz ni base de datos; verificar por integración las garantías definitivas de PostgreSQL. Revisar la estructura si se añaden capas sin responsabilidad concreta.
 
 <a id="adr-003"></a>
 
-## ADR-003: Presentación Expo y comunicación HTTPS mediante REST/RPC
+## ADR-003: Presentación Expo y comunicación HTTPS
 
 **Estado:** adoptada para la propuesta de diseño.
 
@@ -72,11 +72,11 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Contexto.** Clientes, barberos y administradores necesitan interfaces móviles y operaciones seguras sobre servicios remotos.
 
-**Decisión.** Mantener Expo, React Native, Expo Router y TypeScript. La aplicación usará el SDK de Supabase encapsulado y sus interfaces HTTPS: consultas REST, RPC para funciones PostgreSQL e invocación de Edge Functions cuando corresponda.
+**Decisión.** Utilizar Expo, React Native, Expo Router y TypeScript. La aplicación cliente usará adaptadores para autenticarse con Supabase Auth, realizar consultas autorizadas mediante REST e invocar Edge Functions para operaciones críticas. Los casos de uso de servidor accederán a persistencia mediante contratos; los adaptadores podrán invocar por RPC las funciones PostgreSQL necesarias para escrituras atómicas.
 
 **Alternativas consideradas.** Aplicaciones nativas separadas: duplican esfuerzo para el alcance actual. Conexión directa del dispositivo a PostgreSQL con credenciales administrativas: expone permisos incompatibles con un cliente público. API Node.js intermedia: requiere una justificación adicional.
 
-**Consecuencias.** Android es la prioridad inicial; web e iOS se validan por etapas. La aplicación necesita manejar latencia, sesión, carga y errores. No se supone funcionamiento completo sin conexión.
+**Consecuencias.** Android es la prioridad inicial; web e iOS se validan por etapas. El cliente y las Edge Functions necesitan manejar latencia, sesión, carga y errores; una operación crítica no se confirma en la pantalla antes de recibir el resultado del servidor. No se supone funcionamiento completo sin conexión.
 
 **Verificación y criterio de revisión.** Los flujos presentan resultados recuperables y no contienen claves privilegiadas. Validar cada plataforma prevista antes de declararla soportada.
 
@@ -94,7 +94,7 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Alternativas consideradas.** Base por barbería: incrementa administración y migraciones. Esquema por barbería: multiplica objetos y coordinación. Son alternativas futuras solo si se justifican por aislamiento u operación.
 
-**Consecuencias.** Las consultas y políticas deben verificar el contexto correcto. Un perfil global o una notificación personal no requiere artificialmente un barbershop_id; se protege mediante propiedad y relaciones. El catálogo público se distingue de datos privados.
+**Consecuencias.** Las consultas y políticas deben verificar el contexto correcto. Un perfil global o una notificación personal no requiere artificialmente un barbershop_id; se protege mediante propiedad y relaciones. El catálogo, las imágenes y las reseñas publicadas se distinguen de los datos privados; su visibilidad no concede permiso para modificarlos.
 
 **Verificación y criterio de revisión.** Pruebas de acceso cruzado, cambios de identificador y membresías en varios establecimientos; el administrador de A no obtiene privilegios sobre B.
 
@@ -108,13 +108,13 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Contexto.** La identidad autenticada no determina por sí sola qué reservas, pagos o barberías puede gestionar una persona.
 
-**Decisión.** Utilizar Supabase Auth para identidad y sesión. Autorizar con usuario, recurso, membresía activa, rol y barbería. Aplicar permisos de tablas, RLS y comprobaciones en las funciones de servidor. Mantener secretos exclusivamente en entornos seguros.
+**Decisión.** Utilizar Supabase Auth para identidad y sesión. Los casos de uso de servidor verificarán usuario, recurso, barbería, membresía activa y rol; al confirmar un pago, comprobarán además que el barbero esté asignado a la cita o que el administrador pertenezca a la barbería. La reseña exigirá una atención propia completada y la gestión de imágenes, autorización sobre el establecimiento. Aplicar permisos de tablas, RLS y comprobaciones definitivas en las funciones de base de datos. Mantener secretos exclusivamente en servidor.
 
 **Alternativas consideradas.** Autorización solo en pantallas: el usuario puede modificar solicitudes. Rol administrativo global: no representa el alcance por establecimiento. Confiar solo en RLS dentro de funciones privilegiadas: no cubre automáticamente ejecuciones que eviten dichas políticas.
 
-**Consecuencias.** Las funciones SECURITY DEFINER deben verificar identidad y autorización explícitamente, limitar permisos de ejecución y usar un search_path seguro. Google participa en identidad, no decide membresías. Es necesario revisar reglas al añadir recursos.
+**Consecuencias.** La sesión del usuario debe verificarse en la Edge Function y conservarse como contexto confiable para la operación de datos; no se aceptan identificadores de usuario enviados por la pantalla como prueba de identidad. Una función SQL privilegiada no hereda automáticamente las protecciones de RLS: debe verificar identidad y autorización explícitamente, limitar permisos de ejecución y usar un search_path seguro. Google participa en identidad, no decide membresías.
 
-**Verificación y criterio de revisión.** Matriz de pruebas por rol y propiedad, llamadas sin sesión y usuarios de otra barbería. La negativa de acceso no revela datos privados.
+**Verificación y criterio de revisión.** Matriz de pruebas por rol, propiedad, asignación y barbería; llamadas sin sesión, confirmaciones de pagos ajenos, cambios de identificador, reseñas de citas ajenas y modificaciones de imágenes de otro establecimiento. La negativa de acceso no revela datos privados.
 
 <a id="adr-006"></a>
 
@@ -124,15 +124,15 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Origen:** DA02, DA03, DA04; AC03; RC02.
 
-**Contexto.** Entre consultar disponibilidad y confirmar, otro cliente puede ocupar el mismo intervalo. Una reserva comprende varias escrituras relacionadas.
+**Contexto.** Entre consultar disponibilidad y confirmar, otro cliente puede ocupar el mismo intervalo. Una reserva comprende varias escrituras relacionadas y dos usuarios autorizados pueden intentar confirmar simultáneamente un mismo pago.
 
-**Decisión.** Ejecutar confirmación, reprogramación, cancelación y cambios críticos mediante funciones de PostgreSQL con revalidación de permisos, estado y condiciones. Aplicar transacciones, bloqueos apropiados y restricciones de exclusión para intervalos activos, incluida la separación entre citas.
+**Decisión.** Coordinar confirmación, reprogramación, cancelación y confirmación manual de pagos mediante casos de uso de servidor. Cada caso de uso define la operación completa que necesita de un contrato de persistencia. Su adaptador invoca una función PostgreSQL que efectúa las escrituras relacionadas en una transacción y comprueba de nuevo identidad, permisos, estado y condiciones actuales. Usar bloqueos o actualizaciones condicionadas para impedir confirmaciones duplicadas y restricciones de exclusión para intervalos activos, incluida la separación entre citas.
 
 **Alternativas consideradas.** Validación únicamente en cliente: no resuelve concurrencia. Varias escrituras remotas independientes: pueden dejar reservas o pagos incompletos. Distribuir el flujo entre servicios: exige coordinación adicional para preservar consistencia.
 
-**Consecuencias.** El servidor es la autoridad definitiva. El contrato de confirmación representa una operación atómica completa; no se divide en repositorios que escriben por separado desde el cliente. Las reglas conservadas en SQL requieren pruebas de integración.
+**Consecuencias.** El servidor es la autoridad definitiva. El contrato de confirmación representa una operación atómica completa; el cliente no divide el proceso en escrituras remotas independientes. El dominio expresa reglas independientes de infraestructura; SQL conserva las garantías que dependen del estado concurrente y la integridad de datos. Su comportamiento requiere pruebas de integración además de las pruebas de los casos de uso.
 
-**Verificación y criterio de revisión.** Solicitudes concurrentes y fallos inducidos: no se aceptan intervalos incompatibles ni escrituras parciales. Las consultas de disponibilidad son orientativas hasta la confirmación.
+**Verificación y criterio de revisión.** Solicitudes concurrentes y fallos inducidos: no se aceptan intervalos incompatibles, confirmaciones duplicadas del mismo pago ni escrituras parciales. Las consultas de disponibilidad son orientativas hasta la confirmación.
 
 <a id="adr-007"></a>
 
@@ -162,13 +162,13 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Contexto.** El alcance admite efectivo y Yape, pero no un procesador financiero integrado.
 
-**Decisión.** Registrar medio y estado de pago, confirmar recepción por personal autorizado y registrar reembolsos realizados fuera de la plataforma. Validar transición, reserva y permiso de quien actúa.
+**Decisión.** Registrar el medio elegido y dejar el pago pendiente al confirmar una reserva. Permitir que el barbero con membresía activa y asignado a la cita, o un administrador autorizado de esa barbería, verifique la recepción de efectivo o Yape y confirme manualmente el pago. Registrar quién confirmó y cuándo, rechazar confirmaciones repetidas y permitir al administrador registrar reembolsos efectuados fuera de la plataforma según la política aplicable.
 
 **Alternativas consideradas.** Pasarela automática: requiere integración, conciliación y manejo de operaciones externas fuera del alcance. Estado de pago libremente editable: pierde consistencia y control.
 
-**Consecuencias.** Una selección de Yape o la visualización de un QR no confirma recepción. La plataforma no transfiere dinero ni emite comprobantes fiscales. El barbero solo confirma efectivo de atenciones propias autorizadas; el administrador gestiona las operaciones que le correspondan.
+**Consecuencias.** Elegir Yape, visualizar un QR o registrar una reserva no confirma recepción. La plataforma no transfiere dinero, no verifica automáticamente Yape ni emite comprobantes fiscales. Las transiciones de pendiente a pagado y, si corresponde, a reembolsado se autorizan y registran en servidor.
 
-**Verificación y criterio de revisión.** Casos de confirmación duplicada, usuario no autorizado, cambios incompatibles y elegibilidad de reembolso. Una pasarela futura exigiría una decisión nueva.
+**Verificación y criterio de revisión.** Casos de pago en efectivo y Yape confirmado por el barbero asignado o el administrador; rechazos por membresía inactiva, cita ajena, otra barbería, confirmación duplicada y reembolso no autorizado.
 
 <a id="adr-009"></a>
 
@@ -198,13 +198,13 @@ El resultado describe lo que se espera obtener con cada decisión. Su explicaci�
 
 **Contexto.** Supabase, correo y mapas tienen interfaces y formatos propios que pueden cambiar.
 
-**Decisión.** Definir contratos internos para operaciones necesarias y adaptadores concretos para servicios externos. Mantener los tipos generados y la configuración del proveedor en infraestructura. Incorporar reseñas, ubicación y archivos por etapas.
+**Decisión.** Definir contratos internos según las operaciones que necesitan los casos de uso y adaptadores concretos para Supabase, correo, mapas y almacenamiento de imágenes. Mantener tipos generados, formatos de respuesta y configuración del proveedor en infraestructura. Diseñar reseñas, ubicación y gestión de imágenes como funcionalidades del alcance; su entrega puede organizarse por etapas.
 
 **Alternativas consideradas.** Importar proveedores desde cada pantalla o regla: dispersa dependencias. Abstraer todas las llamadas con interfaces genéricas sin casos de uso: añade complejidad sin un límite útil.
 
-**Consecuencias.** Los contratos se basan en necesidades del negocio, como confirmar una reserva de forma atómica. El proveedor de mapas y la solución geoespacial quedan por evaluar; no se presenta PostGIS ni carga multimedia como implementados. Los adaptadores reducen el impacto de cambio, pero no eliminan todas las diferencias de proveedor.
+**Consecuencias.** Los contratos se basan en necesidades concretas, como confirmar una reserva de forma atómica o almacenar una imagen autorizada. El proveedor de mapas y la técnica de búsqueda por proximidad quedan por seleccionar; esto no excluye mapas ni imágenes del alcance. Los adaptadores reducen el impacto de cambios de proveedor, aunque los permisos y reglas del negocio permanecen en los casos de uso y en las garantías definitivas del servidor.
 
-**Verificación y criterio de revisión.** Cambiar un adaptador de prueba sin modificar el dominio; revisar conversiones de entrada, resultado y error. Las funcionalidades previstas deben conservar permisos y reglas propias.
+**Verificación y criterio de revisión.** Sustituir un adaptador de prueba sin modificar dominio ni casos de uso; revisar conversiones de entrada, resultado y error. Probar permisos de reseñas, ubicación e imágenes con usuarios y barberías diferentes.
 
 <a id="adr-011"></a>
 

@@ -1,43 +1,36 @@
-# C3. Componentes
+# C3. Componentes de la aplicación móvil
 
-## Alcance del nivel 3
+## Alcance
 
-C3 detalla el interior de la **Aplicación móvil** presentada en C2. Se concentra en confirmar una reserva y supone que el usuario ya tiene una sesión válida. Cada componente agrupa código con una responsabilidad concreta, como recoger la selección, coordinar la reserva o comunicarse con Supabase.
+C3 abre únicamente el contenedor **Aplicación móvil** de [C2](Nivel2-DiagramadeContenedores.md). Muestra los componentes que intervienen cuando un cliente solicita una reserva con una sesión disponible. La operación de negocio del servidor se dibuja fuera del límite móvil para identificar la integración; sus componentes internos no forman parte de esta vista. El servidor vuelve a comprobar la identidad, los permisos y la disponibilidad antes de confirmar.
 
-## Diagrama
+## Diagramas
 
-![C3: componentes de la aplicación móvil para confirmar una reserva](../../img/nivel3-componentes-diagrama.svg)
+![C3: componentes de la aplicación móvil para solicitar una reserva](../../img/nivel3-componentes-diagrama.svg)
 
-![C3: componentes que colaboran para confirmar una reserva](../../img/nivel3-componentes.svg)
+![C3: componentes que colaboran al solicitar una reserva](../../img/nivel3-componentes.svg)
 
-Las dos imágenes representan el mismo alcance con distribuciones y colores diferentes. Cada una incluye su propia leyenda.
+Ambas imágenes muestran los mismos componentes del cliente con distinta distribución visual. Las flechas continuas indican colaboración durante la solicitud; las discontinuas, construcción e inyección al iniciar el flujo. Una llamada mediante un contrato no significa que el caso de uso importe el adaptador concreto.
 
-## Lectura del diagrama
+## Componentes y responsabilidades
 
-El recorrido principal es **Presentación de reservas → Coordinación de reservas → Adaptador de reservas → API de datos**. La presentación recoge la selección; la coordinación valida la entrada y solicita confirmar mediante un contrato; el adaptador convierte los datos y llama a la API. El resultado regresa por esas mismas conexiones. Este recorrido se lee de arriba hacia abajo en el primer diagrama y de izquierda a derecha en la segunda imagen.
+| Componente | Responsabilidad |
+|---|---|
+| Presentación de reservas | Recoge servicios, barbero, horario y medio de pago; invoca el caso de uso y muestra confirmación o conflicto. |
+| Coordinación de reservas | Contiene `SolicitarReserva`: prepara la solicitud y pide la operación remota mediante el contrato propio `ReservaRemotaGateway`. |
+| Modelo de reserva | Define `SolicitudReserva`, `ResultadoReserva` y validaciones puras de entrada, sin tipos de Supabase ni formatos de tablas. |
+| Adaptador HTTP de reservas | `ReservaHttpAdapter` implementa el contrato, convierte solicitud y respuesta y llama por HTTPS a la operación crítica con la sesión del usuario. |
+| Composición | Construye el caso de uso y le entrega una implementación de su contrato al iniciar el flujo. |
 
-**Composición** construye el caso de uso y le entrega el adaptador al iniciar el flujo. **Modelo de reserva** aporta los tipos de entrada, el resultado y la validación básica. Ambos pertenecen a la aplicación móvil. La API permanece fuera de su marco porque se ejecuta en el backend de Supabase.
+Estos nombres describen la organización propuesta; no indican que ya existan archivos con esos nombres. **Operaciones de negocio** es el contenedor de C2 ejecutado como Edge Function en Supabase, fuera de la aplicación móvil.
 
-## Componentes
+## Relaciones y recorrido
 
-| Nombre del diagrama | Responsabilidad | Correspondencia del ejemplo técnico |
-|---|---|---|
-| Presentación de reservas | Recoger selección y mostrar el resultado. | presentacion/demo.ts representa la entrada/salida; la pantalla móvil se plantea en el diseño. |
-| Coordinación de reservas | Validar la entrada y solicitar una confirmación completa mediante un contrato. | CrearReserva y ReservaTransaccionalGateway, en aplicacion/. |
-| Modelo de reserva | Definir entrada, resultados y normalización sin SDK. | SolicitudReserva, ResultadoReserva y normalizarSolicitud, en dominio/reserva.ts. |
-| Adaptador de reservas | Implementar el contrato y convertir parámetros y errores de la RPC. | SupabaseReservaAdapter, en infraestructura/. |
-| Composición | Construir el caso de uso y conectar su implementación. | crearFlujoReserva, en composicion.ts. |
+1. La presentación entrega la selección a `SolicitarReserva`.
+2. El caso de uso utiliza los tipos y validaciones del modelo, y solicita la confirmación por `ReservaRemotaGateway`.
+3. La composición conecta ese contrato con `ReservaHttpAdapter`. Durante la ejecución, el adaptador envía la solicitud por HTTPS a la Edge Function y traduce su respuesta a `ResultadoReserva`.
+4. En el servidor se verifica la sesión y se ejecuta `ConfirmarReserva`. La comprobación definitiva de permisos, disponibilidad y conflictos ocurre allí y en PostgreSQL; la respuesta vuelve por la misma relación hasta la pantalla.
 
-La **API de datos** es el mismo servicio PostgREST de C2. Se coloca fuera del marco de la Aplicación móvil porque su ejecución corresponde al backend administrado.
+La **dependencia de código** del caso de uso apunta al contrato propio, no al adaptador ni al SDK. La **secuencia de ejecución** sí pasa por el adaptador. El móvil no invoca directamente la función PostgreSQL de confirmación por RPC. Esta separación concreta [Clean Architecture](../02-arquitectura-software/enfoque-arquitectonico.md), ADR-002, ADR-003 y ADR-006, y contribuye a RF13, RF14 y RF42.
 
-## Relaciones y contrato
-
-- Presentación de reservas invoca CrearReserva.
-- Coordinación de reservas usa el Modelo de reserva y declara ReservaTransaccionalGateway.
-- La coordinación solicita confirmar mediante el contrato. Adaptador de reservas lo implementa y usa los tipos de dominio; el caso de uso no importa el adaptador concreto.
-- Composición construye e inyecta el adaptador en el caso de uso.
-- El adaptador invoca create_reservation mediante HTTPS/RPC con la sesión del usuario.
-
-La conexión entre Coordinación y Adaptador representa una llamada a través del contrato; no significa que el caso de uso importe la clase concreta del adaptador. Las líneas discontinuas representan construcción e inyección de dependencias, es decir, entregar a un objeto la implementación que necesita. C4 detalla la interfaz y la clase que la implementa; la secuencia complementaria muestra el orden de las llamadas y respuestas.
-
-Esta separación responde a ADR-002, ADR-006 y ADR-010 y apoya RF13, RF14 y RF42. El nivel siguiente detalla el código de **Coordinación de reservas**; conserva Modelo de reserva y Adaptador de reservas como [componentes vecinos en C4](Nivel4-DiagramadeCodigo.md).
+[C4](Nivel4-DiagramadeCodigo.md) abre el código de Coordinación de reservas; el modelo y el adaptador siguen siendo componentes vecinos de C3.

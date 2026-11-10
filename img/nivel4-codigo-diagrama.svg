@@ -1,80 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1650" viewBox="0 0 1800 1650" role="img" aria-labelledby="title desc">
-<title id="title">C4 · Código de Coordinación de reservas</title>
-<desc id="desc">Abre el componente de C3. Vista estática de clases, interfaz, función y tipos TypeScript.</desc>
-<defs><filter id="shadow" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="1" dy="2" stdDeviation="1" flood-opacity="0.13"/></filter></defs>
-<rect width="1800" height="1650" fill="white"/>
-<text x="547.00" y="55.84" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#202124">C4 · Código de Coordinación de reservas</text>
-<text x="450.01" y="99.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">Abre el componente de C3. Vista estática de clases, interfaz, función y tipos TypeScript.</text>
-<rect x="70" y="190" width="1660" height="520" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
-<text x="88.00" y="225.56" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#202124">COMPONENTE EN DETALLE · COORDINACIÓN DE RESERVAS</text>
-<rect x="70" y="850" width="920" height="680" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
-<text x="88.00" y="883.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">MODELO DE RESERVA</text>
-<text x="88.00" y="911.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Componente vecino</text>
-<rect x="1050" y="850" width="680" height="390" fill="#ffffe3" stroke="#9990d8" stroke-width="1.7"/>
-<text x="1068.00" y="882.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">ADAPTADOR DE RESERVAS</text>
-<text x="1068.00" y="908.99" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">Componente vecino</text>
-<rect x="120" y="285" width="650" height="360" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
-<text x="407.50" y="319.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">«clase»</text>
-<text x="362.00" y="357.44" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">CrearReserva</text>
-<path d="M120 385H770" stroke="#9990d8" stroke-width="1.5"/>
-<text x="138.00" y="420.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">- gateway: ReservaTransaccionalGateway</text>
-<path d="M120 443.5H770" stroke="#9990d8" stroke-width="1.5"/>
-<text x="138.00" y="479.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">+ constructor(gateway: ReservaTransaccionalGateway)</text>
-<text x="138.00" y="506.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">+ ejecutar(entrada: unknown):</text>
-<text x="138.00" y="534.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Promise&lt;ResultadoReserva&gt;</text>
-<rect x="1080" y="285" width="600" height="235" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
-<text x="1332.50" y="319.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">«interfaz»</text>
-<text x="1192.01" y="357.44" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">ReservaTransaccionalGateway</text>
-<path d="M1080 385H1680" stroke="#9990d8" stroke-width="1.5"/>
-<text x="1098.00" y="420.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">+ confirmar(solicitud: SolicitudReserva):</text>
-<text x="1098.00" y="448.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Promise&lt;ResultadoReserva&gt;</text>
-<rect x="1100" y="925" width="580" height="265" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
-<text x="1352.50" y="959.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">«clase»</text>
-<text x="1231.00" y="997.44" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">SupabaseReservaAdapter</text>
-<path d="M1100 1025H1680" stroke="#9990d8" stroke-width="1.5"/>
-<text x="1118.00" y="1060.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">+ confirmar(solicitud: SolicitudReserva):</text>
-<text x="1118.00" y="1088.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Promise&lt;ResultadoReserva&gt;</text>
-<path d="M1100 1111.0H1680" stroke="#9990d8" stroke-width="1.5"/>
-<text x="1118.00" y="1146.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Nota: invoca la RPC create_reservation.</text>
-<rect x="120" y="925" width="820" height="150" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
-<text x="414.00" y="961.62" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#202124">normalizarSolicitud</text>
-<text x="359.01" y="1000.05" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Función independiente · TypeScript</text>
-<text x="349.00" y="1027.56" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">(entrada: unknown): SolicitudReserva</text>
-<text x="340.50" y="1055.06" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Lanza un error si la entrada es inválida.</text>
-<rect x="120" y="1220" width="380" height="300" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
-<text x="280.50" y="1254.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">«tipo»</text>
-<text x="206.00" y="1292.44" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">SolicitudReserva</text>
-<path d="M120 1320H500" stroke="#9990d8" stroke-width="1.5"/>
-<text x="138.00" y="1355.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">barberId: string</text>
-<text x="138.00" y="1383.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">items: { serviceId: string;</text>
-<text x="138.00" y="1410.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">styleId: string | null }[]</text>
-<text x="138.00" y="1438.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">startsAt: string</text>
-<text x="138.00" y="1465.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">paymentMethod: &quot;cash&quot; | &quot;yape&quot;</text>
-<rect x="560" y="1220" width="380" height="285" fill="#eeebff" stroke="#9990d8" stroke-width="1.7" filter="url(#shadow)"/>
-<text x="670.50" y="1254.74" font-family="Arial, sans-serif" font-size="21" font-weight="400" fill="#202124">«unión de tipos»</text>
-<text x="638.00" y="1292.44" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#202124">ResultadoReserva</text>
-<path d="M560 1320H940" stroke="#9990d8" stroke-width="1.5"/>
-<text x="578.00" y="1355.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">{ ok: true; reservaId: string }</text>
-<text x="578.00" y="1383.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">|</text>
-<text x="578.00" y="1410.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">{ ok: false; codigo: ...;</text>
-<text x="578.00" y="1438.18" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">mensaje: string }</text>
-<polyline points="770,430 1080,430" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
-<polygon points="1080.00,430.00 1067.00,424.00 1067.00,436.00" fill="#454545"/>
-<rect x="816" y="372" width="160.00" height="34.75" fill="#f8f8f5"/>
-<text x="820.00" y="396.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">usa el contrato</text>
-<polyline points="445,645 445,925" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
-<polygon points="445.00,925.00 451.00,912.00 439.00,912.00" fill="#454545"/>
-<rect x="466" y="762" width="187.00" height="34.75" fill="#f8f8f5"/>
-<text x="470.00" y="786.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">llama a la función</text>
-<polyline points="1380,925 1380,520" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 6"/>
-<polygon points="1380.00,520.00 1374.00,533.00 1386.00,533.00" fill="#454545"/>
-<rect x="1406" y="762" width="127.00" height="34.75" fill="#f8f8f5"/>
-<text x="1410.00" y="786.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">implementa</text>
-<polygon points="1380,520 1372,536 1388,536" fill="white" stroke="#454545" stroke-width="2"/>
-<polyline points="310,1075 310,1220" fill="none" stroke="#454545" stroke-width="2" stroke-linejoin="round"/>
-<polygon points="310.00,1220.00 316.00,1207.00 304.00,1207.00" fill="#454545"/>
-<rect x="331" y="1122" width="102.00" height="34.75" fill="#f8f8f5"/>
-<text x="335.00" y="1146.62" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#202124">devuelve</text>
-<text x="45.00" y="1590.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Flecha continua: uso. Discontinua con triángulo vacío: implementación de la interfaz. Firmas seleccionadas.</text>
-<text x="45.00" y="1630.68" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#202124">Los tipos de las firmas se detallan en Modelo de reserva; «...» abrevia los cuatro códigos de error del resultado.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="2200" viewBox="0 0 2200 2200"><title>C4 · Código de Coordinación de reservas · Propuesta corregida</title><desc>Detalle del componente cliente Coordinación de reservas: SolicitarReserva depende del contrato ReservaRemotaGateway y de tipos y validaciones de dominio. El adaptador HTTP vecino implementa el contrato y envía solicitudes a una Edge Function. Las flechas describen dependencias de código.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#505050"/></marker><marker id="real" viewBox="0 0 14 14" refX="12" refY="7" markerWidth="11" markerHeight="11" orient="auto"><path d="M1 1L12 7L1 13Z" fill="white" stroke="#505050" stroke-width="1.4"/></marker></defs><rect width="2200" height="2200" fill="white"/>
+<text x="1100" y="67" font-family="Arial,sans-serif" font-size="44" font-weight="700" text-anchor="middle" fill="#202124">C4 · Código de Coordinación de reservas</text>
+<text x="1100" y="123" font-family="Arial,sans-serif" font-size="28" font-weight="400" text-anchor="middle" fill="#202124">Detalle del componente móvil de C3 · Clases, interfaz, función y tipos propios de TypeScript.</text>
+<rect x="80" y="200" width="2040" height="610" fill="#ffffe6" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="108" y="246" font-family="Arial,sans-serif" font-size="29" font-weight="400" text-anchor="start" fill="#202124">COMPONENTE EN DETALLE · COORDINACIÓN DE RESERVAS · APLICACIÓN DEL CLIENTE</text>
+<rect x="140" y="300" width="850" height="445" fill="#eeebff" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="565" y="340" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#202124">«clase»</text>
+<text x="565" y="386" font-family="Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#202124">SolicitarReserva</text>
+<path d="M140 412H990" fill="none" stroke="#9d8af4" stroke-width="1.5"/>
+<text x="164" y="454" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">− gateway: ReservaRemotaGateway</text>
+<text x="164" y="493" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124"></text>
+<text x="164" y="532" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">+ constructor(gateway: ReservaRemotaGateway)</text>
+<text x="164" y="571" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">+ ejecutar(entrada: unknown):</text>
+<text x="164" y="610" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">    Promise&lt;ResultadoReserva&gt;</text>
+<text x="164" y="649" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">Valida la entrada y solicita la operación remota.</text>
+<text x="164" y="688" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">Convierte una entrada inválida en error controlado.</text>
+<rect x="1300" y="300" width="760" height="270" fill="#eeebff" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="1680" y="340" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#202124">«interfaz / puerto propio»</text>
+<text x="1680" y="386" font-family="Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#202124">ReservaRemotaGateway</text>
+<path d="M1300 412H2060" fill="none" stroke="#9d8af4" stroke-width="1.5"/>
+<text x="1324" y="454" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">+ confirmar(solicitud: SolicitudReserva):</text>
+<text x="1324" y="493" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">    Promise&lt;ResultadoReserva&gt;</text>
+<text x="1324" y="532" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">Define la solicitud completa al servidor.</text>
+<path d="M990 470H1300" fill="none" stroke="#505050" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<rect x="1032" y="407" width="230" height="41" fill="#fafaf6"/>
+<text x="1040" y="435" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">usa el contrato</text>
+<rect x="80" y="1000" width="1130" height="910" fill="#ffffe6" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="108" y="1038" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">MODELO DE RESERVA · DOMINIO</text>
+<text x="108" y="1075" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#202124">Componente vecino</text>
+<rect x="140" y="1100" width="1010" height="190" fill="#eeebff" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="645" y="1145" font-family="Arial,sans-serif" font-size="32" font-weight="700" text-anchor="middle" fill="#202124">normalizarSolicitud</text>
+<text x="645" y="1187" font-family="Arial,sans-serif" font-size="26" font-weight="400" text-anchor="middle" fill="#202124">Función independiente · (entrada: unknown): SolicitudReserva</text>
+<text x="645" y="1227" font-family="Arial,sans-serif" font-size="26" font-weight="400" text-anchor="middle" fill="#202124">Normaliza y comprueba formato, servicios, horario y medio permitido.</text>
+<text x="645" y="1267" font-family="Arial,sans-serif" font-size="26" font-weight="400" text-anchor="middle" fill="#202124">Si la entrada es inválida, produce un error de entrada propio.</text>
+<path d="M565 745V1100" fill="none" stroke="#505050" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<rect x="587" y="892" width="244" height="78" fill="#fafaf6"/>
+<text x="595" y="920" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">usa validaciones</text>
+<text x="595" y="957" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">y tipos propios</text>
+<rect x="140" y="1390" width="480" height="360" fill="#eeebff" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="380" y="1430" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#202124">«tipo»</text>
+<text x="380" y="1476" font-family="Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#202124">SolicitudReserva</text>
+<path d="M140 1502H620" fill="none" stroke="#9d8af4" stroke-width="1.5"/>
+<text x="164" y="1544" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">barbershopId: string</text>
+<text x="164" y="1583" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">barberId: string | null</text>
+<text x="164" y="1622" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">items: ItemReserva[]</text>
+<text x="164" y="1661" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">startsAt: string</text>
+<text x="164" y="1700" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">paymentMethod: "cash" | "yape"</text>
+<rect x="670" y="1390" width="480" height="360" fill="#eeebff" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="910" y="1430" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#202124">«unión de tipos»</text>
+<text x="910" y="1476" font-family="Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#202124">ResultadoReserva</text>
+<path d="M670 1502H1150" fill="none" stroke="#9d8af4" stroke-width="1.5"/>
+<text x="694" y="1544" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">{ ok: true; reservaId: string }</text>
+<text x="694" y="1583" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">|</text>
+<text x="694" y="1622" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">{ ok: false;</text>
+<text x="694" y="1661" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">  codigo: CodigoErrorReserva;</text>
+<text x="694" y="1700" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">  mensaje: string }</text>
+<path d="M380 1290V1390" fill="none" stroke="#505050" stroke-width="2.5"  marker-end="url(#arrow)"/>
+<rect x="394" y="1325" width="132" height="41" fill="#fafaf6"/>
+<text x="402" y="1353" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">devuelve</text>
+<text x="110" y="1794" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">Tipos propios: sin dependencias de React Native, HTTP ni SDK.</text>
+<text x="110" y="1837" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#202124">ItemReserva: serviceId y styleId opcional. barberId = null: cualquiera.</text>
+<text x="110" y="1875" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#202124">CodigoErrorReserva identifica errores propios, sin códigos SQL.</text>
+<rect x="1300" y="1000" width="820" height="640" fill="#ffffe6" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="1325" y="1038" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">ADAPTADOR HTTP DE RESERVAS</text>
+<text x="1325" y="1075" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="start" fill="#202124">Componente vecino</text>
+<rect x="1360" y="1100" width="700" height="435" fill="#eeebff" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="1710" y="1140" font-family="Arial,sans-serif" font-size="25" font-weight="400" text-anchor="middle" fill="#202124">«clase · infraestructura del cliente»</text>
+<text x="1710" y="1186" font-family="Arial,sans-serif" font-size="34" font-weight="700" text-anchor="middle" fill="#202124">ReservaHttpAdapter</text>
+<path d="M1360 1212H2060" fill="none" stroke="#9d8af4" stroke-width="1.5"/>
+<text x="1384" y="1254" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">+ confirmar(solicitud: SolicitudReserva):</text>
+<text x="1384" y="1293" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">    Promise&lt;ResultadoReserva&gt;</text>
+<text x="1384" y="1332" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124"></text>
+<text x="1384" y="1371" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">Envía HTTPS con la sesión a la Edge Function.</text>
+<text x="1384" y="1410" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">Traduce la respuesta y los errores a tipos propios.</text>
+<text x="1384" y="1449" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">Los detalles HTTP permanecen en este adaptador.</text>
+<path d="M1990 1100V570" fill="none" stroke="#505050" stroke-width="2.5" stroke-dasharray="10 7" marker-end="url(#real)"/>
+<rect x="1712" y="807" width="174" height="78" fill="#fafaf6"/>
+<text x="1720" y="835" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">implementa</text>
+<text x="1720" y="872" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">el contrato</text>
+<text x="1328" y="1595" font-family="Arial,sans-serif" font-size="26" font-weight="400" text-anchor="start" fill="#202124">La composición lo entrega a SolicitarReserva al iniciar.</text>
+<rect x="80" y="1970" width="2040" height="160" fill="#fafafa" stroke="#9d8af4" stroke-width="1.8"/>
+<text x="110" y="2013" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">LECTURA: flecha continua = dependencia o uso de código; discontinua con triángulo = implementación de interfaz.</text>
+<text x="110" y="2058" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">El núcleo del cliente conserva tipos y contratos propios. El servidor verifica identidad, permisos y disponibilidad final.</text>
+<text x="110" y="2103" font-family="Arial,sans-serif" font-size="27" font-weight="400" text-anchor="start" fill="#202124">Vista de diseño propuesta. La Edge Function y PostgreSQL se detallan fuera del componente móvil.</text>
 </svg>

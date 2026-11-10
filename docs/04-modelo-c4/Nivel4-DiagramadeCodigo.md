@@ -1,44 +1,71 @@
-# C4. Código
+# C4. Código de Coordinación de reservas
 
-## Alcance del nivel 4
+## Alcance
 
-C4 detalla el código del componente **Coordinación de reservas** presentado en C3. Su grupo contiene la clase `CrearReserva` y la interfaz `ReservaTransaccionalGateway`. Los otros grupos muestran los elementos relacionados del Modelo de reserva y del Adaptador de reservas. Así se distingue qué código pertenece al componente estudiado y qué código utiliza de sus vecinos.
+C4 detalla el diseño de código del componente **Coordinación de reservas** de la aplicación móvil presentado en [C3](Nivel3-Diagrama-de-Componentes.md). Este componente contiene la clase `SolicitarReserva` y el contrato propio `ReservaRemotaGateway`. Los grupos vecinos muestran los tipos y validaciones del Modelo de reserva y la implementación del Adaptador HTTP de reservas.
 
-**Diagrama**
+Los nombres y las firmas expresan la propuesta de diseño. Su ubicación corresponde a responsabilidades de aplicación, dominio e infraestructura, sin fijar rutas de archivos ni afirmar una implementación existente. La misma regla de dependencias se aplicará desde el inicio en cliente y servidor.
 
-![C4: clases, interfaz, función y tipos de la coordinación de reservas](../../img/nivel4-codigo-diagrama.svg)
+## Diagramas de código
 
-![C4: clases, interfaz, tipos y función independiente](../../img/nivel4-codigo.svg)
+![C4: clase SolicitarReserva, contrato propio, tipos y adaptador HTTP](../../img/nivel4-codigo-diagrama.svg)
 
-Las dos imágenes representan el mismo alcance con distribuciones y colores diferentes. Cada una incluye su propia leyenda.
+![C4: dependencias de código de la coordinación de reservas del cliente](../../img/nivel4-codigo.svg)
 
-## Correspondencia con el código
+Ambas imágenes representan el mismo alcance. Las relaciones muestran qué código utiliza un contrato, una función o un tipo. El orden de llamadas durante una reserva se explica en la secuencia complementaria.
 
-| Elemento | Tipo y ubicación | Responsabilidad |
+## Elementos y responsabilidades
+
+| Elemento | Tipo y responsabilidad | Ubicación lógica |
 |---|---|---|
-| CrearReserva | Clase de aplicacion/crear-reserva.ts | Recibe el gateway, normaliza la entrada y coordina la confirmación. |
-| ReservaTransaccionalGateway | Interfaz de aplicacion/reserva-transaccional.contrato.ts | Define `confirmar(solicitud: SolicitudReserva): Promise<ResultadoReserva>`. |
-| SolicitudReserva | Tipo de dominio/reserva.ts | barberId, items, startsAt y paymentMethod. |
-| ResultadoReserva | Unión de tipos de dominio/reserva.ts | Éxito con reservaId o fallo con codigo y mensaje. |
-| normalizarSolicitud | Función independiente de dominio/reserva.ts | Recibe unknown y devuelve SolicitudReserva o lanza un error de entrada. |
-| SupabaseReservaAdapter | Clase del componente Adaptador de reservas | Implementa el gateway y mapea la RPC. |
+| `SolicitarReserva` | Clase que recibe el contrato, normaliza la entrada y solicita la operación remota. Su método `ejecutar(entrada: unknown): Promise<ResultadoReserva>` devuelve confirmación o error controlado. | Aplicación del cliente: Coordinación de reservas. |
+| `ReservaRemotaGateway` | Interfaz que define `confirmar(solicitud: SolicitudReserva): Promise<ResultadoReserva>`. Expresa una solicitud completa al servidor, sin exponer operaciones de tablas o parámetros SQL. | Aplicación del cliente: Coordinación de reservas. |
+| `normalizarSolicitud` | Función independiente que comprueba y normaliza la entrada; devuelve `SolicitudReserva` o produce un error de entrada propio que el caso de uso convierte en un resultado controlado. | Dominio del cliente: Modelo de reserva. |
+| `SolicitudReserva` | Tipo con `barbershopId`, `barberId`, `items`, `startsAt` y `paymentMethod`. Representa la selección del cliente. | Dominio del cliente: Modelo de reserva. |
+| `ItemReserva` | Tipo de cada elemento de `items`: identifica el servicio y su estilo opcional. | Dominio del cliente: Modelo de reserva. |
+| `ResultadoReserva` | Unión de tipos: éxito con `ok: true` y `reservaId`, o fallo con `ok: false`, `codigo` y `mensaje`. | Dominio del cliente: Modelo de reserva. |
+| `CodigoErrorReserva` | Tipo propio para distinguir errores comprensibles de la aplicación, como entrada inválida, falta de autorización o conflicto de horario. Los adaptadores traducen los errores externos. | Dominio del cliente: Modelo de reserva. |
+| `ReservaHttpAdapter` | Clase que implementa el contrato remoto, envía la solicitud por HTTPS con la sesión a la Edge Function y convierte la respuesta a tipos propios. | Infraestructura del cliente: Adaptador HTTP de reservas. |
 
-CrearReserva dispone de un constructor que recibe ReservaTransaccionalGateway. Su método `ejecutar(entrada: unknown)` devuelve `Promise<ResultadoReserva>`. La función normalizarSolicitud no pertenece al tipo SolicitudReserva; se representa por separado.
+En la solicitud, `barberId = null` representa la elección «cualquiera»: el servidor determina un barbero elegible antes de confirmar. `startsAt` identifica un instante inequívoco, mostrado en la zona horaria de la barbería. `paymentMethod` admite `cash` o `yape`; el pago se mantiene pendiente hasta que lo confirme manualmente el barbero asignado o un administrador autorizado.
 
-## Lectura de relaciones
+El servidor obtiene la identidad de la sesión verificada y comprueba la barbería, los servicios, los precios y la disponibilidad vigentes. Los identificadores enviados por el cliente no sustituyen esas comprobaciones.
 
-- **CrearReserva usa el contrato:** ReservaTransaccionalGateway define la operación confirmar que necesita el caso de uso. El contrato es una interfaz, no otro servidor.
-- **CrearReserva llama a normalizarSolicitud:** la función comprueba formato y datos básicos antes de solicitar la confirmación. Los permisos y la disponibilidad definitiva se comprueban en servidor.
-- **SupabaseReservaAdapter implementa el contrato:** la línea discontinua con triángulo apunta a la interfaz que cumple esta clase. Composición construye el adaptador y lo entrega a CrearReserva, como muestra C3.
+## Lectura de las relaciones
 
-Las tarjetas SolicitudReserva y ResultadoReserva explican los tipos utilizados en las firmas. `unknown` indica una entrada aún por validar; `Promise<ResultadoReserva>` indica que el resultado se obtiene de forma asíncrona. El diagrama selecciona los elementos relevantes de código; la tabla anterior conserva su ubicación exacta.
+- **Uso del contrato:** `SolicitarReserva` depende de `ReservaRemotaGateway` y de tipos y validaciones propios. La interfaz describe lo que necesita del exterior.
+- **Uso del dominio:** `normalizarSolicitud` comprueba la forma de la entrada antes de una llamada remota. Es una función independiente, no un método del tipo `SolicitudReserva`.
+- **Implementación del contrato:** la línea discontinua con triángulo apunta de `ReservaHttpAdapter` a `ReservaRemotaGateway`. El caso de uso conserva una referencia al contrato; la composición le entrega el adaptador concreto al iniciar el flujo.
+
+`unknown` indica una entrada aún por validar. `Promise<ResultadoReserva>` indica que el resultado se obtiene de forma asíncrona. Los tipos utilizados en las firmas pertenecen al núcleo del cliente; los detalles de HTTP, los frameworks y el SDK quedan fuera de aplicación y dominio.
 
 ## Secuencia complementaria
 
-![Secuencia de llamadas y respuestas de confirmación](../../img/nivel4-secuencia.svg)
+![Secuencia de solicitud, verificación de sesión y confirmación atómica de una reserva](../../img/nivel4-secuencia.svg)
 
-La secuencia es una vista dinámica adicional, distinta del diagrama estático de código. Incluye presentación, caso de uso, adaptador, API de datos y PostgreSQL. Conserva los nombres de C2 y C3 y permite seguir la solicitud hasta la función create_reservation.
+Esta vista dinámica amplía el recorrido hasta el servidor. Sus participantes son:
 
-Una entrada inválida evita la llamada remota. Un conflicto 23P01 informa horario ocupado. Si se pierde la respuesta, se consultan las citas antes de reenviar. La demo simula el servidor; permisos y concurrencia reales se verificarán mediante EQ-01, EQ-02 y EQ-03. Elegir cash o yape no confirma recepción del pago.
+1. **Presentación de reservas:** entrega la selección y muestra el resultado.
+2. **SolicitarReserva:** valida la entrada y solicita la operación mediante `ReservaRemotaGateway`.
+3. **ReservaHttpAdapter:** envía la solicitud y la sesión por HTTPS.
+4. **Entrada HTTP de la Edge Function:** verifica la sesión, transforma la petición y entrega un contexto de usuario confiable al caso de uso.
+5. **ConfirmarReserva:** coordina las reglas propias del servidor y solicita la confirmación mediante `ReservaAtomicaGateway`.
+6. **PostgresReservaAdapter:** implementa el contrato atómico e invoca una función PostgreSQL mediante PostgREST RPC; convierte parámetros, respuestas y errores externos.
+7. **API de datos — PostgREST:** ejecuta la función solicitada por RPC.
+8. **PostgreSQL:** comprueba el estado vigente, los permisos y la disponibilidad; impide intervalos incompatibles y guarda las escrituras relacionadas en una transacción, o revierte la operación completa.
 
-El [diseño interno](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md) y la [demostración técnica](../../tecnologia/barberia-clean-architecture/README.md) completan esta vista.
+La respuesta vuelve por el mismo recorrido. Las líneas continuas de esta secuencia indican solicitudes; las discontinuas indican respuestas. Aquí la RPC parte del adaptador del servidor. El cliente llama a la Edge Function para esta operación crítica.
+
+La transacción conserva la reserva, sus condiciones históricas, el pago pendiente y los avisos internos relacionados. La selección de un medio de pago no acredita su recepción; las entregas externas, como el correo, se realizan fuera de la transacción principal.
+
+| Situación | Comportamiento esperado |
+|---|---|
+| Entrada inválida | Devuelve un error comprensible sin enviar una solicitud remota innecesaria. El servidor también valida lo recibido. |
+| Sesión o permisos rechazados | Rechaza la operación sin exponer datos privados. |
+| Horario ocupado | Devuelve un conflicto y permite elegir otro intervalo. Los códigos de PostgreSQL se traducen en infraestructura. |
+| Confirmación | Muestra el identificador de reserva y mantiene el estado de pago pendiente. |
+| Respuesta perdida | Consulta las reservas del usuario antes de repetir la solicitud; no reintenta automáticamente una escritura cuyo resultado se desconoce. |
+
+Las pruebas unitarias verificarán los casos de uso del cliente y del servidor con adaptadores de prueba. Las pruebas de integración comprobarán sesión, permisos, transacción y concurrencia según EQ-01, EQ-02 y EQ-03 de los [escenarios de calidad](../01-analisis-de-sistema/08-escenarios-atributos-calidad.md).
+
+Este diseño desarrolla ADR-002, ADR-003, ADR-005, ADR-006 y ADR-010, y se complementa con el [diseño interno de módulos](../03-diseño-de-software/diseño-interno/diseño-interno-de-modulos.md).

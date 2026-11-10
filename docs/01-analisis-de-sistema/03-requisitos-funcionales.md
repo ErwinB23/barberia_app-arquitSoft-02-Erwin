@@ -18,7 +18,7 @@
 | RF12 | El sistema debe aplicar anticipación mínima, horizonte máximo y límite de reservas futuras activas antes de confirmar una cita. | HU08, HU09 |
 | RF13 | El sistema debe crear una reserva para el cliente autenticado después de validar nuevamente la disponibilidad, los servicios y el barbero seleccionado. | HU09 |
 | RF14 | El sistema debe impedir la superposición de reservas activas de un mismo barbero, incluso ante solicitudes simultáneas. | HU08, HU09, HU11 |
-| RF15 | El sistema debe permitir seleccionar efectivo o Yape y mostrar los datos de pago que correspondan, sin procesar automáticamente el cobro. | HU09 |
+| RF15 | El sistema debe permitir seleccionar efectivo o Yape, mostrar los datos necesarios para pagar y registrar el pago como pendiente hasta que el personal autorizado confirme su recepción; no debe procesar ni verificar automáticamente el cobro. | HU09 |
 | RF16 | El sistema debe permitir consultar próximas reservas, detalle, estado de atención, estado de pago e historial del cliente. | HU10 |
 | RF17 | El sistema debe conservar en cada reserva los nombres, precios, duración y políticas relevantes vigentes al confirmarla para preservar su historial. | HU10 |
 | RF18 | El sistema debe permitir reprogramar una reserva validando disponibilidad, límites de reprogramación y condiciones aplicables. | HU11 |
@@ -28,26 +28,26 @@
 | RF22 | El sistema debe permitir gestionar intervalos de trabajo y bloqueos del barbero respetando los horarios de la barbería y las reservas comprometidas. | HU14 |
 | RF23 | El sistema debe permitir iniciar y completar atenciones asignadas y registrar inasistencia después del tiempo de tolerancia establecido. | HU15 |
 | RF24 | El sistema debe validar las transiciones entre confirmada, en atención, completada, cancelada y no asistió, y rechazar cambios incompatibles con el ciclo de la reserva. | HU15 |
-| RF25 | El sistema debe permitir al barbero autorizado confirmar pagos en efectivo de las reservas que le corresponden. | HU16 |
-| RF26 | El sistema debe permitir registrar una barbería y actualizar sus datos generales. | HU17 |
+| RF25 | El sistema debe permitir al barbero con membresía activa verificar y confirmar manualmente pagos en efectivo o Yape únicamente de las reservas que tenga asignadas, sin aceptar una segunda confirmación de un pago ya confirmado. | HU16 |
+| RF26 | El sistema debe permitir al administrador autorizado registrar una barbería, actualizar sus datos generales y cargar, reemplazar o retirar las imágenes de su establecimiento. | HU17 |
 | RF27 | El sistema debe permitir configurar políticas de reserva, separación entre citas, reprogramación, cancelación y tolerancia de inasistencia. | HU17 |
 | RF28 | El sistema debe permitir publicar, pausar, reanudar y retirar la publicación de una barbería; una barbería pausada podrá seguir visible, pero no admitirá nuevas reservas. | HU18 |
 | RF29 | El sistema debe validar los datos y recursos mínimos de operación antes de publicar: contacto, dirección, horario general, servicio activo y barbero activo con horario. | HU18 |
-| RF30 | El sistema debe permitir registrar, actualizar y desactivar servicios, indicando nombre, descripción, precio y duración. | HU19 |
-| RF31 | El sistema debe permitir registrar, actualizar y desactivar estilos asociados a los servicios, con descripción e imagen de referencia. | HU19 |
+| RF30 | El sistema debe permitir al administrador autorizado registrar, actualizar y desactivar servicios, indicando nombre, descripción, precio y duración, y cargar, reemplazar o retirar sus imágenes. | HU19 |
+| RF31 | El sistema debe permitir al administrador autorizado registrar, actualizar y desactivar estilos asociados a los servicios, con descripción e imágenes de referencia que pueda cargar, reemplazar o retirar. | HU19 |
 | RF32 | El sistema debe permitir gestionar perfiles de barberos asociados a membresías y asignar o retirar servicios con protección de las reservas comprometidas. | HU20 |
 | RF33 | El sistema debe permitir gestionar los intervalos generales de atención y registrar cierres excepcionales del establecimiento. | HU21 |
 | RF34 | El sistema debe permitir enviar invitaciones a barberos o administradores, consultar su estado y cancelar las pendientes; el canal podrá ser interno o correo. | HU22 |
 | RF35 | El sistema debe permitir al destinatario consultar, aceptar o rechazar invitaciones válidas y actualizar su membresía al aceptarlas. | HU23 |
 | RF36 | El sistema debe permitir consultar la agenda administrativa y filtrar reservas por barbero, estado de atención y estado de pago. | HU24 |
-| RF37 | El sistema debe permitir configurar los datos de Yape y confirmar pagos en efectivo o Yape por el administrador autorizado. | HU25 |
-| RF38 | El sistema debe permitir registrar reembolsos autorizados y mantener estados de pago pendiente, pagado, reembolsado o fallido, según corresponda. | HU25 |
+| RF37 | El sistema debe permitir al administrador autorizado de la barbería configurar sus datos de Yape y verificar y confirmar manualmente pagos en efectivo o Yape de sus reservas, sin aceptar una segunda confirmación de un pago ya confirmado. | HU25 |
+| RF38 | El sistema debe permitir al administrador autorizado registrar reembolsos efectuados fuera de la plataforma cuando corresponda y mantener estados de pago pendiente, pagado o reembolsado, junto con el historial de quién confirmó o registró cada operación. | HU25 |
 | RF39 | El sistema debe generar notificaciones internas ante eventos de reservas e invitaciones y recordatorios próximos a la atención. | HU26 |
 | RF40 | El sistema debe permitir consultar el centro de notificaciones, marcar lectura, ocultar avisos y navegar al contexto relacionado cuando exista permiso. | HU26 |
 | RF41 | El sistema debe permitir que un usuario participe en varias barberías y acceda a sus espacios según las membresías activas. | HU27 |
 | RF42 | El sistema debe autorizar cada operación profesional o administrativa según usuario, recurso y barbería, e impedir accesos a información privada de otros establecimientos. | HU27 |
-| RF43 | El sistema debe permitir registrar una reseña y calificación vinculada a una atención completada del propio cliente y consultar las valoraciones publicadas. | HU28 |
-| RF44 | El sistema debe permitir registrar la ubicación del establecimiento, visualizarla en un mapa y buscar barberías por proximidad usando una ubicación proporcionada o autorizada por el cliente. | HU29 |
+| RF43 | El sistema debe permitir al cliente registrar una reseña y calificación vinculada a una atención propia completada, y consultar las reseñas publicadas de las barberías. | HU28 |
+| RF44 | El sistema debe permitir registrar la ubicación de cada establecimiento, mostrarla en un mapa y buscar barberías por proximidad usando una ubicación proporcionada por el cliente o obtenida con su autorización. | HU29 |
 
 ## Relación entre historias y requisitos funcionales
 
@@ -85,8 +85,8 @@
 
 ## Delimitaciones
 
-- RF43 y RF44 describen reseñas y geolocalización como capacidades previstas para una incorporación gradual.
-- La imagen de referencia de RF31 puede indicarse mediante una URL; la carga de archivos desde la aplicación corresponde a la ampliación multimedia prevista.
-- La confirmación y el reembolso de pagos registran una operación realizada por el personal; no transfieren dinero ni constituyen facturación electrónica.
+- RF26, RF30 y RF31 incluyen la carga y gestión de imágenes; RF43 y RF44 incluyen reseñas y mapas. Todas estas funciones forman parte del alcance de la propuesta, aunque su desarrollo se organice por etapas.
+- RF25 y RF37 exigen comprobación y confirmación manual de efectivo o Yape. El barbero actúa sobre sus citas asignadas y el administrador sobre las reservas de su barbería. El cliente no puede marcar su propio pago como recibido.
+- Los reembolsos de RF38 registran una operación realizada fuera de la plataforma. La aplicación no transfiere dinero, verifica transferencias automáticamente ni emite comprobantes fiscales.
 - Los recordatorios se plantean inicialmente como notificaciones internas. Push no es un requisito de esta primera versión.
 - La elección de cualquier barbero disponible debe producir una reserva asignada a un profesional concreto al confirmar.

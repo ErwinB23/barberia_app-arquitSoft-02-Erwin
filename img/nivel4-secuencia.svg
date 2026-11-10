@@ -1,78 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1720" viewBox="0 0 2400 1720" role="img" aria-labelledby="title desc">
-<title id="title">Secuencia · Solicitud y respuesta de una reserva · App Barbería</title>
-<desc id="desc">Vista dinámica complementaria. La demo simula el backend; el diagrama muestra la interacción prevista con el servidor.</desc>
-<rect width="2400" height="1720" fill="white"/>
-<rect x="0" y="0" width="2400" height="140" rx="0" fill="#162b47" stroke="#162b47" stroke-width="2"/>
-<text x="42.0" y="21.0" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="white" dominant-baseline="text-before-edge">Secuencia · Solicitud y respuesta de una reserva</text>
-<text x="44.0" y="87.0" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#d5e4ed" dominant-baseline="text-before-edge">Vista dinámica complementaria. La demo simula el backend; el diagrama muestra la interacción prevista con el servidor.</text>
-<rect x="45" y="195" width="390" height="110" rx="12" fill="#eef5ff" stroke="#2468c9" stroke-width="2"/>
-<text x="143.0" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Presentación</text>
-<text x="157.0" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Aplicación móvil</text>
-<path d="M240 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
-<rect x="525" y="195" width="390" height="110" rx="12" fill="#f3effb" stroke="#7052b8" stroke-width="2"/>
-<text x="620.5" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">CrearReserva</text>
-<text x="654.5" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Caso de uso</text>
-<path d="M720 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
-<rect x="1005" y="195" width="390" height="110" rx="12" fill="#fff5e5" stroke="#926018" stroke-width="2"/>
-<text x="1123.0" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Adaptador</text>
-<text x="1063.0" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">SupabaseReservaAdapter</text>
-<path d="M1200 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
-<rect x="1485" y="195" width="390" height="110" rx="12" fill="#eaf8f2" stroke="#147d68" stroke-width="2"/>
-<text x="1586.0" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">API de datos</text>
-<text x="1620.0" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">PostgREST</text>
-<path d="M1680 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
-<rect x="1965" y="195" width="390" height="110" rx="12" fill="#eaf8f2" stroke="#147d68" stroke-width="2"/>
-<text x="2070.5" y="209.0" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">PostgreSQL</text>
-<text x="2116.5" y="259.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Servidor</text>
-<path d="M2160 305V1510" stroke="#cbd8e5" stroke-width="2.5" stroke-dasharray="9 9"/>
-<g data-relation="ui-crear"><polyline points="240,420 720,420" fill="none" stroke="#2468c9" stroke-width="3.5" stroke-linejoin="round"/>
-<polygon points="720.0,420.0 704.0,412.0 704.0,428.0" fill="#2468c9" stroke="#2468c9" stroke-width="2"/>
-<text x="265.0" y="335.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">1. Entrega datos</text>
-<text x="265.0" y="366.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">ejecutar(entrada)</text>
-</g>
-<g data-relation="crear-adapter"><polyline points="720,625 1200,625" fill="none" stroke="#7052b8" stroke-width="3.5" stroke-linejoin="round"/>
-<polygon points="1200.0,625.0 1184.0,617.0 1184.0,633.0" fill="#7052b8" stroke="#7052b8" stroke-width="2"/>
-<text x="745.0" y="540.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#7052b8" dominant-baseline="text-before-edge">2. Solicita confirmación</text>
-<text x="745.0" y="571.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#7052b8" dominant-baseline="text-before-edge">confirmar(solicitud)</text>
-</g>
-<g data-relation="adapter-api"><polyline points="1200,760 1680,760" fill="none" stroke="#2468c9" stroke-width="3.5" stroke-linejoin="round"/>
-<polygon points="1680.0,760.0 1664.0,752.0 1664.0,768.0" fill="#2468c9" stroke="#2468c9" stroke-width="2"/>
-<text x="1225.0" y="675.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">3. Invoca RPC</text>
-<text x="1225.0" y="706.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">HTTPS · create_reservation</text>
-</g>
-<g data-relation="api-db"><polyline points="1680,895 2160,895" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round"/>
-<polygon points="2160.0,895.0 2144.0,887.0 2144.0,903.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
-<text x="1705.0" y="810.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">4. Ejecuta función</text>
-<text x="1705.0" y="841.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">SQL · create_reservation</text>
-</g>
-<rect x="520" y="435" width="400" height="95" rx="12" fill="#f3effb" stroke="#7052b8" stroke-width="2"/>
-<text x="539.0" y="449.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#7052b8" dominant-baseline="text-before-edge">Normaliza y valida la entrada.</text>
-<text x="539.0" y="477.8" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#7052b8" dominant-baseline="text-before-edge">Si es inválida, detiene la llamada.</text>
-<rect x="1945" y="930" width="410" height="125" rx="12" fill="#eaf8f2" stroke="#147d68" stroke-width="2"/>
-<text x="1960.0" y="944.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">Revalida permisos, reglas</text>
-<text x="1960.0" y="974.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">y disponibilidad. Guarda</text>
-<text x="1960.0" y="1004.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">todo en una transacción.</text>
-<g data-relation="db-api"><polyline points="2160,1160 1680,1160" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polygon points="1680.0,1160.0 1696.0,1168.0 1696.0,1152.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
-<text x="1705.0" y="1082.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">5. Devuelve identificador</text>
-<text x="1705.0" y="1113.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">UUID de reserva</text>
-</g>
-<g data-relation="api-adapter"><polyline points="1680,1270 1200,1270" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polygon points="1200.0,1270.0 1216.0,1278.0 1216.0,1262.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
-<text x="1225.0" y="1192.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">6. Respuesta de la RPC</text>
-</g>
-<g data-relation="adapter-crear"><polyline points="1200,1380 720,1380" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polygon points="720.0,1380.0 736.0,1388.0 736.0,1372.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
-<text x="745.0" y="1302.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">7. ResultadoReserva</text>
-<text x="745.0" y="1333.2" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">Éxito o error comprensible</text>
-</g>
-<g data-relation="crear-ui"><polyline points="720,1490 240,1490" fill="none" stroke="#147d68" stroke-width="3.5" stroke-linejoin="round" stroke-dasharray="10 8"/>
-<polygon points="240.0,1490.0 256.0,1498.0 256.0,1482.0" fill="#147d68" stroke="#147d68" stroke-width="2"/>
-<text x="265.0" y="1412.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">8. Devuelve el resultado</text>
-</g>
-<rect x="45" y="1525" width="2310" height="75" rx="12" fill="#f7f9fc" stroke="#cbd8e5" stroke-width="2"/>
-<text x="63.0" y="1543.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">La presentación informa confirmación o error. Ante conflicto: horario ocupado. Si se pierde la respuesta, consultar citas antes de reenviar.</text>
-<path d="M40 1616H2360" stroke="#cbd8e5"/>
-<text x="44.0" y="1634.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Línea continua: solicitud. Línea discontinua: respuesta. El servidor confirma la operación de forma completa.</text>
-<text x="44.0" y="1671.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Elegir efectivo o Yape registra el medio elegido; la recepción del pago se confirma manualmente.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="3420" height="2890" viewBox="0 0 3420 2890"><title>Secuencia · Solicitud y confirmación de una reserva · App Barbería</title><desc>Cliente: presentación, SolicitarReserva y ReservaHttpAdapter. Servidor Edge Function: entrada HTTP que verifica la sesión, ConfirmarReserva y PostgresReservaAdapter. El adaptador del servidor invoca PostgREST RPC y PostgreSQL confirma la operación atómica. Respuestas devueltas por el mismo recorrido.</desc><defs><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#2468c9"/></marker><marker id="purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#7854bb"/></marker><marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#008673"/></marker><marker id="return" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#008673"/></marker></defs><rect width="3420" height="2890" fill="white"/><rect width="3420" height="160" fill="#162b47"/>
+<text x="50" y="68" font-family="Arial,sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="start">Secuencia · Solicitud y confirmación de una reserva</text>
+<text x="50" y="123" font-family="Arial,sans-serif" font-size="30" font-weight="400" fill="#d8e5f5" text-anchor="start">Vista dinámica complementaria de C4 · La aplicación solicita; el servidor verifica y confirma. Lectura de arriba hacia abajo.</text>
+<rect x="30" y="205" width="1240" height="2395" rx="12" fill="#fcfdff" stroke="#b8cee9" stroke-width="2" />
+<text x="55" y="255" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#2468c9" text-anchor="start">CLIENTE · Aplicación móvil</text>
+<rect x="1300" y="205" width="1250" height="2395" rx="12" fill="#fdfbff" stroke="#d8cbed" stroke-width="2" />
+<text x="1325" y="255" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#7854bb" text-anchor="start">SERVIDOR · Edge Function / TypeScript</text>
+<rect x="2580" y="205" width="810" height="2395" rx="12" fill="#fbfefd" stroke="#b9ded4" stroke-width="2" />
+<text x="2605" y="255" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#008673" text-anchor="start">SERVIDOR · Datos en Supabase</text>
+<rect x="50" y="300" width="370" height="140" rx="12" fill="#eef5ff" stroke="#2468c9" stroke-width="2" />
+<text x="235" y="340" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#2468c9" text-anchor="middle">Presentación</text>
+<text x="235" y="376" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#2468c9" text-anchor="middle">de reservas</text>
+<text x="235" y="417" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="middle">Expo / React Native</text>
+<path d="M235 440V2570" fill="none" stroke="#c8d6e5" stroke-width="2" stroke-dasharray="9 8"/>
+<rect x="470" y="300" width="370" height="140" rx="12" fill="#f3effb" stroke="#7854bb" stroke-width="2" />
+<text x="655" y="340" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#7854bb" text-anchor="middle">SolicitarReserva</text>
+<text x="655" y="417" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="middle">Caso de uso cliente</text>
+<path d="M655 440V2570" fill="none" stroke="#c8d6e5" stroke-width="2" stroke-dasharray="9 8"/>
+<rect x="890" y="300" width="370" height="140" rx="12" fill="#fff5e7" stroke="#a36612" stroke-width="2" />
+<text x="1075" y="340" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#a36612" text-anchor="middle">ReservaHttpAdapter</text>
+<text x="1075" y="417" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="middle">Adaptador cliente</text>
+<path d="M1075 440V2570" fill="none" stroke="#c8d6e5" stroke-width="2" stroke-dasharray="9 8"/>
+<rect x="1310" y="300" width="370" height="140" rx="12" fill="#eef5ff" stroke="#2468c9" stroke-width="2" />
+<text x="1495" y="340" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#2468c9" text-anchor="middle">Entrada HTTP</text>
+<text x="1495" y="417" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="middle">Verifica la sesión</text>
+<path d="M1495 440V2570" fill="none" stroke="#c8d6e5" stroke-width="2" stroke-dasharray="9 8"/>
+<rect x="1730" y="300" width="370" height="140" rx="12" fill="#f3effb" stroke="#7854bb" stroke-width="2" />
+<text x="1915" y="340" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#7854bb" text-anchor="middle">ConfirmarReserva</text>
+<text x="1915" y="417" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="middle">Caso de uso servidor</text>
+<path d="M1915 440V2570" fill="none" stroke="#c8d6e5" stroke-width="2" stroke-dasharray="9 8"/>
+<rect x="2150" y="300" width="370" height="140" rx="12" fill="#fff5e7" stroke="#a36612" stroke-width="2" />
+<text x="2335" y="340" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#a36612" text-anchor="middle">PostgresReserva</text>
+<text x="2335" y="376" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#a36612" text-anchor="middle">Adapter</text>
+<text x="2335" y="417" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="middle">Adaptador servidor</text>
+<path d="M2335 440V2570" fill="none" stroke="#c8d6e5" stroke-width="2" stroke-dasharray="9 8"/>
+<rect x="2570" y="300" width="370" height="140" rx="12" fill="#eaf8f2" stroke="#008673" stroke-width="2" />
+<text x="2755" y="340" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#008673" text-anchor="middle">API de datos</text>
+<text x="2755" y="417" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="middle">PostgREST</text>
+<path d="M2755 440V2570" fill="none" stroke="#c8d6e5" stroke-width="2" stroke-dasharray="9 8"/>
+<rect x="2990" y="300" width="370" height="140" rx="12" fill="#eaf8f2" stroke="#008673" stroke-width="2" />
+<text x="3175" y="340" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#008673" text-anchor="middle">PostgreSQL</text>
+<text x="3175" y="417" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="middle">Función y restricciones</text>
+<path d="M3175 440V2570" fill="none" stroke="#c8d6e5" stroke-width="2" stroke-dasharray="9 8"/>
+<path d="M235 560H655" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<text x="255" y="472" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#2468c9" text-anchor="start">1. Entrega selección</text>
+<text x="255" y="510" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#2468c9" text-anchor="start">ejecutar(entrada)</text>
+<rect x="455" y="590" width="400" height="146" rx="12" fill="#f3effb" stroke="#7854bb" stroke-width="2" />
+<text x="472" y="626" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#7854bb" text-anchor="start">Normaliza y valida la entrada.</text>
+<text x="472" y="664" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#7854bb" text-anchor="start">Si falla, devuelve error propio</text>
+<text x="472" y="702" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#7854bb" text-anchor="start">sin hacer la llamada remota.</text>
+<path d="M655 880H1075" fill="none" stroke="#7854bb" stroke-width="3"  marker-end="url(#purple)"/>
+<text x="675" y="792" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#7854bb" text-anchor="start">2. Usa ReservaRemotaGateway</text>
+<text x="675" y="830" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#7854bb" text-anchor="start">confirmar(solicitud)</text>
+<path d="M1075 990H1495" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<text x="1095" y="902" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#2468c9" text-anchor="start">3. Solicitud HTTPS</text>
+<text x="1095" y="940" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#2468c9" text-anchor="start">con la sesión del usuario</text>
+<rect x="1295" y="1020" width="400" height="146" rx="12" fill="#eef5ff" stroke="#2468c9" stroke-width="2" />
+<text x="1312" y="1056" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#2468c9" text-anchor="start">Verifica la sesión.</text>
+<text x="1312" y="1094" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#2468c9" text-anchor="start">Obtiene identidad confiable.</text>
+<text x="1312" y="1132" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#2468c9" text-anchor="start">Valida y transforma la petición.</text>
+<path d="M1495 1310H1915" fill="none" stroke="#7854bb" stroke-width="3"  marker-end="url(#purple)"/>
+<text x="1515" y="1222" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#7854bb" text-anchor="start">4. Ejecuta caso de uso</text>
+<text x="1515" y="1260" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#7854bb" text-anchor="start">con ContextoUsuario verificado</text>
+<rect x="1710" y="1340" width="410" height="146" rx="12" fill="#f3effb" stroke="#7854bb" stroke-width="2" />
+<text x="1727" y="1376" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#7854bb" text-anchor="start">Aplica reglas propias y coordina</text>
+<text x="1727" y="1414" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#7854bb" text-anchor="start">la confirmación con identidad</text>
+<text x="1727" y="1452" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#7854bb" text-anchor="start">verificada y contratos internos.</text>
+<path d="M1915 1630H2335" fill="none" stroke="#7854bb" stroke-width="3"  marker-end="url(#purple)"/>
+<text x="1935" y="1542" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#7854bb" text-anchor="start">5. Usa ReservaAtomicaGateway</text>
+<text x="1935" y="1580" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#7854bb" text-anchor="start">Solicita confirmación atómica</text>
+<path d="M2335 1770H2755" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<text x="2355" y="1682" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#2468c9" text-anchor="start">6. Invoca función por RPC</text>
+<text x="2355" y="1720" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#2468c9" text-anchor="start">HTTPS · parámetros del servidor</text>
+<path d="M2755 1910H3175" fill="none" stroke="#008673" stroke-width="3"  marker-end="url(#green)"/>
+<text x="2775" y="1822" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">7. Ejecuta función PostgreSQL</text>
+<text x="2775" y="1860" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">Transacción SQL</text>
+<rect x="2955" y="1940" width="440" height="260" rx="12" fill="#eaf8f2" stroke="#008673" stroke-width="2" />
+<text x="2972" y="1976" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#008673" text-anchor="start">Revalida permisos y servicios.</text>
+<text x="2972" y="2014" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#008673" text-anchor="start">Comprueba precios y disponibilidad.</text>
+<text x="2972" y="2052" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#008673" text-anchor="start">Impide reservas superpuestas.</text>
+<text x="2972" y="2090" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#008673" text-anchor="start">Guarda reserva, condiciones,</text>
+<text x="2972" y="2128" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#008673" text-anchor="start">pago pendiente y avisos internos,</text>
+<text x="2972" y="2166" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#008673" text-anchor="start">o revierte la operación completa.</text>
+<path d="M3175 2310H2755" fill="none" stroke="#008673" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#return)"/>
+<text x="2775" y="2260" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">Confirmación o conflicto</text>
+<path d="M2755 2350H2335" fill="none" stroke="#008673" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#return)"/>
+<text x="2355" y="2300" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">Resultado de la RPC</text>
+<path d="M2335 2390H1915" fill="none" stroke="#008673" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#return)"/>
+<text x="1935" y="2340" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">Resultado propio del servidor</text>
+<path d="M1915 2430H1495" fill="none" stroke="#008673" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#return)"/>
+<text x="1515" y="2380" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">Resultado del caso de uso</text>
+<path d="M1495 2470H1075" fill="none" stroke="#008673" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#return)"/>
+<text x="1095" y="2420" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">Respuesta HTTPS</text>
+<path d="M1075 2510H655" fill="none" stroke="#008673" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#return)"/>
+<text x="675" y="2460" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">ResultadoReserva</text>
+<path d="M655 2550H235" fill="none" stroke="#008673" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#return)"/>
+<text x="255" y="2500" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#008673" text-anchor="start">Confirmación o error comprensible</text>
+<rect x="50" y="2650" width="3320" height="130" rx="12" fill="#f6f9fd" stroke="#cbd9e8" stroke-width="2" />
+<text x="75" y="2693" font-family="Arial,sans-serif" font-size="30" font-weight="400" fill="#20364f" text-anchor="start">Errores: entrada inválida → corregir; sesión o permisos rechazados → informar; horario ocupado → elegir otro intervalo.</text>
+<text x="75" y="2741" font-family="Arial,sans-serif" font-size="29" font-weight="400" fill="#20364f" text-anchor="start">Respuesta perdida: consultar las reservas del usuario antes de repetir. La selección de efectivo o Yape mantiene el pago pendiente de confirmación manual.</text>
+<text x="50" y="2830" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#52667d" text-anchor="start">Continua: solicitud. Discontinua: respuesta. El caso de uso conoce su contrato; la composición conecta los adaptadores antes de iniciar este recorrido.</text>
 </svg>

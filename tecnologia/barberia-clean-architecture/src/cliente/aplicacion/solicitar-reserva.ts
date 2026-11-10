@@ -1,13 +1,13 @@
 import { normalizarSolicitud } from '../dominio/reserva.ts';
 import type { ResultadoReserva, SolicitudReserva } from '../dominio/reserva.ts';
-import type { ReservaTransaccionalGateway } from './reserva-transaccional.contrato.ts';
 
-export class CrearReserva {
-  private readonly gateway: ReservaTransaccionalGateway;
+export interface ReservaRemotaGateway {
+  confirmar(solicitud: SolicitudReserva): Promise<ResultadoReserva>;
+}
 
-  constructor(gateway: ReservaTransaccionalGateway) {
-    this.gateway = gateway;
-  }
+export class SolicitarReserva {
+  private readonly gateway: ReservaRemotaGateway;
+  constructor(gateway: ReservaRemotaGateway) { this.gateway = gateway; }
 
   async ejecutar(entrada: unknown): Promise<ResultadoReserva> {
     let solicitud: SolicitudReserva;

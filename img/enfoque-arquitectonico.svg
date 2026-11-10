@@ -1,97 +1,140 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1550" viewBox="0 0 2000 1550" role="img" aria-labelledby="title desc">
-<title id="title">Clean Architecture: el núcleo y sus adaptadores · App Barbería</title>
-<desc id="desc">Vista de dependencias de código del módulo Reservas: la presentación invoca el caso de uso; infraestructura implementa el contrato de aplicación; aplicación usa los tipos y la validación del dominio. Composición conecta el adaptador y el caso de uso. Una vista separada muestra la ejecución: pantalla, CrearReserva, adaptador, API de datos y PostgreSQL.</desc>
-<rect width="2000" height="1550" fill="#f7f9fc"/>
-<rect x="0" y="0" width="2000" height="145" rx="0" fill="#162b47" stroke="#162b47" stroke-width="2"/>
-<text x="48.0" y="17.0" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#9cc4ff" dominant-baseline="text-before-edge">APP BARBERÍA · ENFOQUE ARQUITECTÓNICO</text>
-<text x="46.0" y="53.0" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="white" dominant-baseline="text-before-edge">Clean Architecture: el núcleo y sus adaptadores</text>
-<text x="48.0" y="110.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#d5e4ed" dominant-baseline="text-before-edge">Ejemplo del módulo Reservas · Responsabilidades separadas y dependencias hacia el interior</text>
-<rect x="55" y="172" width="1890" height="66" rx="12" fill="white" stroke="#d5dfeb" stroke-width="2"/>
-<g transform="translate(74 187)" fill="none" stroke="#147d68" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 1L3 8v12q0 12 17 19 17-7 17-19V8zM11 20l6 6 12-13"/></g>
-<text x="131.0" y="190.0" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#162b47" dominant-baseline="text-before-edge">Regla central: el código exterior depende de Aplicación y Dominio.</text>
-<text x="80.0" y="297.0" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">BORDE · INTERFAZ DE USUARIO</text>
-<text x="1510.0" y="297.0" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">BORDE · INTEGRACIONES</text>
-<rect x="650" y="278" width="700" height="688" rx="20" fill="white" stroke="#c4b7e2" stroke-width="2" stroke-dasharray="10 7"/>
-<text x="678.0" y="294.0" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">INTERIOR · CÓDIGO PROPIO</text>
-<rect x="80" y="395" width="420" height="300" rx="15" fill="#eef5ff" stroke="#bbd2f5" stroke-width="2"/>
-<g transform="translate(102 418)" fill="none" stroke="#2468c9" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="1" width="24" height="36" rx="4"/><path d="M14 6h10M16 31h6"/></g>
-<text x="158.0" y="418.0" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Presentación</text>
-<text x="104.0" y="473.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">React Native / Expo</text>
-<text x="104.0" y="520.0" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Muestra pantallas y recoge</text>
-<text x="104.0" y="554.0" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">la selección del usuario.</text>
-<text x="104.0" y="606.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Entrega datos al caso de uso.</text>
-<rect x="710" y="351" width="580" height="275" rx="15" fill="#f3effb" stroke="#cec2e9" stroke-width="2"/>
-<g transform="translate(732 371)" fill="none" stroke="#7052b8" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L20 1l18 9-18 9zM2 20l18 9 18-9M2 29l18 9 18-9"/></g>
-<text x="788.0" y="371.0" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">Aplicación</text>
-<text x="735.0" y="425.0" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">CrearReserva coordina la confirmación.</text>
-<text x="735.0" y="466.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Define qué necesita del exterior.</text>
-<rect x="735" y="512" width="530" height="92" rx="10" fill="white" stroke="#cec2e9" stroke-width="2"/>
-<text x="751.0" y="524.0" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">Contrato: confirmar(solicitud)</text>
-<text x="751.0" y="565.0" font-family="Arial, sans-serif" font-size="22" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">ReservaTransaccionalGateway</text>
-<rect x="710" y="788" width="580" height="143" rx="15" fill="#eaf8f2" stroke="#b4ded0" stroke-width="2"/>
-<g transform="translate(732 804)" fill="none" stroke="#147d68" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 1L3 8v12q0 12 17 19 17-7 17-19V8zM11 20l6 6 12-13"/></g>
-<text x="788.0" y="805.0" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">Dominio</text>
-<text x="735.0" y="852.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">SolicitudReserva · ResultadoReserva</text>
-<text x="735.0" y="889.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Tipos propios y validación básica de entrada.</text>
-<rect x="1510" y="395" width="410" height="300" rx="15" fill="#fff5e5" stroke="#e5d0a8" stroke-width="2"/>
-<g transform="translate(1533 418)" fill="none" stroke="#926018" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 1v11M29 1v11M4 12h32v8q0 11-16 11T4 20zM20 31v8"/></g>
-<text x="1588.0" y="418.0" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Infraestructura</text>
-<text x="1534.0" y="473.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Adaptador de Supabase</text>
-<text x="1534.0" y="520.0" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Convierte datos y errores</text>
-<text x="1534.0" y="554.0" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">del proveedor.</text>
-<text x="1534.0" y="606.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Utiliza el SDK y llama a la API.</text>
-<polyline points="500,438 710,438" fill="none" stroke="#2468c9" stroke-width="4" stroke-linejoin="round"/>
-<polygon points="710.0,438.0 693.0,430.0 693.0,446.0" fill="#2468c9"/>
-<text x="515.0" y="355.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">Invoca</text>
-<text x="515.0" y="384.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#2468c9" dominant-baseline="text-before-edge">caso de uso</text>
-<polyline points="1510,558 1265,558" fill="none" stroke="#926018" stroke-width="4" stroke-linejoin="round"/>
-<polygon points="1265.0,558.0 1282.0,566.0 1282.0,550.0" fill="#926018"/>
-<text x="1370.0" y="463.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#926018" dominant-baseline="text-before-edge">Implementa</text>
-<text x="1370.0" y="492.0" font-family="Arial, sans-serif" font-size="23" font-weight="400" fill="#926018" dominant-baseline="text-before-edge">el contrato</text>
-<polyline points="1000,626 1000,788" fill="none" stroke="#147d68" stroke-width="4" stroke-linejoin="round"/>
-<polygon points="1000.0,788.0 1008.0,771.0 992.0,771.0" fill="#147d68"/>
-<text x="1040.0" y="670.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">Usa tipos y</text>
-<text x="1040.0" y="701.5" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#147d68" dominant-baseline="text-before-edge">reglas propias</text>
-<text x="80.0" y="735.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Las flechas de esta vista indican</text>
-<text x="80.0" y="765.2" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">qué parte del código conoce a otra.</text>
-<text x="1510.0" y="735.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">El adaptador conoce Supabase.</text>
-<text x="1510.0" y="765.2" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">El caso de uso conoce su contrato.</text>
-<rect x="80" y="1000" width="1840" height="105" rx="13" fill="white" stroke="#d5dfeb" stroke-width="2"/>
-<g transform="translate(102 1021)" fill="none" stroke="#52667d" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="11" width="12" height="17" rx="2"/><rect x="27" y="1" width="12" height="14" rx="2"/><rect x="27" y="25" width="12" height="14" rx="2"/><path d="M13 19h7V8h7M20 19v13h7"/></g>
-<text x="163.0" y="1017.0" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#162b47" dominant-baseline="text-before-edge">Composición: conecta las piezas al iniciar.</text>
-<text x="163.0" y="1061.0" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Crea SupabaseReservaAdapter y se lo entrega a CrearReserva como implementación del contrato.</text>
-<text x="80.0" y="1144.0" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">EJECUCIÓN · RECORRIDO DE UNA RESERVA</text>
-<text x="80.0" y="1189.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Aquí las flechas muestran llamadas entre las partes durante una operación.</text>
-<rect x="1172" y="1234" width="768" height="181" rx="12" fill="white" stroke="#b4ded0" stroke-width="2" stroke-dasharray="10 7"/>
-<text x="1192.0" y="1246.0" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">BACKEND ADMINISTRADO · SUPABASE</text>
-<rect x="80" y="1288" width="300" height="106" rx="11" fill="#eef5ff" stroke="#d5dfeb" stroke-width="2"/>
-<g transform="translate(95 1302)" fill="none" stroke="#2468c9" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="1" width="24" height="36" rx="4"/><path d="M14 6h10M16 31h6"/></g>
-<text x="150.0" y="1306.0" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#2468c9" dominant-baseline="text-before-edge">Pantalla</text>
-<text x="98.0" y="1353.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Recoge la selección</text>
-<rect x="450" y="1288" width="300" height="106" rx="11" fill="#f3effb" stroke="#d5dfeb" stroke-width="2"/>
-<g transform="translate(465 1302)" fill="none" stroke="#7052b8" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10L20 1l18 9-18 9zM2 20l18 9 18-9M2 29l18 9 18-9"/></g>
-<text x="520.0" y="1306.0" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#7052b8" dominant-baseline="text-before-edge">CrearReserva</text>
-<text x="468.0" y="1353.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Solicita confirmar</text>
-<rect x="820" y="1288" width="300" height="106" rx="11" fill="#fff5e5" stroke="#d5dfeb" stroke-width="2"/>
-<g transform="translate(835 1302)" fill="none" stroke="#926018" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 1v11M29 1v11M4 12h32v8q0 11-16 11T4 20zM20 31v8"/></g>
-<text x="890.0" y="1306.0" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#926018" dominant-baseline="text-before-edge">Adaptador</text>
-<text x="838.0" y="1353.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Traduce y llama</text>
-<rect x="1190" y="1288" width="300" height="106" rx="11" fill="#eaf8f2" stroke="#d5dfeb" stroke-width="2"/>
-<g transform="translate(1205 1302)" fill="none" stroke="#147d68" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 7L1 20l10 12M29 7l10 13-10 12M24 1l-9 38"/></g>
-<text x="1260.0" y="1306.0" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">API de datos</text>
-<text x="1208.0" y="1353.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">REST / RPC</text>
-<rect x="1560" y="1288" width="360" height="106" rx="11" fill="#eaf8f2" stroke="#d5dfeb" stroke-width="2"/>
-<g transform="translate(1575 1302)" fill="none" stroke="#147d68" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="20" cy="7" rx="18" ry="6"/><path d="M2 7v25c0 8 36 8 36 0V7M2 19c0 8 36 8 36 0"/></g>
-<text x="1630.0" y="1306.0" font-family="Arial, sans-serif" font-size="29" font-weight="700" fill="#147d68" dominant-baseline="text-before-edge">PostgreSQL</text>
-<text x="1578.0" y="1353.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">Valida y confirma</text>
-<polyline points="380,1340 450,1340" fill="none" stroke="#2468c9" stroke-width="4" stroke-linejoin="round"/>
-<polygon points="450.0,1340.0 433.0,1332.0 433.0,1348.0" fill="#2468c9"/>
-<polyline points="750,1340 820,1340" fill="none" stroke="#2468c9" stroke-width="4" stroke-linejoin="round"/>
-<polygon points="820.0,1340.0 803.0,1332.0 803.0,1348.0" fill="#2468c9"/>
-<polyline points="1120,1340 1190,1340" fill="none" stroke="#2468c9" stroke-width="4" stroke-linejoin="round"/>
-<polygon points="1190.0,1340.0 1173.0,1332.0 1173.0,1348.0" fill="#2468c9"/>
-<polyline points="1490,1340 1560,1340" fill="none" stroke="#2468c9" stroke-width="4" stroke-linejoin="round"/>
-<polygon points="1560.0,1340.0 1543.0,1332.0 1543.0,1348.0" fill="#2468c9"/>
-<text x="80.0" y="1442.0" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#20364f" dominant-baseline="text-before-edge">PostgreSQL verifica permisos y disponibilidad y guarda las escrituras relacionadas en una transacción.</text>
-<text x="80.0" y="1497.0" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#52667d" dominant-baseline="text-before-edge">Clean Architecture separa el código del cliente; la autorización y las reglas transaccionales se conservan en el servidor.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2450" viewBox="0 0 2000 2450"><title>App Barbería: Clean Architecture, núcleo y adaptadores en cliente y servidor</title><desc>Vista visual del módulo Reservas con dependencias hacia el núcleo y un recorrido de ejecución separado: pantalla, caso de uso cliente, adaptador HTTP, caso de uso servidor, adaptador SQL, API de datos y PostgreSQL.</desc><defs>
+<marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9Z" fill="#2468c9" stroke="#2468c9"/></marker>
+<marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9Z" fill="#008673" stroke="#008673"/></marker>
+<marker id="impl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9Z" fill="white" stroke="#9c610e"/></marker>
+</defs><rect width="2000" height="2450" fill="#f6f9fd"/>
+<rect x="35" y="25" width="1930" height="160" rx="20" fill="#162b47" stroke="#162b47" stroke-width="2" />
+<text x="75" y="70" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#9fc6ff" text-anchor="start">APP BARBERÍA · ENFOQUE ARQUITECTÓNICO</text>
+<text x="75" y="124" font-family="Arial,sans-serif" font-size="43" font-weight="700" fill="#fff" text-anchor="start">Clean Architecture: el núcleo y sus adaptadores</text>
+<text x="75" y="166" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#d8e5f5" text-anchor="start">Módulo Reservas · Cliente y servidor · Aplicado desde la primera implementación</text>
+<rect x="55" y="220" width="1890" height="75" rx="17" fill="#fff" stroke="#d6e1ee" stroke-width="2" />
+<g transform="translate(78 240) scale(1.3846153846153846)" fill="none" stroke="#008673" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l10 4v7c0 7-10 12-10 12S2 19 2 12V5zM7 12l4 4 7-8"/></g>
+<text x="135" y="267" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#20364f" text-anchor="start">Regla central: presentación e infraestructura dependen de Aplicación y Dominio.</text>
+<text x="75" y="355" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#20364f" text-anchor="start">CLIENTE · Expo / React Native / TypeScript</text>
+<text x="75" y="408" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#2468c9" text-anchor="start">BORDE · INTERFAZ DE USUARIO</text>
+<text x="675" y="408" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#7854bb" text-anchor="start">INTERIOR · NÚCLEO PROPIO</text>
+<text x="1550" y="408" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#9c610e" text-anchor="start">BORDE · INTEGRACIONES</text>
+<rect x="650" y="435" width="760" height="490" rx="22" fill="#fff" stroke="#cdbbf0" stroke-width="2" stroke-dasharray="10 7"/>
+<rect x="75" y="500" width="430" height="295" rx="17" fill="#eef5ff" stroke="#b8d1ff" stroke-width="2" />
+<g transform="translate(98 522) scale(1.4230769230769231)" fill="none" stroke="#2468c9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="1" width="13" height="23" rx="3"/><path d="M10 4h5M11 21h3"/></g>
+<text x="155" y="551" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#2468c9" text-anchor="start">Presentación</text>
+<text x="98" y="605" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Recoge la selección del usuario.</text>
+<text x="98" y="647" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Invoca SolicitarReserva.</text>
+<text x="98" y="689" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Muestra confirmación o conflicto.</text>
+<rect x="700" y="470" width="660" height="245" rx="17" fill="#f3eefb" stroke="#d1bff0" stroke-width="2" />
+<g transform="translate(722 492) scale(1.4230769230769231)" fill="none" stroke="#7854bb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l12 7-12 7L0 8zM1 13l11 7 11-7M1 18l11 7 11-7"/></g>
+<text x="780" y="521" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#7854bb" text-anchor="start">Aplicación</text>
+<text x="722" y="574" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#20364f" text-anchor="start">SolicitarReserva</text>
+<text x="722" y="614" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#20364f" text-anchor="start">Valida y solicita la confirmación.</text>
+<rect x="720" y="635" width="620" height="60" rx="9" fill="#fff" stroke="#d1bff0" stroke-width="2" />
+<text x="740" y="674" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#7854bb" text-anchor="start">Contrato: ReservaRemotaGateway</text>
+<rect x="700" y="785" width="660" height="115" rx="17" fill="#eaf8f2" stroke="#b9ded2" stroke-width="2" />
+<g transform="translate(722 805) scale(1.3076923076923077)" fill="none" stroke="#008673" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l10 4v7c0 7-10 12-10 12S2 19 2 12V5zM7 12l4 4 7-8"/></g>
+<text x="778" y="833" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#008673" text-anchor="start">Dominio</text>
+<text x="722" y="875" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#20364f" text-anchor="start">SolicitudReserva · ResultadoReserva · validaciones puras</text>
+<rect x="1550" y="500" width="390" height="295" rx="17" fill="#fff5e5" stroke="#ebce9e" stroke-width="2" />
+<g transform="translate(1573 522) scale(1.4230769230769231)" fill="none" stroke="#9c610e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1v7M18 1v7M3 8h19v6c0 9-19 9-19 0zM12 21v5"/></g>
+<text x="1630" y="551" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#9c610e" text-anchor="start">Infraestructura</text>
+<text x="1573" y="604" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#20364f" text-anchor="start">ReservaHttpAdapter</text>
+<text x="1573" y="649" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Implementa el contrato.</text>
+<text x="1573" y="690" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Convierte datos y errores.</text>
+<text x="1573" y="731" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Encapsula HTTPS y SDK.</text>
+<path d="M505 580H700" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<text x="526" y="534" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#2468c9" text-anchor="start">Depende del</text>
+<text x="526" y="564" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#2468c9" text-anchor="start">caso de uso</text>
+<path d="M1550 665H1340" fill="none" stroke="#9c610e" stroke-width="3" stroke-dasharray="9 6" marker-end="url(#impl)"/>
+<text x="1418" y="607" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#9c610e" text-anchor="start">Implementa</text>
+<text x="1418" y="637" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#9c610e" text-anchor="start">el contrato</text>
+<path d="M1030 715V785" fill="none" stroke="#008673" stroke-width="3"  marker-end="url(#green)"/>
+<text x="1050" y="760" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#008673" text-anchor="start">Usa tipos y reglas</text>
+<text x="75" y="845" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#52667d" text-anchor="start">El borde depende del núcleo.</text>
+<text x="1550" y="845" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#52667d" text-anchor="start">El proveedor queda en el adaptador.</text>
+<rect x="75" y="960" width="1865" height="80" rx="17" fill="#fff" stroke="#d6e1ee" stroke-width="2" />
+<text x="100" y="993" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#20364f" text-anchor="start">COMPOSICIÓN · conecta el caso de uso con su adaptador mediante el contrato.</text>
+<text x="100" y="1027" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#52667d" text-anchor="start">SolicitarReserva recibe ReservaHttpAdapter como implementación de ReservaRemotaGateway.</text>
+<text x="75" y="1135" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#20364f" text-anchor="start">SERVIDOR · ejecución en Supabase Edge Functions</text>
+<text x="75" y="1188" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#2468c9" text-anchor="start">BORDE · ENTRADA HTTP</text>
+<text x="675" y="1188" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#7854bb" text-anchor="start">INTERIOR · NÚCLEO PROPIO</text>
+<text x="1550" y="1188" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#9c610e" text-anchor="start">BORDE · INTEGRACIONES</text>
+<rect x="650" y="1215" width="760" height="490" rx="22" fill="#fff" stroke="#cdbbf0" stroke-width="2" stroke-dasharray="10 7"/>
+<rect x="75" y="1280" width="430" height="295" rx="17" fill="#eef5ff" stroke="#b8d1ff" stroke-width="2" />
+<g transform="translate(98 1302) scale(1.4230769230769231)" fill="none" stroke="#2468c9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4L0 12l8 8M17 4l8 8-8 8M15 1l-5 23"/></g>
+<text x="155" y="1331" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#2468c9" text-anchor="start">Presentación</text>
+<text x="98" y="1385" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Recibe la solicitud por HTTPS.</text>
+<text x="98" y="1427" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Obtiene la identidad verificada.</text>
+<text x="98" y="1469" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Invoca ConfirmarReserva.</text>
+<rect x="700" y="1250" width="660" height="245" rx="17" fill="#f3eefb" stroke="#d1bff0" stroke-width="2" />
+<g transform="translate(722 1272) scale(1.4230769230769231)" fill="none" stroke="#7854bb" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l12 7-12 7L0 8zM1 13l11 7 11-7M1 18l11 7 11-7"/></g>
+<text x="780" y="1301" font-family="Arial,sans-serif" font-size="32" font-weight="700" fill="#7854bb" text-anchor="start">Aplicación</text>
+<text x="722" y="1354" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#20364f" text-anchor="start">ConfirmarReserva</text>
+<text x="722" y="1394" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#20364f" text-anchor="start">Coordina autorización y reglas.</text>
+<rect x="720" y="1415" width="620" height="60" rx="9" fill="#fff" stroke="#d1bff0" stroke-width="2" />
+<text x="740" y="1454" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#7854bb" text-anchor="start">Contrato: ReservaAtomicaGateway</text>
+<rect x="700" y="1565" width="660" height="115" rx="17" fill="#eaf8f2" stroke="#b9ded2" stroke-width="2" />
+<g transform="translate(722 1585) scale(1.3076923076923077)" fill="none" stroke="#008673" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l10 4v7c0 7-10 12-10 12S2 19 2 12V5zM7 12l4 4 7-8"/></g>
+<text x="778" y="1613" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#008673" text-anchor="start">Dominio</text>
+<text x="722" y="1655" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#20364f" text-anchor="start">ContextoUsuario · tipos propios · reglas puras</text>
+<rect x="1550" y="1280" width="390" height="295" rx="17" fill="#fff5e5" stroke="#ebce9e" stroke-width="2" />
+<g transform="translate(1573 1302) scale(1.4230769230769231)" fill="none" stroke="#9c610e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1v7M18 1v7M3 8h19v6c0 9-19 9-19 0zM12 21v5"/></g>
+<text x="1630" y="1331" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#9c610e" text-anchor="start">Infraestructura</text>
+<text x="1573" y="1384" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#20364f" text-anchor="start">PostgresReservaAdapter</text>
+<text x="1573" y="1429" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Implementa el contrato.</text>
+<text x="1573" y="1470" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Convierte datos y errores.</text>
+<text x="1573" y="1511" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">Encapsula RPC y SDK.</text>
+<path d="M505 1360H700" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<text x="526" y="1314" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#2468c9" text-anchor="start">Depende del</text>
+<text x="526" y="1344" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#2468c9" text-anchor="start">caso de uso</text>
+<path d="M1550 1445H1340" fill="none" stroke="#9c610e" stroke-width="3" stroke-dasharray="9 6" marker-end="url(#impl)"/>
+<text x="1418" y="1387" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#9c610e" text-anchor="start">Implementa</text>
+<text x="1418" y="1417" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#9c610e" text-anchor="start">el contrato</text>
+<path d="M1030 1495V1565" fill="none" stroke="#008673" stroke-width="3"  marker-end="url(#green)"/>
+<text x="1050" y="1540" font-family="Arial,sans-serif" font-size="22" font-weight="400" fill="#008673" text-anchor="start">Usa tipos y reglas</text>
+<text x="75" y="1625" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#52667d" text-anchor="start">El borde depende del núcleo.</text>
+<text x="1550" y="1625" font-family="Arial,sans-serif" font-size="23" font-weight="400" fill="#52667d" text-anchor="start">El proveedor queda en el adaptador.</text>
+<rect x="75" y="1740" width="1865" height="80" rx="17" fill="#fff" stroke="#d6e1ee" stroke-width="2" />
+<text x="100" y="1773" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#20364f" text-anchor="start">COMPOSICIÓN · conecta el caso de uso con su adaptador mediante el contrato.</text>
+<text x="100" y="1807" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#52667d" text-anchor="start">ConfirmarReserva recibe PostgresReservaAdapter como implementación de ReservaAtomicaGateway.</text>
+<text x="75" y="1895" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#7854bb" text-anchor="start">CÓMO LEER LAS DEPENDENCIAS</text>
+<text x="75" y="1935" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="start">Flechas continuas: uso de tipos o casos de uso. Discontinuas: implementación de contratos del núcleo.</text>
+<text x="75" y="2002" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#2468c9" text-anchor="start">EJECUCIÓN · RECORRIDO DE UNA RESERVA</text>
+<text x="75" y="2043" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#52667d" text-anchor="start">Aquí las flechas muestran llamadas durante la operación; el resultado regresa por la misma ruta.</text>
+<rect x="875" y="2075" width="1070" height="225" rx="14" fill="#fff" stroke="#b9ded2" stroke-width="2" stroke-dasharray="10 7"/>
+<text x="900" y="2105" font-family="Arial,sans-serif" font-size="23" font-weight="700" fill="#008673" text-anchor="start">BACKEND SUPABASE · Edge Functions + servicios de datos</text>
+<rect x="75" y="2140" width="245" height="130" rx="17" fill="#eef5ff" stroke="#d6e1ee" stroke-width="2" />
+<g transform="translate(91 2157) scale(1.1153846153846154)" fill="none" stroke="#2468c9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="1" width="13" height="23" rx="3"/><path d="M10 4h5M11 21h3"/></g>
+<text x="92" y="2210" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#20364f" text-anchor="start">Pantalla</text>
+<text x="92" y="2250" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#52667d" text-anchor="start">Recoge selección</text>
+<path d="M320 2200H345" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<rect x="345" y="2140" width="245" height="130" rx="17" fill="#f3eefb" stroke="#d6e1ee" stroke-width="2" />
+<g transform="translate(361 2157) scale(1.1153846153846154)" fill="none" stroke="#2468c9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l12 7-12 7L0 8zM1 13l11 7 11-7M1 18l11 7 11-7"/></g>
+<text x="362" y="2210" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#20364f" text-anchor="start">SolicitarReserva</text>
+<text x="362" y="2250" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#52667d" text-anchor="start">Caso de uso cliente</text>
+<path d="M590 2200H615" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<rect x="615" y="2140" width="245" height="130" rx="17" fill="#fff5e5" stroke="#d6e1ee" stroke-width="2" />
+<g transform="translate(631 2157) scale(1.1153846153846154)" fill="none" stroke="#2468c9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1v7M18 1v7M3 8h19v6c0 9-19 9-19 0zM12 21v5"/></g>
+<text x="632" y="2210" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#20364f" text-anchor="start">Adaptador HTTP</text>
+<text x="632" y="2250" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#52667d" text-anchor="start">Solicitud + sesión</text>
+<path d="M860 2200H885" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<rect x="885" y="2140" width="245" height="130" rx="17" fill="#eaf8f2" stroke="#d6e1ee" stroke-width="2" />
+<g transform="translate(901 2157) scale(1.1153846153846154)" fill="none" stroke="#008673" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l10 4v7c0 7-10 12-10 12S2 19 2 12V5zM7 12l4 4 7-8"/></g>
+<text x="902" y="2210" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#20364f" text-anchor="start">ConfirmarReserva</text>
+<text x="902" y="2250" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#52667d" text-anchor="start">Caso de uso servidor</text>
+<path d="M1130 2200H1155" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<rect x="1155" y="2140" width="245" height="130" rx="17" fill="#fff5e5" stroke="#d6e1ee" stroke-width="2" />
+<g transform="translate(1171 2157) scale(1.1153846153846154)" fill="none" stroke="#008673" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 1v7M18 1v7M3 8h19v6c0 9-19 9-19 0zM12 21v5"/></g>
+<text x="1172" y="2210" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#20364f" text-anchor="start">Adaptador SQL</text>
+<text x="1172" y="2250" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#52667d" text-anchor="start">Invoca RPC</text>
+<path d="M1400 2200H1425" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<rect x="1425" y="2140" width="245" height="130" rx="17" fill="#eaf8f2" stroke="#d6e1ee" stroke-width="2" />
+<g transform="translate(1441 2157) scale(1.1153846153846154)" fill="none" stroke="#008673" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4L0 12l8 8M17 4l8 8-8 8M15 1l-5 23"/></g>
+<text x="1442" y="2210" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#20364f" text-anchor="start">API de datos</text>
+<text x="1442" y="2250" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#52667d" text-anchor="start">PostgREST</text>
+<path d="M1670 2200H1695" fill="none" stroke="#2468c9" stroke-width="3"  marker-end="url(#blue)"/>
+<rect x="1695" y="2140" width="245" height="130" rx="17" fill="#eaf8f2" stroke="#d6e1ee" stroke-width="2" />
+<g transform="translate(1711 2157) scale(1.1153846153846154)" fill="none" stroke="#008673" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="4" rx="11" ry="4"/><path d="M1 4v17c0 5 22 5 22 0V4M1 12c0 5 22 5 22 0"/></g>
+<text x="1712" y="2210" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#20364f" text-anchor="start">PostgreSQL</text>
+<text x="1712" y="2250" font-family="Arial,sans-serif" font-size="21" font-weight="400" fill="#52667d" text-anchor="start">Transacción atómica</text>
+<text x="75" y="2350" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#20364f" text-anchor="start">El núcleo no importa React Native, SDK Supabase, Edge Functions ni tipos de tablas.</text>
+<text x="75" y="2390" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#20364f" text-anchor="start">PostgreSQL verifica permisos sobre datos actuales, disponibilidad e integridad y guarda las escrituras relacionadas en una transacción.</text>
+<text x="75" y="2430" font-family="Arial,sans-serif" font-size="24" font-weight="400" fill="#52667d" text-anchor="start">La misma regla de dependencias se aplica a cada funcionalidad. Los nombres mostrados son ejemplos de diseño.</text>
 </svg>
